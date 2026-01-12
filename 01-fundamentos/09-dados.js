@@ -1,6 +1,6 @@
-const valor = 7;
+const VALOR = 7;
 
-// Erro, pois a variável "valor" é constante
-// valor += 3;
+// Erro, pois a variável "VALOR" é constante
+// VALOR += 3;
 
-console.log(valor);
+console.log(VALOR);
