@@ -15,6 +15,7 @@ Este repositório atua como uma **documentação de estudos** envolvendo a minha
 Para facilitar a navegação, o código está organizado por tema:
 
 * **`/01-fundamentos`**: Sentenças, blocos, comentários e dados.
+* **`/02-javascript`**: Condicionais, laços de repetição e controles de fluxo.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
@@ -27,8 +28,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | :----- | :----: | :----------------- |
 | **Introdução do Curso** | ✅ Concluído | Visão geral, repositório, boas práticas e terminais |
 | **Configuração do Ambiente** | ✅ Concluído | Instalação das ferramentas e uso dos terminais |
-| **Iniciando com Programação** | 🔄 Em Progresso | Conceitos base do desenvolvimento de software |
-| **JavaScript: Fundamentos** | ⏳ Pendente | Fundamentos essenciais da linguagem JavaScript |
+| **Iniciando com Programação** | ✅ Concluído | Conceitos base do desenvolvimento de software |
+| **JavaScript: Fundamentos** | 🔄 Em Progresso | Fundamentos essenciais da linguagem JavaScript |
+| **JavaScript: Estruturas de Controle** | ⏳ Pendente | Comandos que determinam o fluxo de execução do código |
 | **---** | --- | --- |
 
 ---
@@ -50,7 +52,7 @@ Por questões de organização, os projetos finais de cada grande módulo possui
 
 Este tópico agrega as principais anotações de engenharia e as ideias mais disruptivas observadas ao longo do curso, contribuindo para a fixação e a expansão do conhecimento.
 
-* **[Tema]:** [Descrição].
+* **Sentenças e Blocos de Código:** a primeira aula de sentença de código utilizou uma analogia interessante que relaciona a estrutura de um livro com a de um código. Sendo assim, da mesma forma como um livro é organizado em letras que formam palavras, que formam frases, que formam parágrafos, que formam seções, que formam capítulos, que, finalmente, formam livros, os códigos também são organizados com sentenças de código que formam blocos, que formam arquivos, que formam pastas, que, finalmente, formam programas. Ainda utilizando a mesma analogia, da mesma forma que o ponto final encerra uma frase, um ponto e vírgula encerra uma sentença de código (dependendo da linguagem de programação).
 
 ---
 
