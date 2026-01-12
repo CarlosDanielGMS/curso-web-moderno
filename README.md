@@ -15,6 +15,7 @@ Este repositório atua como uma **documentação de estudos** envolvendo a minha
 Para facilitar a navegação, o código está organizado por tema:
 
 * **`/01-fundamentos`**: Sentenças, blocos, comentários e dados.
+* **`/02-javascript`**: Condicionais, laços de repetição e controles de fluxo.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
@@ -27,8 +28,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | :----- | :----: | :----------------- |
 | **Introdução do Curso** | ✅ Concluído | Visão geral, repositório, boas práticas e terminais |
 | **Configuração do Ambiente** | ✅ Concluído | Instalação das ferramentas e uso dos terminais |
-| **Iniciando com Programação** | 🔄 Em Progresso | Conceitos base do desenvolvimento de software |
-| **JavaScript: Fundamentos** | ⏳ Pendente | Fundamentos essenciais da linguagem JavaScript |
+| **Iniciando com Programação** | ✅ Concluído | Conceitos base do desenvolvimento de software |
+| **JavaScript: Fundamentos** | 🔄 Em Progresso | Fundamentos essenciais da linguagem JavaScript |
+| **JavaScript: Estruturas de Controle** | ⏳ Pendente | Comandos que determinam o fluxo de execução do código |
 | **---** | --- | --- |
 
 ---
