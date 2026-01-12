@@ -4,7 +4,7 @@ var preco = 2500;
 let imposto = 500;
 var precoFinal = (preco + imposto) * quantidade;
 
-console.log("Produto: R$ " + nome);
+console.log("Produto: " + nome);
 console.log("Quantidade: " + quantidade);
 console.log("Preço: R$ " + preco);
 console.log("Imposto: R$ " + imposto);
