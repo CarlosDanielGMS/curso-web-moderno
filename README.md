@@ -56,6 +56,8 @@ Este tópico agrega as principais anotações de engenharia e as ideias mais dis
 
 * **Ordem de Execução em Algoritmos:** o conceito de algoritmo, apresentado na primeira aula do módulo de fundamentos do JavaScript, utilizou uma analogia que facilita a compreensão acerca da importância da ordem que os códigos são executados. O ato de vestir uma roupa, por exemplo, pode gerar uma falha (equivalente a um bug, em programação) se a calça for vestida antes da cueca. O visual do Super-Homem foi utilizado para ilustrar o "erro".
 
+* **Tipos de Atribuição:** a aula "Entendendo o Null & Undefined", do módulo de fundamentos do JavaScript, apresentou um conceito disruptivo pra mim até então: atribuição por valor e atribuição por referência. Quando atribuímos tipos primitivos a uma variável, chamamos de atribuição por valor, uma vez que o valor é copiado para ela e se torna independente. Na atribuição por referência (quando atribuímos objetos, por exemplo), no entanto, a variável recebe o endereço de memória, resultando em alterações síncronas (onde todas as variáveis mudam o valor ao alterar apenas uma delas).
+
 ---
 
 ## 🚀 Como Executar Localmente
