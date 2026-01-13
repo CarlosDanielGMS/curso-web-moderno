@@ -54,6 +54,8 @@ Este tópico agrega as principais anotações de engenharia e as ideias mais dis
 
 * **Sentenças e Blocos de Código:** a primeira aula de sentença de código utilizou uma analogia interessante que relaciona a estrutura de um livro com a de um código. Sendo assim, da mesma forma como um livro é organizado em letras que formam palavras, que formam frases, que formam parágrafos, que formam seções, que formam capítulos, que, finalmente, formam livros, os códigos também são organizados com sentenças de código que formam blocos, que formam arquivos, que formam pastas, que, finalmente, formam programas. Ainda utilizando a mesma analogia, da mesma forma que o ponto final encerra uma frase, um ponto e vírgula encerra uma sentença de código (dependendo da linguagem de programação).
 
+* **Ordem de Execução em Algoritmos:** o conceito de algoritmo, apresentado na primeira aula do módulo de fundamentos do JavaScript, utilizou uma analogia que facilita a compreensão acerca da importância da ordem que os códigos são executados. O ato de vestir uma roupa, por exemplo, pode gerar uma falha (equivalente a um bug, em programação) se a calça for vestida antes da cueca. O visual do Super-Homem foi utilizado para ilustrar o "erro".
+
 ---
 
 ## 🚀 Como Executar Localmente
