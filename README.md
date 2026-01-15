@@ -29,8 +29,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Introdução do Curso** | ✅ Concluído | Visão geral, repositório, boas práticas e terminais |
 | **Configuração do Ambiente** | ✅ Concluído | Instalação das ferramentas e uso dos terminais |
 | **Iniciando com Programação** | ✅ Concluído | Conceitos base do desenvolvimento de software |
-| **JavaScript: Fundamentos** | 🔄 Em Progresso | Fundamentos essenciais da linguagem JavaScript |
-| **JavaScript: Estruturas de Controle** | ⏳ Pendente | Comandos que determinam o fluxo de execução do código |
+| **JavaScript: Fundamentos** | ✅ Concluído | Fundamentos essenciais da linguagem JavaScript |
+| **JavaScript: Estruturas de Controle** | 🔄 Em Progresso | Comandos que determinam o fluxo de execução do código |
+| **JavaScript: Função** | ⏳ Pendente | Funções, parâmetros e retornos |
 | **---** | --- | --- |
 
 ---
@@ -53,6 +54,10 @@ Por questões de organização, os projetos finais de cada grande módulo possui
 Este tópico agrega as principais anotações de engenharia e as ideias mais disruptivas observadas ao longo do curso, contribuindo para a fixação e a expansão do conhecimento.
 
 * **Sentenças e Blocos de Código:** a primeira aula de sentença de código utilizou uma analogia interessante que relaciona a estrutura de um livro com a de um código. Sendo assim, da mesma forma como um livro é organizado em letras que formam palavras, que formam frases, que formam parágrafos, que formam seções, que formam capítulos, que, finalmente, formam livros, os códigos também são organizados com sentenças de código que formam blocos, que formam arquivos, que formam pastas, que, finalmente, formam programas. Ainda utilizando a mesma analogia, da mesma forma que o ponto final encerra uma frase, um ponto e vírgula encerra uma sentença de código (dependendo da linguagem de programação).
+
+* **Ordem de Execução em Algoritmos:** o conceito de algoritmo, apresentado na primeira aula do módulo de fundamentos do JavaScript, utilizou uma analogia que facilita a compreensão acerca da importância da ordem que os códigos são executados. O ato de vestir uma roupa, por exemplo, pode gerar uma falha (equivalente a um bug, em programação) se a calça for vestida antes da cueca. O visual do Super-Homem foi utilizado para ilustrar o "erro".
+
+* **Tipos de Atribuição:** a aula "Entendendo o Null & Undefined", do módulo de fundamentos do JavaScript, apresentou um conceito disruptivo pra mim até então: atribuição por valor e atribuição por referência. Quando atribuímos tipos primitivos a uma variável, chamamos de atribuição por valor, uma vez que o valor é copiado para ela e se torna independente. Na atribuição por referência (quando atribuímos objetos, por exemplo), no entanto, a variável recebe o endereço de memória, resultando em alterações síncronas (onde todas as variáveis mudam o valor ao alterar apenas uma delas).
 
 ---
 
