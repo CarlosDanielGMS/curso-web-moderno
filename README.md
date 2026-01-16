@@ -30,8 +30,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Configuração do Ambiente** | ✅ Concluído | Instalação das ferramentas e uso dos terminais |
 | **Iniciando com Programação** | ✅ Concluído | Conceitos base do desenvolvimento de software |
 | **JavaScript: Fundamentos** | ✅ Concluído | Fundamentos essenciais da linguagem JavaScript |
-| **JavaScript: Estruturas de Controle** | 🔄 Em Progresso | Comandos que determinam o fluxo de execução do código |
-| **JavaScript: Função** | ⏳ Pendente | Funções, parâmetros e retornos |
+| **JavaScript: Estruturas de Controle** | ✅ Concluído | Comandos que determinam o fluxo de execução do código |
+| **JavaScript: Função** | 🔄 Em Progresso | Funções, parâmetros e retornos |
+| **JavaScript: Objeto** | ⏳ Pendente | Orientação a Objetos (OO), notações, getters/setters e herança |
 | **---** | --- | --- |
 
 ---
