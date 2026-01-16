@@ -1,7 +1,7 @@
 function gerarNumeroAleatorio (minimo, maximo)
 {
     const numero = Math.random() * (maximo - minimo) + minimo;
-    const numeroArredondado = Math.floor(numero);
+    const numeroArredondado = Math.round(numero);
 
     return numeroArredondado;
 };
