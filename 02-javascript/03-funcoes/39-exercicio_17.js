@@ -7,7 +7,6 @@ function aumentarSalario (plano, salario)
         case 'A':
             aumento += salario * 0.10;
             console.log(`O funcionário, pertencente ao plano ${plano} com o salário de R$ ${salario}, receberá um aumento para R$ ${aumento}.`);
-            
             break;
         case 'B':
             aumento += salario * 0.15;
