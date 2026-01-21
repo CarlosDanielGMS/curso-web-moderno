@@ -3,7 +3,7 @@ function calcularParesImpares (numeros)
     let quantidadePares = 0;
     let quantidadeImpares = 0;
 
-    for (numero in numeros)
+    for (let numero of numeros)
     {
         numero % 2 == 0 ? quantidadePares++ : quantidadeImpares++;
     };
