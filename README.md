@@ -15,7 +15,7 @@ Este repositório atua como uma **documentação de estudos** envolvendo a minha
 Para facilitar a navegação, o código está organizado por tema:
 
 * **`/01-fundamentos`**: Sentenças, blocos, comentários e dados.
-* **`/02-javascript`**: Condicionais, laços de repetição e controles de fluxo.
+* **`/02-javascript`**: Condicionais, laços de repetição, controles de fluxo, funções, objetos e vetores.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
@@ -31,8 +31,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Iniciando com Programação** | ✅ Concluído | Conceitos base do desenvolvimento de software |
 | **JavaScript: Fundamentos** | ✅ Concluído | Fundamentos essenciais da linguagem JavaScript |
 | **JavaScript: Estruturas de Controle** | ✅ Concluído | Comandos que determinam o fluxo de execução do código |
-| **JavaScript: Função** | 🔄 Em Progresso | Funções, parâmetros e retornos |
-| **JavaScript: Objeto** | ⏳ Pendente | Orientação a Objetos (OO), notações, getters/setters e herança |
+| **JavaScript: Função** | ✅ Concluído | Funções, parâmetros e retornos |
+| **JavaScript: Objeto** | 🔄 Em Progresso | Orientação a Objetos (OO), notações, getters/setters e herança |
+| **JavaScript: Array** | ⏳ Pendente | Foreach, map, filter, reduce, concat, flatmap etc |
 | **---** | --- | --- |
 
 ---
