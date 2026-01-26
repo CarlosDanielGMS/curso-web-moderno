@@ -1,8 +1,8 @@
-Array.prototype.reduce2 = function(callback)
+Array.prototype.reduce2 = function(callback, valorInicial)
 {
-    let reducao = this[0];
+    let reducao = valorInicial ? valorInicial : this[0];
 
-    for (let indice = 1; indice < this.length; indice++)
+    for (let indice = valorInicial ? 0 : 1; indice < this.length; indice++)
     {
         reducao = callback(reducao, this[indice], this);
     };
@@ -38,7 +38,7 @@ const alunos =
 ];
 
 const notas = alunos.map(aluno => aluno.nota);
-const soma = notas.reduce2(somar);
+const soma = notas.reduce2(somar, 5);
 
 console.log(`Soma das notas: ${soma}`);
 
