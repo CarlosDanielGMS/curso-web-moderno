@@ -33,8 +33,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **JavaScript: Estruturas de Controle** | ✅ Concluído | Comandos que determinam o fluxo de execução do código |
 | **JavaScript: Função** | ✅ Concluído | Funções, parâmetros e retornos |
 | **JavaScript: Objeto** | ✅ Concluído | Orientação a Objetos (OO), notações, getters/setters e herança |
-| **JavaScript: Array** | 🔄 Em Progresso | Foreach, map, filter, reduce, concat, flatmap etc |
-| **Lista de Exercícios de JavaScript** | ⏳ Pendente | Funções, objetos e vetores |
+| **JavaScript: Array** | ✅ Concluído | Foreach, map, filter, reduce, concat, flatmap etc |
+| **Lista de Exercícios de JavaScript** | 🔄 Em Progresso | Funções, objetos e vetores |
+| **Node** | ⏳ Pendente | Módulos, package, instâncias, dependências, leitura e escrita de arquivos, frameworks, padrões e tarefas |
 | **---** | --- | --- |
 
 ---
