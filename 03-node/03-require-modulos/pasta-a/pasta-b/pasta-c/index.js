@@ -1,0 +1,1 @@
+this.primeiraSaudacao = 'Olá!';
