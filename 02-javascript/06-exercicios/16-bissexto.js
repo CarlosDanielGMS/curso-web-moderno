@@ -1,0 +1,11 @@
+const exibir = mensagem => console.log(mensagem);
+function verificarBissexto (ano)
+{
+    if (ano % 400 == 0) return true;
+    else if (ano % 100 == 0) return false;
+    else if (ano % 4 == 0) return true;
+    else return false;
+};
+
+exibir(verificarBissexto(2020));
+exibir(verificarBissexto(2100));
