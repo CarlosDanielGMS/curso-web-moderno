@@ -64,6 +64,8 @@ Este tópico agrega as principais anotações de engenharia e as ideias mais dis
 
 * **Tipos de Atribuição:** a aula "Entendendo o Null & Undefined", do módulo de fundamentos do JavaScript, apresentou um conceito disruptivo pra mim até então: atribuição por valor e atribuição por referência. Quando atribuímos tipos primitivos a uma variável, chamamos de atribuição por valor, uma vez que o valor é copiado para ela e se torna independente. Na atribuição por referência (quando atribuímos objetos, por exemplo), no entanto, a variável recebe o endereço de memória, resultando em alterações síncronas (onde todas as variáveis mudam o valor ao alterar apenas uma delas).
 
+* **Bibliotecas vs Frameworks:** a diferença entre esses dois conceitos pode ser confusa em um certo nível de conhecimento. Por isso, na aula "Frameworks Web", do módulo de Node.js, foi abordado exatamente este tema. As bibliotecas são como ferramentas utilizadas para diferentes propósitos, normalmente quando e como quiser. Os frameworks, por sua vez, ditam as regras da estrutura do negócio, pré-modelando o sistema a que se aplica (seja no backend, seja no frontend).
+
 ---
 
 ## 🚀 Como Executar Localmente
