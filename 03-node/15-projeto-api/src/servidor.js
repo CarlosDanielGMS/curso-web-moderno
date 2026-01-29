@@ -7,19 +7,43 @@ const express = require('express');
 // Instancia a aplicação
 const aplicacao = express();
 
-// Cria uma rota
+// Importa o módulo responsável pelo gerenciamento do banco de dados
+const bancoDados = require('./banco_dados');
+
+// Cria uma rota para buscar os produtos registrados
 aplicacao.get
 (
     '/produtos', // Define o nome da rota
     (requisicao, resposta, proximo) => // Define a função middleware da rota
     {
-        resposta.send // Envia uma resposta para o servidor
+        resposta.send(bancoDados.getProdutos()) // Envia uma resposta para o servidor
+    }
+);
+
+// Cria uma rota para buscar o produto de acordo com o ID passado como parâmetro
+aplicacao.get
+(
+    '/produtos/:id', // Define o nome da rota
+    (requisicao, resposta, proximo) => // Define a função middleware da rota
+    {
+        resposta.send(bancoDados.getProduto(requisicao.params.id)); // Envia uma resposta para o servidor
+    }
+);
+
+// Cria uma rota para registrar o produto passado como parâmetro
+aplicacao.post
+(
+    '/produtos', // Define o nome da rota
+    (requisicao, resposta, proximo) => // Define a função middleware da rota
+    {
+        const produto = bancoDados.salvarProduto // Salva o produto no banco de dados
         (
-            { // A resposta contém um objeto que será convertido para o formato JSON
-                nome: 'Notebook',
-                preco: 123.45
+            {
+                nome: requisicao.body.nome,
+                preco: requisicao.body.preco
             }
         );
+        resposta.send(produto); // Envia uma resposta para o servidor
     }
 );
 
