@@ -7,8 +7,14 @@ const express = require('express');
 // Instancia a aplicação
 const aplicacao = express();
 
+// Importa o módulo responsável pela análise sintática (converter o corpo das requisições em objeto)
+const bodyParser = require('body-parser');
+
 // Importa o módulo responsável pelo gerenciamento do banco de dados
 const bancoDados = require('./banco_dados');
+
+// Obriga todas as requisições a passarem pela análise sintática
+aplicacao.use(bodyParser.urlencoded({ extended: true }));
 
 // Cria uma rota para buscar os produtos registrados
 aplicacao.get
