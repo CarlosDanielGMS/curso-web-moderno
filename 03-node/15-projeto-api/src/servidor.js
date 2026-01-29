@@ -53,6 +53,24 @@ aplicacao.post
     }
 );
 
+// Cria uma rota para alterar o produto passado como parâmetro
+aplicacao.put
+(
+    '/produtos/:id', // Define o nome da rota
+    (requisicao, resposta, proximo) => // Define a função middleware da rota
+    {
+        const produto = bancoDados.salvarProduto // Salva o produto no banco de dados
+        (
+            {
+                id: requisicao.params.id,
+                nome: requisicao.body.nome,
+                preco: requisicao.body.preco
+            }
+        );
+        resposta.send(produto); // Envia uma resposta para o servidor
+    }
+);
+
 // Inicia o servidor
 aplicacao.listen
 (
