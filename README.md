@@ -16,6 +16,7 @@ Para facilitar a navegação, o código está organizado por tema:
 
 * **`/01-fundamentos`**: Sentenças, blocos, comentários e dados.
 * **`/02-javascript`**: Condicionais, laços de repetição, controles de fluxo, funções, objetos e vetores.
+* **`/03-node`**: Módulos, package, instâncias, dependências, leitura e escrita de arquivos, frameworks, padrões e tarefas.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
@@ -35,8 +36,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **JavaScript: Objeto** | ✅ Concluído | Orientação a Objetos (OO), notações, getters/setters e herança |
 | **JavaScript: Array** | ✅ Concluído | Foreach, map, filter, reduce, concat, flatmap etc |
 | **Lista de Exercícios de JavaScript** | ✅ Concluído | Funções, objetos e vetores |
-| **Node** | 🔄 Em Progresso | Módulos, package, instâncias, dependências, leitura e escrita de arquivos, frameworks, padrões e tarefas |
-| **ESNext** | ⏳ Pendente | Operador rest/spread, tagged template, map, set, for of, promises, callbacks async/await etc |
+| **Node** | ✅ Concluído | Módulos, package, instâncias, dependências, leitura e escrita de arquivos, frameworks, padrões e tarefas |
+| **ESNext** | 🔄 Em Progresso | Operador rest/spread, tagged template, map, set, for of, promises, callbacks async/await etc |
+| **Conceitos sobre Web** | ⏳ Pendente | Protocolos HTTP/HTTPS, Servidor Web, Client Side vs Server Side, Conteúdo Estático vs Conteúdo Dinânimo, DNS etc |
 | **---** | --- | --- |
 
 ---
