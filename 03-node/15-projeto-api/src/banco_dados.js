@@ -5,8 +5,8 @@ const sequencia =
     get id () { return this._id++ }
 };
 
-// Cria o objeto que contém os produtos registrados
-const produtos = {};
+// Cria o vetor de objetos que contém os produtos registrados
+const produtos = [];
 
 // Registra o produto passado como parâmetro
 function salvarProduto (produto)
