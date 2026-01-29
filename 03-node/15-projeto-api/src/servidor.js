@@ -71,6 +71,17 @@ aplicacao.put
     }
 );
 
+// Cria uma rota para excluir o produto de acordo com o ID passado como parâmetro
+aplicacao.delete
+(
+    '/produtos/:id', // Define o nome da rota
+    (requisicao, resposta, proximo) => // Define a função middleware da rota
+    {
+        const produto = bancoDados.excluirProduto(requisicao.params.id); // Salva o produto no banco de dados
+        resposta.send(produto); // Envia uma resposta para o servidor
+    }
+);
+
 // Inicia o servidor
 aplicacao.listen
 (

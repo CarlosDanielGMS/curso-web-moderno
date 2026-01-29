@@ -28,5 +28,13 @@ function getProdutos ()
     return Object.values(produtos);
 };
 
+// Exclui o produto de acordo com o ID passado como parâmetro
+function excluirProduto (id)
+{
+    const produto = produtos[id];
+    delete produtos[id];
+    return produto;
+}
+
 // Exporta as funções
-module.exports = { salvarProduto, getProduto, getProdutos };
+module.exports = { salvarProduto, getProduto, getProdutos, excluirProduto };
