@@ -20,11 +20,11 @@ function processar (valor, chanceErro) // Declara a função que
 };
 
 processar('ok.', 0.5).then(valor => `Valor: ${valor}`)
-                                .then
-                                (
-                                    mensagem => console.log(mensagem),
-                                    erro => console.log(`Erro específico: ${erro}`)
-                                )
-                                .then(() => console.log('Processo quase terminando...'))
-                                .catch(erro => console.log(`Erro geral: ${erro}`))
-                                .then(() => console.log('Fim do processo!'));
+                     .then
+                     (
+                        mensagem => console.log(mensagem),
+                        erro => console.log(`Erro específico: ${erro}`)
+                     )
+                     .then(() => console.log('Processo quase terminando...'))
+                     .catch(erro => console.log(`Erro geral: ${erro}`))
+                     .then(() => console.log('Fim do processo!'));
