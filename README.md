@@ -17,6 +17,7 @@ Para facilitar a navegação, o código está organizado por tema:
 * **`/01-fundamentos`**: Sentenças, blocos, comentários e dados.
 * **`/02-javascript`**: Condicionais, laços de repetição, controles de fluxo, funções, objetos e vetores.
 * **`/03-node`**: Módulos, package, instâncias, dependências, leitura e escrita de arquivos, frameworks, padrões e tarefas.
+* **`/04-esnext`**: Operador Rest/Spread, Tagged Template, Map, Set, For Of, Promises, Callbacks e Async/Await.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
@@ -37,8 +38,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **JavaScript: Array** | ✅ Concluído | Foreach, map, filter, reduce, concat, flatmap etc |
 | **Lista de Exercícios de JavaScript** | ✅ Concluído | Funções, objetos e vetores |
 | **Node** | ✅ Concluído | Módulos, package, instâncias, dependências, leitura e escrita de arquivos, frameworks, padrões e tarefas |
-| **ESNext** | 🔄 Em Progresso | Operador rest/spread, tagged template, map, set, for of, promises, callbacks async/await etc |
-| **Conceitos sobre Web** | ⏳ Pendente | Protocolos HTTP/HTTPS, Servidor Web, Client Side vs Server Side, Conteúdo Estático vs Conteúdo Dinânimo, DNS etc |
+| **ESNext** | ✅ Concluído | Operador Rest/Spread, Tagged Template, Map, Set, For Of, Promises, Callbacks e Async/Await |
+| **Conceitos sobre Web** | 🔄 Em Progresso | Protocolos HTTP/HTTPS, Servidor Web, Client Side vs Server Side, Conteúdo Estático vs Conteúdo Dinânimo, DNS etc |
+| **HTML** | ⏳ Pendente | TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens, vídeos etc |
 | **---** | --- | --- |
 
 ---
