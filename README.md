@@ -39,8 +39,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Lista de Exercícios de JavaScript** | ✅ Concluído | Funções, objetos e vetores |
 | **Node** | ✅ Concluído | Módulos, package, instâncias, dependências, leitura e escrita de arquivos, frameworks, padrões e tarefas |
 | **ESNext** | ✅ Concluído | Operador Rest/Spread, Tagged Template, Map, Set, For Of, Promises, Callbacks e Async/Await |
-| **Conceitos sobre Web** | 🔄 Em Progresso | Protocolos HTTP/HTTPS, Servidor Web, Client Side vs Server Side, Conteúdo Estático vs Conteúdo Dinânimo, DNS etc |
-| **HTML** | ⏳ Pendente | TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens, vídeos etc |
+| **Conceitos sobre Web** | ✅ Concluído | Protocolos HTTP/HTTPS, Servidor Web, Client Side vs Server Side, Conteúdo Estático vs Conteúdo Dinânimo, DNS etc |
+| **HTML** | 🔄 Em Progresso | TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens, vídeos etc |
+| **CSS** | ⏳ Pendente | Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, mídias etc |
 | **---** | --- | --- |
 
 ---
@@ -69,6 +70,8 @@ Este tópico agrega as principais anotações de engenharia e as ideias mais dis
 * **Tipos de Atribuição:** a aula "Entendendo o Null & Undefined", do módulo de fundamentos do JavaScript, apresentou um conceito disruptivo pra mim até então: atribuição por valor e atribuição por referência. Quando atribuímos tipos primitivos a uma variável, chamamos de atribuição por valor, uma vez que o valor é copiado para ela e se torna independente. Na atribuição por referência (quando atribuímos objetos, por exemplo), no entanto, a variável recebe o endereço de memória, resultando em alterações síncronas (onde todas as variáveis mudam o valor ao alterar apenas uma delas).
 
 * **Bibliotecas vs Frameworks:** a diferença entre esses dois conceitos pode ser confusa em um certo nível de conhecimento. Por isso, na aula "Frameworks Web", do módulo de Node.js, foi abordado exatamente este tema. As bibliotecas são como ferramentas utilizadas para diferentes propósitos, normalmente quando e como quiser. Os frameworks, por sua vez, ditam as regras da estrutura do negócio, pré-modelando o sistema a que se aplica (seja no backend, seja no frontend).
+
+* **Client-Side vs Server-Side:** esses dois conceitos fazem parte da arquitetura web e foram explicados durante a aula "Client Side vs Server Side", do módulo "Conceitos sobre Web". Client-Side se refere ao processamento executado diretamente no dispositivo do usuário, enquanto o Server-Side refere-se à lógica processada em servidores remotos, enviando ao cliente apenas o resultado final pronto para ser visualizado.
 
 ---
 
