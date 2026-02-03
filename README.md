@@ -70,6 +70,8 @@ Este tópico agrega as principais anotações de engenharia e as ideias mais dis
 
 * **Bibliotecas vs Frameworks:** a diferença entre esses dois conceitos pode ser confusa em um certo nível de conhecimento. Por isso, na aula "Frameworks Web", do módulo de Node.js, foi abordado exatamente este tema. As bibliotecas são como ferramentas utilizadas para diferentes propósitos, normalmente quando e como quiser. Os frameworks, por sua vez, ditam as regras da estrutura do negócio, pré-modelando o sistema a que se aplica (seja no backend, seja no frontend).
 
+* **Client-Side vs Server-Side:** esses dois conceitos fazem parte da arquitetura web e foram explicados durante a aula "Client Side vs Server Side", do módulo "Conceitos sobre Web". Client-Side se refere ao processamento executado diretamente no dispositivo do usuário, enquanto o Server-Side refere-se à lógica processada em servidores remotos, enviando ao cliente apenas o resultado final pronto para ser visualizado.
+
 ---
 
 ## 🚀 Como Executar Localmente
