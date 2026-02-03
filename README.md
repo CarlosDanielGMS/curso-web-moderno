@@ -39,8 +39,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Lista de Exercícios de JavaScript** | ✅ Concluído | Funções, objetos e vetores |
 | **Node** | ✅ Concluído | Módulos, package, instâncias, dependências, leitura e escrita de arquivos, frameworks, padrões e tarefas |
 | **ESNext** | ✅ Concluído | Operador Rest/Spread, Tagged Template, Map, Set, For Of, Promises, Callbacks e Async/Await |
-| **Conceitos sobre Web** | 🔄 Em Progresso | Protocolos HTTP/HTTPS, Servidor Web, Client Side vs Server Side, Conteúdo Estático vs Conteúdo Dinânimo, DNS etc |
-| **HTML** | ⏳ Pendente | TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens, vídeos etc |
+| **Conceitos sobre Web** | ✅ Concluído | Protocolos HTTP/HTTPS, Servidor Web, Client Side vs Server Side, Conteúdo Estático vs Conteúdo Dinânimo, DNS etc |
+| **HTML** | 🔄 Em Progresso | TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens, vídeos etc |
+| **CSS** | ⏳ Pendente | Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, mídias etc |
 | **---** | --- | --- |
 
 ---
