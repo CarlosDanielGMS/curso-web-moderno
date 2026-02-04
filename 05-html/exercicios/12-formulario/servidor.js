@@ -15,7 +15,19 @@ aplicacao.post
     (requisicao, resposta, proximo) =>
     {
         console.log(requisicao.body);
-        resposta.send('<h1>PARABÉNS!!!</h1>');
+        resposta.send('<h1>PARABÉNS!!! Usuário salvo com sucesso.</h1>');
+    }
+);
+
+// Cria uma rota para registrar o usuário passado como parâmetro
+aplicacao.post
+(
+    '/usuarios/:id',
+    (requisicao, resposta, proximo) =>
+    {
+        console.log(requisicao.params.id);
+        console.log(requisicao.body);
+        resposta.send('<h1>PARABÉNS!!! Usuário alterado com sucesso.</h1>');
     }
 );
 
