@@ -1,10 +1,10 @@
 <!-- Lista Aninhada -->
 <ul class="tree">
     <li>
-        backend
+        <span diretorio>backend</span>
         <ul>
             <li>
-                app
+                <span diretorio>app</span>
                 <ul>
                     <li>produto.js</li>
                     <li>usuario.js</li>
@@ -12,7 +12,7 @@
                 </ul>
             </li>
             <li>
-                config
+                <span diretorio>config</span>
                 <ul>
                     <li>banco.js</li>
                     <li>rota.js</li>
@@ -22,10 +22,10 @@
         </ul>
     </li>
     <li>
-        frontend
+        <span diretorio>frontend</span>
         <ul>
             <li>
-                public
+                <span diretorio>public</span>
                 <ul>
                     <li>app.css</li>
                     <li>app.js</li>
@@ -39,5 +39,17 @@
 <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
 
 <script>
-    // ...
+    document.querySelectorAll('[diretorio]').forEach
+    (
+        pasta =>
+        {
+            pasta.onclick = function (evento)
+            {
+                const lista = pasta.nextElementSibling;
+                const exibicao = lista.style.display;
+
+                lista.style.display = exibicao === 'none' ? 'block' : 'none';
+            };
+        }
+    );
 </script>
