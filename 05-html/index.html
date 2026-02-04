@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>Exercícios de HTML</h1>
+    </header>
+    <nav>
+        <a href incorporar="exercicios/04-teste.html">04 - Teste</a> |
+        <a href incorporar="exercicios/04-temporario.html">04 - Temporário</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        <br>
+        Curso de Web Moderno
+    </footer>
+    <script>
+        document.querySelectorAll('[incorporar]').forEach // Percorre todos os links de incorporação da página
+        (
+            link => // Passa uma função como parâmetro
+            {
+                link.onclick = function (evento) // Atribui uma função ao evento de clique no link
+                {
+                    event.preventDefault(); // Previne o comportamento padrão do evento (ir para a página do link)
+                    
+                    const conteudo = document.getElementById('conteudo'); // Obtém o elemento com a identificação 'conteudo'
+                    fetch(link.getAttribute('incorporar')).then(resposta => resposta.text()) // Obtém o HTML do link
+                                                          .then(html => conteudo.innerHTML = html); // Adiciona o HTML do link à página
+                };
+            }
+        );
+    </script>
+</body>
+
+</html>
