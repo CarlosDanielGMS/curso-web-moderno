@@ -64,3 +64,23 @@
         background-size: 200%;
     }
 </style>
+
+<script>
+    function mover (elemento, posicaoInicial, posicaoFinal, incremento, funcao)
+    {
+        const novaPosicaoInicial = posicaoInicial - incremento;
+        if (novaPosicaoInicial >= posicaoFinal)
+        {
+            elemento.style.left = novaPosicaoInicial + 'px';
+            setTimeout(() => mover(elemento, novaPosicaoInicial, posicaoFinal, incremento, funcao), 7);
+        }
+        else
+        {
+            funcao();
+        }
+    }
+
+    const paragrafoImagem = document.querySelector('[slider] > p');
+    paragrafoImagem.style.display = 'block';
+    mover(paragrafoImagem, 1500, -513, 1, () => { console.log('Terminou!'); });
+</script>
