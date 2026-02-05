@@ -66,6 +66,12 @@
 </style>
 
 <script>
+    function getProximoElemento (vetor, elementoAtual)
+    {
+        const indiceProximoElemento = vetor.indexOf(elementoAtual) + 1;
+        return indiceProximoElemento < vetor.length ? vetor[indiceProximoElemento] : vetor[0];
+    };
+
     function mover (elemento, posicaoInicial, posicaoFinal, incremento, funcao)
     {
         const novaPosicaoInicial = posicaoInicial - incremento;
@@ -77,10 +83,40 @@
         else
         {
             funcao();
-        }
+        };
+    };
+
+    function exibir (elementos, elemento)
+    {
+        elemento.style.display = 'block';
+
+        const posicaoInicial = innerWidth;
+        const posicaoFinal = -elemento.clientWidth;
+        const incremento = 5;
+
+        elemento.style.left = `${posicaoInicial}px`;
+
+        mover
+        (
+            elemento,
+            posicaoInicial,
+            posicaoFinal,
+            incremento,
+            () =>
+            {
+                elemento.style.display = 'none';
+                exibir(elementos, getProximoElemento(elementos, elemento));
+            }
+        );
+    };
+
+    function ativarSlide ()
+    {
+        const elementos = document.querySelectorAll('[slider] > p');
+        const slides = Array.from(elementos);
+
+        exibir(slides, slides[0]);
     }
 
-    const paragrafoImagem = document.querySelector('[slider] > p');
-    paragrafoImagem.style.display = 'block';
-    mover(paragrafoImagem, 1500, -513, 1, () => { console.log('Terminou!'); });
+    ativarSlide();
 </script>
