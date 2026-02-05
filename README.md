@@ -75,6 +75,8 @@ Este tópico agrega as principais anotações de engenharia e as ideias mais dis
 
 * **Client-Side vs Server-Side:** esses dois conceitos fazem parte da arquitetura web e foram explicados durante a aula "Client Side vs Server Side", do módulo "Conceitos sobre Web". Client-Side se refere ao processamento executado diretamente no dispositivo do usuário, enquanto o Server-Side refere-se à lógica processada em servidores remotos, enviando ao cliente apenas o resultado final pronto para ser visualizado.
 
+* **Combinações de Seletores CSS:** a aula "Seletores CSS #01", do módulo CSS, explicou a diferença entre as combinações de seletores na linguagem. Existem quatro comportamentos fundamentais que vou explicar utilizando as tags ```div``` e ```p```: a **Descendência** (```div p```) aplica o estilo a todos os parágrafos dentro da divisão, independentemente do nível de aninhamento; a **Filiação Direta** (```div > p```) aplica o estilo apenas aos parágrafos que são filhos diretos da divisão; a **Vizinhança Adjacente** (```div + p```) aplica o estilo somente ao primeiro parágrafo que aparece logo após a divisão; e a **Vizinhança Geral** (```div ~ p```) aplica o estilo a todos os parágrafos depois da divisão que compartilham o mesmo nível de hierarquia.
+
 ---
 
 ## 🚀 Como Executar Localmente
