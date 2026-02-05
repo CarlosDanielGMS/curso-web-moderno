@@ -1,0 +1,49 @@
+<h1>Tags Não Visual</h1>
+
+<!--
+    Tags semânticas...
+
+    'section' -> Agrumpamento temático de conteúdo
+    'article' -> Conteúdo auto-contido
+    'header' -> Cabeçalho do documento
+    'footer' -> Rodapé do documento
+    'nav' -> Agrupamento dos links de navegação
+    'aside' -> Alinhamento lateral com o conteúdo em volta
+    'details' -> Exibição de detalhes que podem ser exibidos ou escondidos
+
+    As famosas...
+
+    'div' -> Divisão ou seção
+    'span' -> Agrupamento de elementos em uma mesma linha
+-->
+
+<!-- Divisão -->
+<div>Área 1</div>
+<div>Área 2</div>
+
+<p>
+    <!-- Span -->
+    Este é um texto com <span class="diferente">muitas palavras</span> e um ponto final.
+</p>
+
+<style>
+    /* Exibe as divisões em uma única linha */
+    div
+    {
+        display: inline;
+    }
+    
+    /* Exibe os spans como blocos */
+    span
+    {
+        display: block;
+    }
+    
+    /* Altera o estilo da classe diferente para fonte negrito, tamanho de 30 pixels e cor chocolate */
+    .diferente
+    {
+        font-weight: bold;
+        font-size: 30px;
+        color: chocolate;
+    }
+</style>
