@@ -18,6 +18,7 @@ Para facilitar a navegação, o código está organizado por tema:
 * **`/02-javascript`**: Condicionais, laços de repetição, controles de fluxo, funções, objetos e vetores.
 * **`/03-node`**: Módulos, package, instâncias, dependências, leitura e escrita de arquivos, frameworks, padrões e tarefas.
 * **`/04-esnext`**: Operador Rest/Spread, Tagged Template, Map, Set, For Of, Promises, Callbacks e Async/Await.
+* **`/05-html`**: TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens e vídeos.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
@@ -40,8 +41,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Node** | ✅ Concluído | Módulos, package, instâncias, dependências, leitura e escrita de arquivos, frameworks, padrões e tarefas |
 | **ESNext** | ✅ Concluído | Operador Rest/Spread, Tagged Template, Map, Set, For Of, Promises, Callbacks e Async/Await |
 | **Conceitos sobre Web** | ✅ Concluído | Protocolos HTTP/HTTPS, Servidor Web, Client Side vs Server Side, Conteúdo Estático vs Conteúdo Dinânimo, DNS etc |
-| **HTML** | 🔄 Em Progresso | TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens, vídeos etc |
-| **CSS** | ⏳ Pendente | Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, mídias etc |
+| **HTML** | ✅ Concluído | TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens, vídeos etc |
+| **CSS** | 🔄 Em Progresso | Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, mídias etc |
+| **Integrando HTML, CSS e JavaScript** | ⏳ Pendente | DOM, selecionando elementos, acessando atributos e classes, modificando HTML, trabalhando com eventos etc |
 | **---** | --- | --- |
 
 ---
