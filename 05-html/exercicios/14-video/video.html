@@ -1,0 +1,34 @@
+<!-- Vídeo -->
+<video id="video" width="800" height="450" controls autoplay controlsList="nodownload">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4">
+    Seu navegador não suporta a exibição de vídeos.
+</video>
+
+<div progresso="video" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button reproducao="video">Reproduzir</button>
+    <button pausa="video">Pausar</button>
+</div>
+
+<style>
+    .progresso
+    {
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+
+    .progresso > div
+    {
+        background-color: red;
+        color: white;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    }
+</style>
