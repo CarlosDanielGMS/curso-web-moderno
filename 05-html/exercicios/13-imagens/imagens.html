@@ -1,0 +1,122 @@
+<!-- Imagem -->
+<div slider>
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro da Cidade" width="513" title="Muro da Cidade por Tarso Bessa">
+    </p>
+
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="Introdução Cod3r" width="513" height="342">
+    </p>
+
+    <p class="circular">
+        <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Rio de Janeiro" width="513" height="342">
+    </p>
+
+    <p class="texto">
+        <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="Avatar" height="50" align="left">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <p class="cidade"></p>
+
+    <p>
+        <picture>
+            <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png" media="(min-width: 600px)">
+            <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">
+        </picture>
+    </p>
+</div>
+
+<!-- Estilo -->
+<style>
+    p
+    {
+        position: absolute;
+        display: none;
+    }
+    
+    .circular
+    {
+        background-color: #444;
+    }
+
+    .texto
+    {
+        width: 513px;
+    }
+
+    .texto img
+    {
+        margin-right: 10px;
+    }
+
+    .cidade
+    {
+        width: 513px;
+        height: 342px;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+</style>
+
+<script>
+    function getProximoElemento (vetor, elementoAtual)
+    {
+        const indiceProximoElemento = vetor.indexOf(elementoAtual) + 1;
+        return indiceProximoElemento < vetor.length ? vetor[indiceProximoElemento] : vetor[0];
+    };
+
+    function mover (elemento, posicaoInicial, posicaoFinal, incremento, funcao)
+    {
+        const novaPosicaoInicial = posicaoInicial - incremento;
+        if (novaPosicaoInicial >= posicaoFinal)
+        {
+            elemento.style.left = novaPosicaoInicial + 'px';
+            setTimeout(() => mover(elemento, novaPosicaoInicial, posicaoFinal, incremento, funcao), 7);
+        }
+        else
+        {
+            funcao();
+        };
+    };
+
+    function exibir (elementos, elemento)
+    {
+        elemento.style.display = 'block';
+
+        const posicaoInicial = innerWidth;
+        const posicaoFinal = -elemento.clientWidth;
+        const incremento = 5;
+
+        elemento.style.left = `${posicaoInicial}px`;
+
+        mover
+        (
+            elemento,
+            posicaoInicial,
+            posicaoFinal,
+            incremento,
+            () =>
+            {
+                elemento.style.display = 'none';
+                exibir(elementos, getProximoElemento(elementos, elemento));
+            }
+        );
+    };
+
+    function ativarSlide ()
+    {
+        const elementos = document.querySelectorAll('[slider] > p');
+        const slides = Array.from(elementos);
+
+        exibir(slides, slides[0]);
+    }
+
+    ativarSlide();
+</script>

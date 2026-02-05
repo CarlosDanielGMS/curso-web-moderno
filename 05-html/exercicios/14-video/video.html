@@ -1,0 +1,54 @@
+<!-- Vídeo -->
+<video id="video" width="800" height="450" controls autoplay controlsList="nodownload">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4">
+    Seu navegador não suporta a exibição de vídeos.
+</video>
+
+<div progresso="video" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button reproducao="video" onclick="reproduzirVideo()">Reproduzir</button>
+    <button pausa="video" onclick="pausarVideo()">Pausar</button>
+</div>
+
+<style>
+    .progresso
+    {
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+
+    .progresso > div
+    {
+        background-color: red;
+        color: white;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    }
+</style>
+
+<script>
+    const video = document.getElementById('video');
+    const elementos = document.querySelectorAll('[progresso] > div');
+    const divisores = Array.from(elementos);
+    const barraProgresso = divisores[0];
+
+    video.addEventListener
+    (
+        'timeupdate',
+        () =>
+        {
+            const porcentagemVideo = (video.currentTime / video.duration) * 100;
+            barraProgresso.style.width = `${porcentagemVideo}%`;
+        }
+    );
+    
+    const reproduzirVideo = () => { if (video.paused) video.play() };
+    const pausarVideo = () => { if (!video.paused) video.pause() };
+</script>

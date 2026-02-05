@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de HTML</title>
+    <style>
+        #conteudo /* Altera o estilo de uma identificação */
+        {
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Exercícios de HTML</h1>
+    </header>
+    <nav>
+        <a href incorporar="exercicios/04-teste/teste.html">04 - Teste</a> |
+        <a href incorporar="exercicios/05-texto_puro/texto_puro.html">05 - Texto puro</a> |
+        <a href incorporar="exercicios/06-primeiro_texto/primeiro_texto.html">06 - Primeiro texto</a> |
+        <a href incorporar="exercicios/07-segundo_texto/segundo_texto.html">07 - Segundo texto</a> |
+        <a href incorporar="exercicios/08-listas/listas.html">08 - Listas</a> |
+        <a href incorporar="exercicios/09-lista_aninhada/lista_aninhada.html">09 - Lista aninhada</a> |
+        <a href incorporar="exercicios/10-links/links.html">10 - Links</a> |
+        <a href incorporar="exercicios/11-tabela/tabela.html">11 - Tabela</a> |
+        <a href incorporar="exercicios/12-formulario/formulario.html">12 - Formulário</a> |
+        <a href incorporar="exercicios/13-imagens/imagens.html">13 - Imagens</a> |
+        <a href incorporar="exercicios/14-video/video.html">14 - Video</a> |
+        <a href incorporar="exercicios/15-tags/tags.html">15 - Tags</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        Curso de Web Moderno
+    </footer>
+    <script>
+        document.querySelectorAll('[incorporar]').forEach // Percorre todos os links de incorporação da página
+        (
+            link => // Passa uma função como parâmetro
+            {
+                link.onclick = function (evento) // Atribui uma função ao evento de clique no link
+                {
+                    event.preventDefault(); // Previne o comportamento padrão do evento (ir para a página do link)
+                    
+                    const conteudo = document.getElementById('conteudo'); // Obtém o elemento com a identificação 'conteudo'
+                    fetch(link.getAttribute('incorporar')).then(resposta => resposta.text()) // Obtém o HTML do link
+                                                          .then(html => conteudo.innerHTML = html); // Adiciona o HTML do link à página
+                };
+            }
+        );
+    </script>
+</body>
+
+</html>
