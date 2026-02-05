@@ -9,8 +9,8 @@
 </div>
 
 <div>
-    <button reproducao="video">Reproduzir</button>
-    <button pausa="video">Pausar</button>
+    <button reproducao="video" onclick="reproduzirVideo()">Reproduzir</button>
+    <button pausa="video" onclick="pausarVideo()">Pausar</button>
 </div>
 
 <style>
@@ -32,3 +32,23 @@
         width: 0%;
     }
 </style>
+
+<script>
+    const video = document.getElementById('video');
+    const elementos = document.querySelectorAll('[progresso] > div');
+    const divisores = Array.from(elementos);
+    const barraProgresso = divisores[0];
+
+    video.addEventListener
+    (
+        'timeupdate',
+        () =>
+        {
+            const porcentagemVideo = (video.currentTime / video.duration) * 100;
+            barraProgresso.style.width = `${porcentagemVideo}%`;
+        }
+    );
+    
+    const reproduzirVideo = () => { if (video.paused) video.play() };
+    const pausarVideo = () => { if (!video.paused) video.pause() };
+</script>
