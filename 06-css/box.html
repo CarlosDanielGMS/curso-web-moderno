@@ -5,7 +5,30 @@
     <meta charset="UTF-8">
     <title>Box Model</title>
     <style>
-        /* ... */
+        body { font-size: 80px; margin: 0; }
+
+        .c1 { background-color: orange; }
+        .c2 { background-color: skyblue; }
+        .c3 { background-color: tomato; }
+
+        div
+        {
+            /* Perde o conceito de bloco */
+            float: left;
+            /* Define o preenchimento superior */
+            padding-top: 100px;
+            /* Define todos os preenchimentos, sobrescrevendo o preenchimento anterior */
+            padding: 10px 50px 100px 150px; /* Propriedade conhecida como 'shortcut' */
+            /* Define os preenchimentos verticais e horizontais, sobrescrevendo o preenchimento anterior */
+            padding: 100px 50px;
+            /* Define o preenchimento completo, sobrescrevendo o preenchimento anterior */
+            padding: 50px;
+            /* Define as margens verticais e laterais */
+            margin: 0px 20px;
+            /* Define as bordas */
+            border: solid 15px black;
+            /* O tamanho do elemento inclui o conteúdo, o preenchimento e a borda */
+        }
     </style>
 </head>
 
