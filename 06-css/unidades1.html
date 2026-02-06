@@ -5,7 +5,31 @@
     <meta charset="UTF-8">
     <title>Unidades #01</title>
     <style>
-        /* ... */
+        .unidades-absolutas
+        {
+            position: absolute;
+            border: solid 5px #222;
+            font-size: 40px;
+            padding: 20px;
+            top: 150px;
+            left: 200px;
+            margin: 30px;
+            width: 4cm;
+            height: 20mm;
+        }
+
+        .unidades-relativas
+        {
+            position: absolute;
+            border: solid 1vw #222; /* 1% da largura do viewport */
+            font-size: 4em; /* 4x o tamanho definido no elemento-pai */
+            padding: 5%;
+            margin: .8%;
+            width: 20vw; /* 20% da largura do viewport */
+            height: 15vh; /* 15% da altura do viewport */
+            bottom: 5%;
+            right: 5%;
+        }
     </style>
 </head>
 
