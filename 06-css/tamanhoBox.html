@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <title>Tamanho Box</title>
     <style>
+        /* Aplica a propriedade box-sizing para todos os elementos da página */
+        *
+        {
+            /* Considera apenas o conteúdo para o tamanho da caixa */
+            box-sizing: content-box;
+
+            /* Considera o conteúdo, o preenchimento e a borda para o tamanho da caixa, sobrepondo a definição anterior */
+            box-sizing: border-box;
+        }
         body {
             font-size: 45px;
+            margin: 0;
+        }
+
+        div
+        {
+            background-color: deepskyblue;
+            width: 100%;
+            height: 300px;
+            padding: 100px;
+            border: solid 20px;
         }
     </style>
 </head>
