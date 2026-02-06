@@ -11,18 +11,38 @@
 
         .c1 {
             background-color: red;
+            /* Move para a direita e libera o espaço à esquerda */
+            float: right;
         }
 
         .c2 {
             background-color: green;
+            /* Se houverem itens flutuando à direita, pula pra linha de baixo */
+            clear: right;
+            /* Move para a esquerda e libera o espaço à direita */
+            float: left;
         }
         
         .c3 {
             background-color: blue;
+            /* Se houverem itens flutuando à esquerda, pula pra linha de baixo */
+            clear: left;
+            /* Move para a direita e libera o espaço à esquerda */
+            float: right;
         }
 
         .c4 {
             background-color: orange;
+            /* Se houverem itens flutuando (independentemente da direção), pula pra linha de baixo */
+            clear: both;
+            /* Move para a esquerda e libera o espaço à direita */
+            float: left;
+        }
+
+        div
+        {
+            width: 50px;
+            height: 50px;
         }
     </style>
 </head>
