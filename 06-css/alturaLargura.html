@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <title>Altura e Largura</title>
     <style>
+        /* O percentual de altura/largura é relativo e age sobre o elemento-pai */
+        html { height: 100%; } /* Obriga o elemento HTML a ocupar 100% da altura de seu elemento-pai (view) */
+
         body {
             font-size: 40px;
             background-color: coral;
+            height: 100%; /* Obriga o elemento body a ocupar 100% da altura de seu elemento-pai (HTML) */
+            margin: 0;
         }
 
         div {
@@ -16,6 +21,14 @@
 
         span {
             background-color: dodgerblue;
+        }
+
+        span, div
+        {
+            width: 50%; /* Obriga os elementos span e div a ocuparem 50% da largura de seu elemento-pai (body) */
+            height: 250px; /* Define a altura dos elementos span e div como 250px, independentemente da altura de seu elemento-pai (body) */
+            height: 50%; /* Obriga os elementos span e div a ocuparem 50% da altura de seu elemento-pai (body) */
+            display: block; /* Considera as dimensões para o span */
         }
     </style>
 </head>
