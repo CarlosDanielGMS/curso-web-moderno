@@ -6,16 +6,38 @@
     <title>Flexbox #03</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        .flex-container
+        {
+            width: 600px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container div
+        {
+            box-sizing: border-box;
+            
+            /* Define o tamanho do elemento no sentido do eixo padrão */
+            flex-basis: 100px;
+
+            /* Define o tamanho do elemento (flex-basis possui preferência) */
+            width: 200px;
+        }
+
+        .flex-container div:nth-child(4)
+        {
+            /* Define grow, shrink e basis */
+            flex: 3 6 100px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="flex-container tag nolabel">
-        <div class="tag nolabel">1</div>
-        <div class="tag nolabel">2</div>
-        <div class="tag nolabel">3</div>
-        <div class="tag nolabel">4</div>
+    <div class="flex-container tag semrotulo">
+        <div class="tag semrotulo">1</div>
+        <div class="tag semrotulo">2</div>
+        <div class="tag semrotulo">3</div>
+        <div class="tag semrotulo">4</div>
     </div>
     <script src="js/tag.js"></script>
 </body>
