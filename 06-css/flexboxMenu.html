@@ -51,9 +51,40 @@
             background: #f50a31;
             color: #fff;
         }
+
         /* ==================== */
         /* Solução com Flex Box */
         /* ==================== */
+        
+        .cabecalho
+        {
+            /* Define o uso do Flex Box */
+            display: flex;
+            
+            /* Alinha os elementos do Flex Box com base no centro do Flex Item */
+            align-items: center;
+
+            /* Distribui os elementos do Flex Box apenas entre os próprios elementos */
+            justify-content: space-between;
+        }
+
+        .menu
+        {
+            /* Preenche o espaço vazio distribuindo o mesmo espaço/peso para todos os itens */
+            flex-grow: 1;
+        }
+
+        .menu ul
+        {
+            /* Define o uso do Flex Box */
+            display: flex;
+        }
+
+        .menu li
+        {
+            /* Define a margem entre os itens da lista */
+            margin: 0px 10px;
+        }
     </style>
 </head>
 
