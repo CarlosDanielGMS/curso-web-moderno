@@ -22,7 +22,59 @@
         <p>Fim</p>
     </div>
     <script>
-        // ...
+        // Exibe uma informação no console
+        function exibir ()
+        {
+            console.log(this);
+        };
+
+        // Adiciona a função 'exibir' aos protótipos HTML
+        HTMLCollection.prototype.exibir = exibir;
+        HTMLElement.prototype.exibir = exibir;
+        NodeList.prototype.exibir = exibir;
+        Node.prototype.exibir = exibir;
+        
+        // Seleciona todos os elementos do tipo 'ul' presentes nos elementos do tipo 'div'
+        const lista = document.querySelector('div ul');
+
+        // Exibe o elemento-pai da lista no console
+        lista.parentNode.exibir();
+
+        // Exibe todos os elementos-filho da lista no console
+        lista.childNodes.exibir();
+
+        // Seleciona o primeiro elemento-filho da lista
+        const primeiroElementoFilho = lista.firstChild;
+
+        // Exibe o primeiro elemento-filho da lista no console
+        primeiroElementoFilho.exibir();
+
+        // Exibe o próximo elemento-filho da lista no console
+        primeiroElementoFilho.nextSibling.exibir();
+
+        // Seleciona o último elemento-filho da lista
+        const ultimoElementoFilho = lista.lastChild;
+
+        // Exibe o último elemento-filho da lista no console
+        ultimoElementoFilho.exibir();
+
+        // Exibe o elemento-filho anterior ao último da lista no console
+        ultimoElementoFilho.previousSibling.exibir();
+
+        // Exibe todos os elementos-filho da lista no console
+        lista.children.exibir();
+
+        // Exibe o primeiro elemento-filho da lista no console
+        lista.firstElementChild.exibir();
+
+        // Exibe o último elemento-filho da lista no console
+        lista.lastElementChild.exibir();
+
+        // Exibe o elemento anterior ao elemento-pai da lista no console
+        lista.parentNode.previousElementSibling.exibir();
+
+        // Exibe o elemento posterior ao elemento-pai da lista no console
+        lista.parentNode.nextElementSibling.exibir();
     </script>
 </body>
 
