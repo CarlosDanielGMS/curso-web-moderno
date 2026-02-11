@@ -31,7 +31,29 @@
         <button>Pesquisar</button>
     </form>
     <script>
-        // ...
+        // Seleciona uma coleção HTML com todos os formulários da página
+        console.log(document.forms);
+        
+        // Seleciona todos os elementos do primeiro formulário da página
+        console.log(document.forms[0]);
+        
+        // Seleciona uma lista do Node com todos os elementos da página com o nome 'pesquisa'
+        console.log(document.getElementsByName('pesquisa'));
+        
+        // Seleciona todos os elementos dos formulários da página com o nome 'pesquisa'
+        console.log(document.pesquisa);
+        
+        // Seleciona todos os elementos de nome 'q' dos formulários da página com o nome 'pesquisa'
+        console.log(document.pesquisa.q);
+        
+        // Altera o valor padrão escrito no elemento de nome 'q' presente no elemento de nome 'pesquisa' da página
+        document.pesquisa.q.value = 'Daniel é um gato!';
+        
+        // Altera o valor padrão selecionado no elemento de nome 'hl' presente no elemento de nome 'pesquisa' da página
+        document.pesquisa.hl.value = 'en-us';
+
+        // Exibe o índice do item selecionado no elemento de nome 'hl' presente no elemento de nome 'pesquisa' da página
+        console.log(document.pesquisa.hl.selectedIndex);
     </script>
 </body>
 
