@@ -6,7 +6,74 @@
     <title>CSS Grid #03</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        *
+        {
+            padding: 0;
+            margin: 0;
+        }
+
+        header
+        {
+            grid-area: cabecalho;
+        }
+
+        nav
+        {
+            grid-area: navegacao;
+        }
+
+        main
+        {
+            grid-area: conteudo;
+        }
+
+        footer
+        {
+            grid-area: rodape;
+        }
+
+        body
+        {
+            /* Habilita o CSS Grid */
+            display: grid;
+
+            /* Define o tamanho mínimo do corpo */
+            min-height: 100vh;
+
+            /* Define o template das colunas */
+            grid-template-columns: 359px 1fr;
+
+            /* Define o template das linhas */
+            grid-template-rows: 100px 1fr 100px;
+
+            /* Define o template da área */
+            grid-template-areas:
+                'cabecalho cabecalho'
+                'navegacao conteudo'
+                'rodape rodape';
+        }
+        
+        /* Exibe a grade de forma diferente com base na largura da página */
+        @media(max-width: 700px)
+        {
+            body
+            {
+                /* Define o template das colunas */
+                grid-template-columns: 1fr;
+
+                /* Define o template das linhas */
+                grid-template-rows: 80px 1fr 100px;
+
+                /* Define o template da área */
+                grid-template-areas: 'navegacao' 'conteudo' 'rodape';
+            }
+
+            header
+            {
+                /* Oculta o cabeçalho */
+                display: none;
+            }
+        }
     </style>
 </head>
 
