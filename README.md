@@ -19,6 +19,7 @@ Para facilitar a navegação, o código está organizado por tema:
 * **`/03-node`**: Módulos, package, instâncias, dependências, leitura e escrita de arquivos, frameworks, padrões e tarefas.
 * **`/04-esnext`**: Operador Rest/Spread, Tagged Template, Map, Set, For Of, Promises, Callbacks e Async/Await.
 * **`/05-html`**: TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens e vídeos.
+* **`/06-css`**: Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, media query, flex box e css grid.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
