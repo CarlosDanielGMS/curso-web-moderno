@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #02</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        .flex-container
+        {
+            width: 300px;
+            height: 300px;
+            display: flex;
+
+            /* Diminui o tamanho de todos os itens igualmente */
+            flex-shrink: 1;
+        }
+
+        .flex-container div
+        {
+            width: 100px;
+            box-sizing: border-box;
+
+            /* Não preenche o espaço vazio */
+            flex-grow: 0;
+
+            /* Preenche o espaço vazio distribuindo o mesmo espaço/peso para todos os itens */
+            flex-grow: 1;
+        }
+
+        .flex-container div:nth-child(1)
+        {
+            /* Dá um espaço/peso maior no preenchimento para o item */
+            flex-grow: 2;
+
+            /* Dá um espaço/peso menor no encholimento para o item */
+            flex-shrink: 5;
+        }
+
+        .flex-container div:nth-child(3)
+        {
+            background-color: indianred;
+
+            /* Por padrão, todos os Flex Items possuem ordem 0 */
+
+            /* Itens com ordens maiores são exibidos por último */
+            order: 1;
+
+            /* Itens com ordens neutras (0) são exibidos de acordo com a ordem original definida no HTML */
+            order: 0;
+
+            /* Itens com ordens negativas são exibidos primeiro */
+            order: -1;
+
+            /* Alinha o item no início do Flex-Box */
+            align-self: flex-start;
+
+            /* Alinha o item no meio do Flex-Box */
+            align-self: center;
+
+            /* Alinha o item no fim do Flex-Box */
+            align-self: flex-end;
+
+            /* Alinha o item no alinhamento padrão do Flex-Box */
+            align-self: stretch;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag semrotulo">
+        <div class="tag semrotulo">1</div>
+        <div class="tag semrotulo">2</div>
+        <div class="tag semrotulo">3</div>
+        <div class="tag semrotulo">4</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

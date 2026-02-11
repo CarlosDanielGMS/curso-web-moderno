@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Texto</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style>
+        /* ... */
+        * {
+            margin: 0;
+        }
+
+        html
+        {
+            font-size: 28px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div
+        {
+            font-size: 50px;
+        }
+
+        p
+        {
+            /* Valores padrões */
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 16px;
+            font-size: 12pt;
+
+            /* Unidades absolutas */
+            font-size: 100px; /* O tamanho do pixel é relativo, varia de acordo com a densidade de pixels da tela */
+            font-size: 72pt; /* Pontos */
+            font-size: 1in; /* Polegadas */
+
+            /* Unidades relativas */
+            font-size: 2.2em; /* Multiplica pelo tamanho da fonte mais próxima */
+            font-size: 2.2rem; /* Multiplica pelo tamanho da fonte mais distante */
+            font-size: 10vh; /* Considera 10% da altura do viewport */
+            font-size: 10vw; /* Considera 50% da largura do viewport */
+
+            /* Famílias de fontes */
+            font-family: monospace; /* Espaçamento igual entre caracteres */
+            font-family: serif; /* Apresenta traços ou "pés" nas extremidades das letras */
+            font-family: sans-serif; /* Não apresenta traços ou "pés" nas extremidades das letras */
+            font-family: cursive; /* Apresenta traços próximos da escrita cursiva (à mão) */
+
+            /* Estilos personalizados */
+            font-weight: bold; /* Peso das palavras */
+            font-style: italic; /* Estilo das palavras */
+            text-transform: uppercase; /* Maiúsculas e minúsculas */
+            text-decoration: overline line-through underline; /* Traços no texto */
+            word-spacing: 10px; /* Espaçamento entre as palavras */
+            letter-spacing: 20px; /* Espaçamento entre as letras */
+            line-height: 2.5em; /* Espaçamento entre as linhas */
+            text-align: center; /* Alinhamento das palavras */
+        }
+
+        .botao
+        {
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque
+        {
+            color: white;
+            background-color: tomato;
+            box-shadow: 2px 2px 1px 1px black;
+        }
+
+        .destaque:active
+        {
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            Que texto
+            <br>legal!!!
+        </p>
+    </div>
+    <a href="http://google.com" class="botao destaque">Google</a>
+</body>
+
+</html>

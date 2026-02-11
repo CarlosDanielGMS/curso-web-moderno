@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Overflow</title>
+    <style>
+        div {
+            font-size: 40px;
+            height: 100px;
+            width: 260px;
+            border: solid 3px;
+
+            /* Esconde o conteúdo extrapolado e desabilita o scroll no eixo x */
+            overflow-x: hidden;
+
+            /* Esconde o conteúdo extrapolado e desabilita o scroll no eixo y */
+            overflow-y: hidden;
+
+            /* Esconde o conteúdo extrapolado e desabilita o scroll nos eixos x e y */
+            overflow: hidden;
+
+            /* Esconde o conteúdo extrapolado e habilita o scroll nos eixos x e y */
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        TudoFuncionaMuitoBemEmCSS!!!
+        Texto muito grande para caber nessa div.
+        Já pensou qual será o comportamento padrão?
+    </div>
+</body>
+</html>

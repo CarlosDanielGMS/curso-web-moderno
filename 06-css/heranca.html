@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Herança</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Alguns estilos são herdados por outros elementos por padrão */
+        body
+        {
+            font-family: "Roboto", sans-serif; /* Herdado */
+            font-size: 40px; /* Herdado */
+            border: solid 3px red; /* Não herdado */
+            padding: 50px; /* Não herdado */
+            margin: 10px 100px 150px 200px; /* Não herdado */
+        }
+        
+        /* É possível forçar a herança por meio do termo 'inherit' */
+        div
+        {
+            border: inherit;
+            padding: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Herança</h1>
+    <div>Estou herdando</div>
+</body>
+
+</html>

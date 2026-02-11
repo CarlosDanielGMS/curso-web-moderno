@@ -42,8 +42,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **ESNext** | ✅ Concluído | Operador Rest/Spread, Tagged Template, Map, Set, For Of, Promises, Callbacks e Async/Await |
 | **Conceitos sobre Web** | ✅ Concluído | Protocolos HTTP/HTTPS, Servidor Web, Client Side vs Server Side, Conteúdo Estático vs Conteúdo Dinânimo, DNS etc |
 | **HTML** | ✅ Concluído | TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens, vídeos etc |
-| **CSS** | 🔄 Em Progresso | Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, mídias etc |
-| **Integrando HTML, CSS e JavaScript** | ⏳ Pendente | DOM, selecionando elementos, acessando atributos e classes, modificando HTML, trabalhando com eventos etc |
+| **CSS** | ✅ Concluído | Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, mídias etc |
+| **Integrando HTML, CSS e JavaScript** | 🔄 Em Progresso | DOM, selecionando elementos, acessando atributos e classes, modificando HTML, trabalhando com eventos etc |
+| **Ajax** | ⏳ Pendente | Server, XMLHttpRequest, Fetch API, Axios etc |
 | **---** | --- | --- |
 
 ---
@@ -74,6 +75,8 @@ Este tópico agrega as principais anotações de engenharia e as ideias mais dis
 * **Bibliotecas vs Frameworks:** a diferença entre esses dois conceitos pode ser confusa em um certo nível de conhecimento. Por isso, na aula "Frameworks Web", do módulo de Node.js, foi abordado exatamente este tema. As bibliotecas são como ferramentas utilizadas para diferentes propósitos, normalmente quando e como quiser. Os frameworks, por sua vez, ditam as regras da estrutura do negócio, pré-modelando o sistema a que se aplica (seja no backend, seja no frontend).
 
 * **Client-Side vs Server-Side:** esses dois conceitos fazem parte da arquitetura web e foram explicados durante a aula "Client Side vs Server Side", do módulo "Conceitos sobre Web". Client-Side se refere ao processamento executado diretamente no dispositivo do usuário, enquanto o Server-Side refere-se à lógica processada em servidores remotos, enviando ao cliente apenas o resultado final pronto para ser visualizado.
+
+* **Combinações de Seletores CSS:** a aula "Seletores CSS #01", do módulo CSS, explicou a diferença entre as combinações de seletores na linguagem. Existem quatro comportamentos fundamentais que vou explicar utilizando as tags ```div``` e ```p```: a **Descendência** (```div p```) aplica o estilo a todos os parágrafos dentro da divisão, independentemente do nível de aninhamento; a **Filiação Direta** (```div > p```) aplica o estilo apenas aos parágrafos que são filhos diretos da divisão; a **Vizinhança Adjacente** (```div + p```) aplica o estilo somente ao primeiro parágrafo que aparece logo após a divisão; e a **Vizinhança Geral** (```div ~ p```) aplica o estilo a todos os parágrafos depois da divisão que compartilham o mesmo nível de hierarquia.
 
 ---
 
