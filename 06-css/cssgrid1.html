@@ -22,6 +22,81 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body
+        {
+            /* Define o uso do CSS Grid */
+            display: grid;
+
+            /* Exibe duas colunas, onde cada uma ocupa metade do espaço */
+            grid-template-columns: 50% 50%;
+
+            /* Exibe três colunas, onde cada uma ocupa 8,33% do espaço, e repete o processo 4 vezes (exibindo 12 colunas ao todo) */
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
+
+            /* Exibe uma coluna que ocupa 8,33% do espaço e repete o processo 12 vezes (exibindo 12 colunas ao todo) */
+            grid-template-columns: repeat(12, 8.33%);
+
+            /* Exibe uma coluna que ocupa 100 pixels do espaço, repete o processo 11 vezes e adiciona mais uma coluna de 100 pixels no final (exibindo 12 colunas ao todo) */
+            grid-template-columns: repeat(11, 100px) 100px;
+
+            /* Exibe três colunas, onde a primeira ocupa 200 pixels, a segunda 20% e a terceira o espaço restante */
+            grid-template-columns: 200px 20% 1fr;
+
+            /* Exibe três colunas, onde a primeira ocupa 3 fragmentos, a segunda 6 fragmentos e a terceira 3 fragmentos (totalizando 12 fragmentos de espaço) */
+            grid-template-columns: 3fr 6fr 3fr;
+
+            /* Exibe quatro linhas, onde a primeira ocupa 50%, a segunda 25% e a terceira e a quarta 12,5% do espaço */
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+
+            /* Exibe quatro linhas, onde a primeira ocupa 100 pixels, as duas últimas ocupam o espaço mínimo de exibição para completar a exibição dos elementos e a segunda ocupa o espaço restante */
+            grid-template-rows: 100px 1fr;
+
+            /* Exibe quatro linhas, onde a primeira ocupa 100 pixels e as outras três ocupam o espaço restante */
+            grid-template-rows: 100px auto auto auto;
+        }
+
+        .d8
+        {
+            /* Inicia a exibição do elemento na coluna 2 */
+            grid-column-start: 2;
+
+            /* Finaliza a exibição do elemento na coluna 4 */
+            grid-column-end: 4;
+
+            /* Exibe o elemento em 2 colunas, partindo da atual */
+            grid-column-end: span 2;
+            
+            /* Inicia a exibição do elemento na linha 3 */
+            grid-row-start: 3;
+
+            /* Finaliza a exibição do elemento na linha 5 */
+            grid-row-end: 5;
+
+            /* Exibe o elemento em 2 linhas, partindo da atual */
+            grid-row-end: span 2;
+        }
+
+        .d10, .d11
+        {
+            /* Inicia a exibição do elemento na coluna 1 */
+            grid-column-start: 1;
+
+            /* Finaliza a exibição do elemento na coluna 3 */
+            grid-column-end: 3;
+
+            /* Inicia a exibição do elemento na linha 5 (sobrepôe o elemento) */
+            grid-row-start: 5;
+
+            /* Exibe o elemento em 2 linhas, partindo da atual */
+            grid-row-end: span 1;
+        }
+
+        .d10
+        {
+            /* Dá maior prioridade de exibição ao elemento, sobrepondo o que estiver competindo com ele */
+            z-index: 0;
+        }
     </style>
 </head>
 
