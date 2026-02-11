@@ -43,7 +43,7 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **ESNext** | ✅ Concluído | Operador Rest/Spread, Tagged Template, Map, Set, For Of, Promises, Callbacks e Async/Await |
 | **Conceitos sobre Web** | ✅ Concluído | Protocolos HTTP/HTTPS, Servidor Web, Client Side vs Server Side, Conteúdo Estático vs Conteúdo Dinânimo, DNS etc |
 | **HTML** | ✅ Concluído | TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens, vídeos etc |
-| **CSS** | ✅ Concluído | Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, mídias etc |
+| **CSS** | ✅ Concluído | Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, media query, flex box, css grid etc |
 | **Integrando HTML, CSS e JS** | 🔄 Em Progresso | DOM, selecionando elementos, acessando atributos e classes, modificando HTML, trabalhando com eventos etc |
 | **Ajax** | ⏳ Pendente | Server, XMLHttpRequest, Fetch API, Axios etc |
 | **---** | --- | --- |
