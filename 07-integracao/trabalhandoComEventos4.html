@@ -31,6 +31,57 @@
         <button wm-submit>Pesquisar</button>
     </form>
     <script>
-        // ...
+        /*
+        // Seleciona o primeiro elemento com o atributo 'wm-submit' presente na página
+        const envio = document.querySelector('[wm-submit]');
+        // Declara a função a ser executada ao clicar em pesquisar
+        envio.onclick = evento =>
+        {
+            // Previne a execução padrão do evento (pesquisar)
+            evento.preventDefault();
+            // Captura o botão, que é o "destino" do evento ao clicar
+            const botao = evento.target;
+            // Captura o formulário, que é o elemento-pai do botão
+            const formulario = botao.parentNode;
+            // Captura os dados do formulário
+            const dadosFormulario = new FormData(formulario);
+            // Acrescenta o metadado 'Ajax' aos dados do formulário com o valor 'true'
+            dadosFormulario.append('Ajax', true);
+            // Exibe o valor da chave 'q' no console
+            console.log(dadosFormulario.get('q'));
+            // Exibe no terminal o resultado da verificação se o formulário possui a chave 'hl'
+            console.log(dadosFormulario.has('hl'));
+            // Exibe o par chave-valor de cada dado presente no formulário
+            for (let dado of dadosFormulario)
+            {
+                console.log(dado);
+            }
+        };
+        */
+        
+        // Seleciona o primeiro formulário presente na página
+        const formulario = document.forms[0];
+        // Declara a função a ser executada ao enviar o formulário
+        formulario.onsubmit = evento =>
+        {
+            // Previne a execução padrão do evento (submeter)
+            evento.preventDefault();
+            // Captura o formulário, que é o "destino" do evento ao submeter
+            const formulario = evento.target;
+            // Captura os dados do formulário
+            const dadosFormulario = new FormData(formulario);
+            // Acrescenta o metadado 'Ajax' aos dados do formulário com o valor 'true'
+            dadosFormulario.append('Ajax', true);
+            // Exibe o valor da chave 'q' no console
+            console.log(dadosFormulario.get('q'));
+            // Exibe no terminal o resultado da verificação se o formulário possui a chave 'hl'
+            console.log(dadosFormulario.has('hl'));
+            // Percorre cada dado presente no formulário
+            for (let dado of dadosFormulario)
+            {
+                // Exibe o par chave-valor do dado
+                console.log(dado);
+            }
+        };
     </script>
 </body>
