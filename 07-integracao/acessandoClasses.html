@@ -12,7 +12,35 @@
         Classes
     </div>
     <script>
-        // ...
+        // Seleciona o primeiro elemento do tipo 'div' presente na página
+        const div = document.querySelector('div');
+
+        // Seleciona a lista de classes da div
+        const classesDiv = div.classList;
+
+        // Adiciona a classe 'destaque' à div
+        classesDiv.add('destaque');
+
+        // Remove a classe 'destaque' da div
+        classesDiv.remove('destaque');
+
+        // Alterna a classe 'destaque' na div
+        classesDiv.toggle('destaque');
+
+        // Exibe o resultado da verificação se a div contém a classe 'destaque'
+        console.log(classesDiv.contains('destaque'));
+        
+        // Exibe a quantidade de classes presentes na div
+        console.log(classesDiv.length);
+        
+        // Adiciona a classe 'outra' à div
+        classesDiv.add('outra');
+        
+        // Exibe a quantidade de classes presentes na div
+        console.log(classesDiv.length);
+
+        // Exibe o nome de cada classe presente na div
+        classesDiv.forEach(classe => console.log(classe));
     </script>
 </body>
 
