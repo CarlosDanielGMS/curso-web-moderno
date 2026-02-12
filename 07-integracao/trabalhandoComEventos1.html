@@ -9,9 +9,40 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- Invoca a função 'atrasarPor5s' passando o evento como parâmetro ao clicar no link -->
+        <!-- Má prática, pois exige mais trabalho ao realizar manutenção -->
+        <!-- <a href="https://google.com.br" onclick="atrasarPor5s(event)">Google</a> -->
+
+        <!-- Declara o atributo personalizado 'atrasar-execucao' -->
+        <!-- Boa prática, pois a manutenção fica por conta do script e a informação continua no elemento -->
+        <a href="https://google.com.br" atrasar-execucao>Google</a>
     </div>
     <script>
-        // ...
+        // Atrasa o redirecionamento de página por 5 segundos
+        function atrasarPor5s (evento)
+        {
+            evento.preventDefault(); // Previne o comportamento padrão
+            console.log('Redirecionando em 5 segundos...'); // Exibe uma mensagem informando o acontecimento
+            setTimeout // Declara o temporizador
+            (
+                () => // Declara a função a ser executada após o aguardo
+                {
+                    const link = evento.target; // Captura o destino (link) do evento
+                    window.location.href = link.href; // Substitui o link da página atual pelo link do destino do evento
+                },
+                5000 // Define o tempo a ser aguardado antes de executar a função responsável pelo redirecionamento
+            );
+        };
+        
+        // Seleciona o primeiro elemento do tipo 'a' presente na página
+        // const a = document.querySelector('a');
+        // Adiciona o atributo 'onclick' ao elemento 'a' e atribui o valor da função 'atrasarPor5s' a ele
+        // a.onclick = atrasarPor5s;
+        // Má prática, pois não deixa nenhuma informação no elemento HTML
+
+        // Seleciona o primeiro elemento que contém o atributo personalizado 'atrasar-execucao' na página
+        const a = document.querySelector('[atrasar-execucao]');
+        // Adiciona o atributo 'onclick' ao elemento 'a' e atribui o valor da função 'atrasarPor5s' a ele
+        a.onclick = atrasarPor5s;
     </script>
 </body>
