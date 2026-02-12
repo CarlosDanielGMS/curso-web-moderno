@@ -10,6 +10,29 @@
 <body class="conteudo exercicio">
     <div>Elemento</div>
     <script>
-        // ...
+        // Seleciona o primeiro elemento do tipo 'div' presente na página
+        const divisao = document.querySelector('div');
+
+        // Define o valor da posição da divisão como absoluto
+        divisao.style.position = 'absolute';
+
+        // Executa uma função personalizada ao mover o mouse
+        divisao.onmousemove = evento =>
+        {
+            // Captura o item do evento
+            const item = evento.target;
+
+            // Altera o cursor ao sobrepor o item para o cursor de mover
+            item.style.cursor = 'move';
+
+            // Verifica se o clique está pressionado no evento
+            if (evento.buttons)
+            {
+                // Altera a posição superior do item na página de acordo com a posição Y do cursor
+                item.style.top = `${evento.clientY - (item.clientHeight / 2)}px`;
+                // Altera a posição à esquerda do item na página de acordo com a posição X do cursor
+                item.style.left = `${evento.clientX - (item.clientWidth / 2)}px`;
+            }
+        };
     </script>
 </body>
