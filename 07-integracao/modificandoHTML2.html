@@ -12,7 +12,26 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+        // Seleciona o primeiro elemento do tipo 'div' presente na página
+        const divisao = document.querySelector('div');
+
+        // Substitui todo o conteúdo da divisão pelo texto 'Texto Alterado'
+        divisao.innerHTML = 'Texto Alterado';
+
+        // Adiciona o texto 'Antes do Início' antes do início da divisão
+        divisao.insertAdjacentHTML('beforebegin', '<p>Antes do Início</p>');
+
+        // Adiciona o texto 'Depois do Início' depois do início da divisão
+        divisao.insertAdjacentHTML('afterbegin', '<p>Depois do Início</p>');
+
+        // Adiciona o texto 'Antes do Fim' antes do fim da divisão
+        divisao.insertAdjacentHTML('beforeend', '<p>Antes do Fim</p>');
+
+        // Adiciona o texto 'Depois do Fim' depois do fim da divisão
+        divisao.insertAdjacentHTML('afterend', '<p>Depois do Fim</p>');
+
+        // Exibe apenas o texto presente na divisão
+        console.log(divisao.innerText);
     </script>
 </body>
 
