@@ -9,7 +9,49 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        // Seleciona o primeiro elemento do tipo 'body' presente na página
+        const corpo = document.querySelector('body');
+
+        // Cria um elemento do tipo 'div'
+        const primeiraDivisao = document.createElement('div');
+        // Adiciona a classe 'destaque' à primeira divisão
+        primeiraDivisao.classList.add('destaque');
+        // Adiciona o conteúdo 'Primeiro' à primeira divisão
+        primeiraDivisao.innerHTML = 'Primeiro';
+        // Adiciona a primeira divisão como elemento-filho do corpo
+        corpo.appendChild(primeiraDivisao);
+
+        // Cria um elemento do tipo 'div'
+        const segundaDivisao = document.createElement('div');
+        // Adiciona o atributo de nome 'atributo' e valor 'valor' à segunda divisão
+        segundaDivisao.setAttribute('atributo', 'valor');
+        // Adiciona o conteúdo 'Segundo' à segunda divisão
+        segundaDivisao.innerHTML = 'Segundo';
+        // Adiciona a segunda divisão como elemento-filho do corpo
+        corpo.appendChild(segundaDivisao);
+        
+        // Cria um elemento do tipo 'div'
+        const terceiraDivisao = document.createElement('div');
+        // Cria um elemento do tipo 'p'
+        const paragrafo = document.createElement('p');
+        // Adiciona o conteúdo 'Terceiro' ao parágrafo
+        paragrafo.innerHTML = 'Terceiro';
+        // Adiciona o parágrafo como elemento-filho da terceira divisão
+        terceiraDivisao.appendChild(paragrafo);
+        // Adiciona a terceira divisão como elemento-filho do corpo
+        corpo.appendChild(terceiraDivisao);
+
+        // Cria um nó de texto com o valor 'Antes...'
+        const textoAntes = document.createTextNode('Antes...');
+        // Insere o nó de texto na terceira divisão antes do primeiro elemento-filho dela
+        terceiraDivisao.insertBefore(textoAntes, terceiraDivisao.childNodes[0]);
+
+        // Clona a terceira divisão com todos os seus nós
+        const quartaDivisao = terceiraDivisao.cloneNode(true);
+        // Adiciona a quarta divisão como elemento-filho do corpo
+        corpo.appendChild(quartaDivisao);
+        // Remove a terceira divisão como elemento-filho do corpo
+        corpo.removeChild(terceiraDivisao);
     </script>
 </body>
 
