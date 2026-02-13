@@ -117,9 +117,9 @@ function Progresso ()
 {
     this.elemento = criarElemento('span', 'progresso');
 
-    this.atualizarPontuacao = pontos =>
+    this.atualizarPontuacao = pontuacao =>
     {
-        this.elemento.innerHTML = pontos;
+        this.elemento.innerHTML = pontuacao;
     };
 
     this.atualizarPontuacao(0);
