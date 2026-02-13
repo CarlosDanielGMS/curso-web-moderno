@@ -124,3 +124,34 @@ function Progresso ()
 
     this.atualizarPontuacao(0);
 };
+
+function FlappyBird ()
+{
+    const interface = document.querySelector('[wm-flappy]');
+    const alturaInterface = interface.clientHeight;
+    const larguraInterface = interface.clientWidth;
+    
+    const pontuacao = 0;
+    const progresso = new Progresso();
+    const barreiras = new Barreiras(alturaInterface, larguraInterface, 200, 400, () => { progresso.atualizarPontuacao(++pontuacao) });
+    const passaro = new Passaro(alturaInterface);
+
+    interface.appendChild(progresso.elemento);
+    barreiras.pares.forEach(parBarreiras => interface.appendChild(parBarreiras.elemento));
+    interface.appendChild(passaro.elemento);
+
+    this.iniciar = () =>
+    {
+        const temporizador = setInterval
+        (
+            () =>
+            {
+                barreiras.animar();
+                passaro.animar();
+            },
+            20
+        );
+    };
+};
+
+new FlappyBird().iniciar();
