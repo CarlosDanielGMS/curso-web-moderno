@@ -125,6 +125,38 @@ function Progresso ()
     this.atualizarPontuacao(0);
 };
 
+function estaoSobrepostos (elementoA, elementoB)
+{
+    const coordenadasA = elementoA.getBoundingClientRect();
+    const coodenadasB = elementoB.getBoundingClientRect();
+
+    const sobreposicaoHorizontal = coordenadasA.right >= coodenadasB.left && coodenadasB.right >= coordenadasA.left;
+    const sobreposicaoVertical = coordenadasA.bottom >= coodenadasB.top && coodenadasB.bottom >= coordenadasA.top;
+    
+    return sobreposicaoHorizontal && sobreposicaoVertical;
+};
+
+function colidiu (passaro, barreiras)
+{
+    let colidiu = false;
+
+    barreiras.pares.forEach
+    (
+        parBarreiras =>
+        {
+            if (!colidiu)
+            {
+                const barreiraSuperior = parBarreiras.barreiraSuperior.elemento;
+                const barreiraInferior = parBarreiras.barreiraInferior.elemento;
+
+                colidiu = estaoSobrepostos(passaro.elemento, barreiraSuperior) || estaoSobrepostos(passaro.elemento, barreiraInferior);
+            }
+        }
+    );
+
+    return colidiu;
+};
+
 function FlappyBird ()
 {
     const interface = document.querySelector('[wm-flappy]');
@@ -148,6 +180,11 @@ function FlappyBird ()
             {
                 barreiras.animar();
                 passaro.animar();
+
+                if (colidiu(passaro, barreiras))
+                {
+                    clearInterval(temporizador);
+                }
             },
             20
         );
