@@ -43,3 +43,37 @@ function ParBarreiras (alturaInterface, abertura, posicaoX)
     this.gerarAbertura();
     this.setPosicaoX(posicaoX);
 };
+
+function Barreiras (alturaInterface, larguraInterface, aberturaParBarreiras, distancia, notificarCruzamento)
+{
+    this.pares =
+    [
+        new ParBarreiras(alturaInterface, aberturaParBarreiras, larguraInterface),
+        new ParBarreiras(alturaInterface, aberturaParBarreiras, larguraInterface + distancia),
+        new ParBarreiras(alturaInterface, aberturaParBarreiras, larguraInterface + distancia * 2),
+        new ParBarreiras(alturaInterface, aberturaParBarreiras, larguraInterface + distancia * 3)
+    ];
+
+    const deslocamento = 3;
+
+    this.animar = () =>
+    {
+        this.pares.forEach
+        (
+            parBarreiras =>
+            {
+                parBarreiras.setPosicaoX(parBarreiras.getPosicaoX() - deslocamento);
+
+                if (parBarreiras.getPosicaoX() < -parBarreiras.getLargura())
+                {
+                    parBarreiras.setPosicaoX(parBarreiras.getPosicaoX() + distancia * this.pares.length);
+                    parBarreiras.gerarAbertura();
+                };
+
+                const meioInterface = larguraInterface / 2;
+                const cruzouMeio = parBarreiras.getPosicaoX() + deslocamento >= meioInterface && parBarreiras.getPosicaoX() < meioInterface;
+                if (cruzouMeio) notificarCruzamento();
+            }
+        );
+    };
+};
