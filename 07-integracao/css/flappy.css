@@ -23,7 +23,6 @@
 {
     position: absolute;
     left: calc(50% - 30px);
-    bottom: calc(50% - 30px);
     width: 60px;
 }
 

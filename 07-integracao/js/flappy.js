@@ -77,3 +77,38 @@ function Barreiras (alturaInterface, larguraInterface, aberturaParBarreiras, dis
         );
     };
 };
+
+function Passaro (alturaInterface)
+{
+    this.elemento = criarElemento('img', 'passaro');
+    this.elemento.src = 'imgs/passaro.png'
+
+    this.getPosicaoY = () => parseInt(this.elemento.style.bottom.split('px')[0]);
+    this.setPosicaoY = posicaoY => this.elemento.style.bottom = `${posicaoY}px`;
+
+    let voando = false;
+    window.onkeydown = evento => voando = true;
+    window.onkeyup = evento => voando = false;
+
+    this.animar = () =>
+    {
+        const novaPosicaoY = this.getPosicaoY() + (voando ? 8 : -4);
+        const alturaMaxima = alturaInterface - this.elemento.clientHeight;
+        const alturaMinima = 0;
+
+        if (novaPosicaoY <= alturaMinima)
+        {
+            this.setPosicaoY(alturaMinima);
+        }
+        else if (novaPosicaoY >= alturaMaxima)
+        {
+            this.setPosicaoY(alturaMaxima);
+        }
+        else
+        {
+            this.setPosicaoY(novaPosicaoY);
+        }
+    };
+
+    this.setPosicaoY(alturaInterface / 2);
+};
