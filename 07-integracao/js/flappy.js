@@ -131,7 +131,7 @@ function FlappyBird ()
     const alturaInterface = interface.clientHeight;
     const larguraInterface = interface.clientWidth;
     
-    const pontuacao = 0;
+    let pontuacao = 0;
     const progresso = new Progresso();
     const barreiras = new Barreiras(alturaInterface, larguraInterface, 200, 400, () => { progresso.atualizarPontuacao(++pontuacao) });
     const passaro = new Passaro(alturaInterface);
