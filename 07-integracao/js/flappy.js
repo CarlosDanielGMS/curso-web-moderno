@@ -112,3 +112,15 @@ function Passaro (alturaInterface)
 
     this.setPosicaoY(alturaInterface / 2);
 };
+
+function Progresso ()
+{
+    this.elemento = criarElemento('span', 'progresso');
+
+    this.atualizarPontuacao = pontos =>
+    {
+        this.elemento.innerHTML = pontos;
+    };
+
+    this.atualizarPontuacao(0);
+};
