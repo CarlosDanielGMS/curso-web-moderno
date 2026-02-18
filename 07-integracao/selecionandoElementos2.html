@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <script>
+        // O Query Selector também permite selecionar elementos HTML pelo ID, pela tag, pela classe etc usando JavaScript
+
+        function adicionarClasseDestaque (seletor)
+        {
+            document.querySelectorAll(seletor).forEach(elemento => elemento.classList.add('destaque'));
+        };
+        
+        function removerClasseDestaque (seletor)
+        {
+            document.querySelectorAll(seletor).forEach(elemento => elemento.classList.remove('destaque'));
+        };
+        
+        // Adiciona a classe 'destaque' aos elementos do tipo 'div'
+        adicionarClasseDestaque('div');
+        // Remove a classe 'destaque' de todos os elementos
+        removerClasseDestaque('*');
+
+        // Adiciona a classe 'destaque' aos elementos com as classes 'terceiro' e 'ultimo'
+        adicionarClasseDestaque('.terceiro.ultimo');
+        // Remove a classe 'destaque' de todos os elementos
+        removerClasseDestaque('*');
+
+        // Adiciona a classe 'destaque' a todos os elementos, exceto os que possuem o ID #primeiro
+        adicionarClasseDestaque(':not(#primeiro)');
+        // Remove a classe 'destaque' de todos os elementos
+        removerClasseDestaque('*');
+
+        // Adiciona a classe 'destaque' ao primeiro elemento-filho de cada elemento-pai
+        adicionarClasseDestaque(':nth-child(1)');
+        // Remove a classe 'destaque' de todos os elementos
+        removerClasseDestaque('*');
+
+        // Adiciona a classe 'destaque' ao primeiro elemento-filho de cada elemento do tipo 'div'
+        adicionarClasseDestaque('div:nth-of-type(1)');
+        // Remove a classe 'destaque' de todos os elementos
+        removerClasseDestaque('*');
+
+        // Adiciona a classe 'destaque' a todos os elementos com o atributo 'wb-attrib'
+        adicionarClasseDestaque('[wb-attrib]');
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #03</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <ul id="compras" destino='escritório' data-urgencia="5">
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartável</li>
+        </ul>
+    </div>
+    <script>
+        // Seleciona o primeiro elemento que contém o ID 'compras' presenta na página
+        const lista = document.querySelector('#compras');
+
+        // Existe uma forma de acessar os atributos personalizados de um elemento por meio da notação ponto
+        // No entanto, essa forma atende apenas a leitura (não é possível atribuir novos valores) dos atributos
+        console.log('attributes: ', lista.attributes); // Existe todos os atributos da lista
+        console.log('attributes[0]:', lista.attributes[0]); // Exibe o primeiro atributo da lista
+        console.log('attributes.destino: ', lista.attributes.destino); // Exibe o atributo 'destino' da lista
+        // console.log('attributes.data-urgencia', lista.attributes.data-urgencia); // Tenta exibir o atributo 'data-urgencia' da lista, mas exibe um erro porque o atributo possui hífens
+        console.log("attributes['data-urgencia']: ", lista.attributes['data-urgencia']); // Exibe o atributo 'data-urgencia' da lista
+    </script>
+</body>
+
+</html>

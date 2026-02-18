@@ -1,0 +1,96 @@
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #03</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+        }
+        
+        .esquerda {
+            height: 100vh;
+            width: 50%;
+            background-color: coral;
+        }
+        
+        .direita {
+            height: 100vh;
+            width: 50%;
+            background-color: cornflowerblue;
+        }
+        
+        .item {
+            border: solid 5px black;
+            background-color: darkgrey;
+            color: white;
+            height: 100px;
+            font-size: 40px;
+            margin: 10px;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="esquerda" wm-dropzone>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="direita" wm-dropzone></div>
+    <script>
+        // Seleciona os elementos com classe 'item' pertencentes a objetos que possuem o atributo 'wm-dropzone'
+        const itens = document.querySelectorAll('[wm-dropzone] .item');
+        // Percorre cada item encontrado
+        itens.forEach
+        (
+            // Declara a função a ser executada para cada item
+            (item, indice) =>
+            {
+                // Adiciona o atributo 'draggable' ao item com o valor 'true'
+                item.draggable = true;
+                // Adiciona o ID 'item-arrastavel-indice' ao item, se já não tiver
+                item.id = item.id || `item-arrastavel-${indice}`;
+                // Declara a função a ser executada quando começar a arrastar o item
+                item.ondragstart = evento =>
+                {
+                    // Adiciona o ID do item aos dados de transferência
+                    evento.dataTransfer.setData('id-item', evento.target.id);
+                };
+            }
+        );
+
+        // Seleciona os elementos que possuem o atributo 'wm-dropzone' na página
+        const zonas = document.querySelectorAll('[wm-dropzone]');
+        // Percorre cada zona encontrada
+        zonas.forEach
+        (
+            // Declara a função a ser executada para cada zona
+            zona =>
+            {
+                // Previne a execução do evento padrão ao arrastar para cima da zona
+                zona.ondragover = evento => evento.preventDefault();
+                // Declara a função a ser executada quando soltar o item
+                zona.ondrop = evento =>
+                {
+                    // Captura o ID do item presente nos dados de transferência
+                    const id = evento.dataTransfer.getData('id-item');
+                    // Seleciona o elemento com o ID capturado presente na página
+                    const item = document.getElementById(id);
+                    // Adiciona o item como elemento-filho da zona ou do item
+                    // evento.target.appendChild(item);
+                    // Adiciona o item como elemento-filho apenas da zona
+                    zona.appendChild(item);
+                };
+            }
+        );
+    </script>
+</body>
+
+</html>

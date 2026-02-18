@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>
+        // É possível selecionar elementos HTML pelo ID, pela tag e pela classe usando JavaScript
+
+        // Pelo ID
+        document.getElementById('primeiro').classList.add('destaque');
+
+        // Pela tag
+        const divs = document.getElementsByTagName('div');
+        Array.from(divs).forEach(elemento => elemento.classList.remove('destaque'));
+        
+        // Pela classe
+        const ultimosElementos = document.getElementsByClassName('ultimo');
+        for (let elemento of ultimosElementos)
+        {
+            elemento.classList.add('destaque');
+        };
+    </script>
+</body>
+</html>

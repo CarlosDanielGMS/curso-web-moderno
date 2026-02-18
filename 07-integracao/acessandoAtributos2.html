@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <label for="compras">Compras</label>
+        <ul id="compras" destino='escritório' data-urgencia="5">
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartável</li>
+        </ul>
+    </div>
+    <script>
+        // Seleciona o primeiro elemento do tipo 'ul' que contenha o atributo "destino='escritório'" e esteja dentro de um elemento do tipo 'div' presente na página
+        const lista = document.querySelector("div ul[destino='escritório']");
+        
+        console.log('--- EXIBE AS PROPRIEDADES DA LISTA ("UL") ---');
+        console.log('childNodes: ', lista.childNodes); // Exibe os elementos filhos da lista (inclusive as quebras de linha e espaços em branco)
+        console.log('destino: ', lista.destino); // Tenta exibir o valor do atributo 'destino' da lista, mas exibe o valor 'undefined' porque a notação ponto não funciona para atributos personalizados
+        console.log('getAttribute: ', lista.getAttribute('destino')); // Exibe o valor do atributo 'destino' da lista
+        console.log('hasAttribute: ', lista.hasAttribute('destino')); // Verifica se a lista possui um atributo chamado 'destino'
+        lista.setAttribute('destino', 'empresa'); // Altera o valor do atributo 'destino' da lista para 'empresa'
+        lista.setAttribute('status', 'aberto'); // Adiciona o atributo 'status' com o valor 'aberto' à lista
+        lista.removeAttribute('destino'); // Remove o atributo 'destino' da lista
+        console.log('dataset: ', lista.dataset); // Exibe os atributos personalizados da lista que utilizam a convenção do prefixo 'data' na nomenclatura
+        console.log('dataset.urgencia: ', lista.dataset.urgencia); // Exibe o valor do atributo 'urgencia' da lista que utiliza a convenção do prefixo 'data' na nomenclatura
+        lista.dataset.urgencia = 4; // Altera o valor do atributo 'urgencia' da lista que utiliza a convenção do prefixo 'data' na nomenclatura para o valor "4" (convertido em string)
+        console.log('getAttribute: ', lista.getAttribute('data-urgencia')); // Exibe o valor do atributo 'data-urgencia' da lista
+        
+        // Seleciona o primeiro elemento do tipo 'label' presente na página
+        const rotulo = document.querySelector('label');
+
+        console.log('\n--- EXIBE AS PROPRIEDADES DO RÓTULO ("LABEL") ---');
+        console.log('for:', rotulo.for); // Tenta exibir o valor do atributo 'for' do rótulo, mas exibe o valor 'undefine' porque o termo 'for' é reservado da linguagem
+        console.log('htmlFor', rotulo.htmlFor); // Exibe o valor do atributo 'for' do rótulo
+        console.log('getAttribute: ', rotulo.getAttribute('for')); // Exibe o valor do atributo 'for' do rótulo
+    </script>
+</body>
+
+</html>

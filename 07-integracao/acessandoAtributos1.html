@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <a href='https://www.cod3r.com.br'>Cod3r</a>
+    </div>
+    <div id='primeiro'>
+        <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
+    </div>
+    <script>
+        // Exibe mensagens no console
+        function exibir (...mensagens)
+        {
+            let mensagemFinal = '';
+
+            mensagens.forEach(mensagem => mensagemFinal += mensagem);
+
+            console.log(mensagemFinal);
+        }
+
+        // Seleciona o primeiro elemento do tipo 'img' presente na página
+        const imagem = document.querySelector('img');
+        
+        // Exibe o valor do atributo explícita de diferentes formas
+        exibir('--- VALOR DO ATRIBUTO EXPLÍCITA ---');
+        exibir('getAttribute: ', imagem.getAttribute('src')); // Vantagem: permite passar uma variável como parâmetro
+        exibir('src: ', imagem.src); // Vantagem: é mais curto e, consequentemente, mais rápido de digitar
+        exibir("['src']:", imagem['src']) // Vantagem: permite passar uma variável como parâmetro
+
+        // Exibe o valor dos atributos implícitos da imagem ('img')
+        exibir('\n--- VALOR DOS ATRIBUTOS IMPLÍCITOS DA IMAGEM ("IMG") ---');
+        exibir('NodeType: ', imagem.nodeType); // Exibe o tipo do nó
+        exibir('NodeName: ', imagem.nodeName); // Exibe o nome do nó
+        
+        // Seleciona a propriedade do tipo 'src' da imagem
+        const source = imagem.getAttributeNode('src');
+
+        // Exibe o valor dos atributos implícitos da fonte ('src')
+        exibir('\n--- VALOR DOS ATRIBUTOS IMPLÍCITOS DA FONTE ("SRC") ---');
+        exibir('NodeType: ', source.nodeType); // Exibe o tipo do nó
+        exibir('NodeName: ', source.nodeName); // Exibe o nome do nó
+        exibir('NodeValue: ', source.nodeValue); // Exibe o valor do nó
+        
+        // Seleciona o primeiro elemento do tipo 'a' presente na página
+        const link = document.querySelector('a');
+
+        // Exibe o valor dos atributos implícitos do link ('a')
+        exibir('\n--- VALOR DOS ATRIBUTOS DO LINK ("A") ---');
+        exibir('href: ', link.href); // Exibe o valor do atributo 'href' do link
+        exibir('firstChild.nodeType: ', link.firstChild.nodeType); // Exibe o tipo do primeiro nó filho (texto "Cod3r") do link
+        link.firstChild.nodeValue = 'Novo Texto'; // Altera o valor do nó
+    </script>
+</body>
+
+</html>
