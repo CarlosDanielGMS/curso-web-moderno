@@ -22,6 +22,48 @@
     <div class="progresso"></div>
 
     <script>
-        // ...
+        function carregarArquivoAjax (configuracao) // Instancia a função para carregar arquivo via requisição Ajax
+        {
+            const xhr = new XMLHttpRequest(); // Instancia uma requisição do tipo XMLHttpRequest
+
+            if (xhr.upload) // Verifica se há carregamento de arquivo
+            {
+                xhr.upload.onprogress = evento => // Atribui uma função ao identificar progresso no carregamento do arquivo
+                {
+                    const progressoAtual = evento.loaded; // Captura o progresso atual do carregamento
+                    const progressoTotal = evento.total; // Captura o progresso total do carregamento
+                    const percentualProgresso = Math.floor(progressoAtual / progressoTotal * 100); // Calcula o percentual de progresso do carregamento
+
+                    configuracao.progresso({ progressoAtual, progressoTotal, percentualProgresso }); // Invoca a função de progresso presente no objeto de configuração passado como parâmetro
+                }
+            }
+
+            xhr.open(configuracao.metodo, configuracao.url, true); // Inicializa, de forma assíncrona, a requisição criada usando o método e a URL presentes no objeto de configuração
+            xhr.send(configuracao.dadosFormulario); // Envia a requisição
+        };
+
+        const entradaArquivo = document.querySelector('input[type=file]'); // Captura o primeiro elemento do tipo 'input' com o atributo 'type' e valor 'file' presente na página
+
+        entradaArquivo.onchange = evento => // Instancia a função a ser executada ao alterar a entrada de arquivo
+        {
+            const dadosFormulario = new FormData(); // Instancia os dados do formulário
+            const entrada = evento.target; // Captura o item do evento
+
+            dadosFormulario.append(entrada.name, entrada.files[0]); // Acrescenta o metadado nome do arquivo aos dados do formulário com o arquivo carregado
+
+            carregarArquivoAjax // Invoca a função de carregar arquivo via requisição Ajax
+            (
+                { // Passa um objeto como parâmetro
+                    metodo: 'post', // Define o método da requisição
+                    url: '/carregar', // Define a URL da requisição
+                    dadosFormulario: dadosFormulario, // Define os dados do formulário
+                    progresso (dados) // Instancia a função de progresso de carregamento
+                    {
+                        const progresso = document.querySelector('.progresso'); // Captura o primeiro elemento com a classe 'progresso' presente na página
+                        progresso.innerHTML = JSON.stringify(dados.percentualProgresso) + '%'; // Adiciona o percentual de progresso de carregamento ao elemento
+                    }
+                }
+            );
+        };
     </script>
 </body>
