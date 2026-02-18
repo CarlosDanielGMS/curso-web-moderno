@@ -7,6 +7,4 @@ aplicacao.use(express.static('.')); // Disponibiliza todos os arquivos estático
 aplicacao.use(bodyParser.urlencoded({ extended: true })); // Converte em objeto todas as informações contidas em formulários recebidas por requisição
 aplicacao.use(bodyParser.json()); // Converte em objeto todas as informações no formato JSON recebidas por requisição
 
-aplicacao.get('/teste', (requisicao, resposta) => resposta.send('Ok')); // Cria uma rota para testar o funcionamento que retorna uma mensagem
-
 aplicacao.listen(8080, () => console.log('Executando...')); // Inicia o servidor e exibe uma mensagem logo após a execução
