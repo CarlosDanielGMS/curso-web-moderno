@@ -57,4 +57,23 @@ aplicacao.post // Cria uma rota para enviar o formulário
     }
 );
 
+aplicacao.get // Cria uma rota para verificar se um número é par ou ímpar
+(
+    '/parImpar', // Define o nome da rota
+    (requisicao, resposta) => // Executa uma função ao acessar a rota passando a requisição e a resposta como parâmetros
+    {
+        // FORMAS DE RECEBER PARÂMETROS VIA REQUISIÇÃO
+        // requisicao.body - Valores presentes no corpo da requisição, exemplo: { "numero": "5" }
+        // requisicao.query - Valores presentes no endereço da requisição usando '?', exemplo: localhost:8080/parImpar?numero=7
+        // requisicao.params - Valores presentes no endereço da requisição usando '/', exemplo: localhost:8080/parImpar/5
+        const isPar = parseInt(requisicao.query.numero) % 2 === 0;
+        resposta.send // Envia uma resposta
+        (
+            { // Cria um objeto
+                resultado: isPar ? 'par' : 'ímpar' // Adiciona o resultado da verificação ao objeto
+            }
+        );
+    }
+);
+
 aplicacao.listen(8080, () => console.log('Executando...')); // Inicia o servidor e exibe uma mensagem logo após a execução
