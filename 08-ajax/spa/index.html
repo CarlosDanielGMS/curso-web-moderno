@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Mini SPA</title>
+    <link rel='stylesheet' href='../css/estilo.css'>
+    <style>
+        nav {
+            font-size: 2em;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #FFF;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body class="conteudo">
+    <nav>
+        <a href wm-link="series.html" wm-destino=".pagina">Séries</a> |
+        <a href wm-link="linguagens.html" wm-destino=".pagina">Linguagens</a>
+    </nav>
+    <div class="pagina"></div>
+    <script>
+        function navegarViaAjax (endereco, seletor, criarHistorico = true) // Carrega partes de páginas dinamicamente recebendo o endereço da página desejada, o seletor do elemento destino e a opção de histórico (com o valor verdadeiro como padrão) como parâmetros
+        {
+            if (!endereco || !seletor) return; // Sai da função se os parâmetros 'endereco' ou 'seletor' estiverem vazios
+
+            const elemento = document.querySelector(seletor); // Seleciona o primeiro elemento com o seletor passado como parâmetro presente na página
+
+            fetch(endereco) // Envia a requisição para o endereço passado como parâmetro
+                .then(resposta => resposta.text()) // Ao receber a resposta da requisição, converte-a em texto
+                .then // Ao converter a resposta em texto, executa uma função
+                (
+                    pagina => // Define a função a ser executada passando a página como parâmetro
+                    {
+                        elemento.innerHTML = pagina // Substitui todo o conteúdo do elemento pela página passada como parâmetro
+
+                        if (criarHistorico) // Verifica se a opção 'criarHistorico' foi definida como 'true'
+                        {
+                            history.pushState // Adiciona uma entrada no histórico do navegador
+                            (
+                                { seletor }, // Passa o seletor como parâmetro
+                                null, // Passa null como parâmetro
+                                endereco // Passa o endereço como parâmetro
+                            );
+                        }
+                    }
+                );
+        };
+
+        const links = document.querySelectorAll('[wm-link]'); // Seleciona todos os elementos com o atributo 'wm-link' presentes na página
+        links.forEach // Executa uma função para cada link
+        (
+            link => // Passa o elemento do link como parâmetro da função a ser executada
+            {
+                const endereco = link.attributes['wm-link'].value; // Captura o valor do atributo 'wm-link' presente no elemento do link
+                const seletor = link.attributes['wm-destino'].value; // Captura o valor do atributo 'wm-destino' presente no elemento do link
+                
+                link.onclick = evento => // Define a função a ser executada passando o evento como parâmetro ao clicar no link
+                {
+                    evento.preventDefault(); // Previne a execução padrão do evento
+                    navegarViaAjax(endereco, seletor); // Invoca a função 'navegarViaAjax' passando o endereço e o seletor como parâmetro
+                };
+            }
+        );
+
+        window.onpopstate = evento => // Define a função a ser executada ao voltar a página passando o evento como parâmetro
+        {
+            if (evento.state) // Verifica se foi salvo algum item no histórico anteriormente
+            {
+                navegarViaAjax(window.location.href, evento.state.seletor, false); // Invoca a função 'navegarViaAjax' passando o endereço atual da página, o seletor adicionado anteriormente e o valor 'false' para a opção 'criarHistorico' como parâmetro
+            }
+        }
+    </script>
+</body>

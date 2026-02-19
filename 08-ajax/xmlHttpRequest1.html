@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>XMLHttpRequest #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Estados</h1>
+
+    <script>
+        function enviarRequisicaoAjax (configuracao) // Envia uma requisição de acordo com a configuração recebida como parâmetro
+        {
+            const xhr = new XMLHttpRequest(); // Instancia uma requisição do tipo XMLHttpRequest
+            xhr.open(configuracao.metodo, configuracao.url, true); // Inicializa, de forma assíncrona, a requisição criada usando o método e a URL presentes no objeto de configuração
+
+            xhr.onload = evento => // Instancia a função a ser executada após receber uma resposta da requisição
+            {
+                if (xhr.status >= 200 && xhr.status < 300) // Verifica se o código de retorno é de sucesso
+                {
+                    configuracao.sucesso(xhr.response); // Invoca a função de sucesso presente no objeto de configuração
+                }
+                else if (xhr.status >= 400) // Verifica se o código de retorno é de erro
+                {
+                    configuracao.falha // Invoca a função de falha presente no objeto de configuração
+                    (
+                        { // Cria o objeto de falha
+                            codigo: xhr.status, // Atribui o código de retorno ao código do objeto de erro
+                            texto: xhr.statusText // Atribui o texto de retorno ao texto do objeto de erro
+                        }
+                    );
+                }
+            };
+
+            xhr.send(); // Envia a requisição
+        }
+
+        function criarTabela (estados) // Cria uma tabela de acordo com a lista de estados recebidos como parâmetro
+        {
+            const linhasTabela = estados.map // Instancia as linhas da tabela percorrendo cada estado passado como parâmetro
+            (
+                estado => // Executa uma função para cada estado
+                {
+                    const linha = document.createElement('tr'); // Instancia uma linha
+
+                    const celulaID = document.createElement('td'); // Instancia uma célula da linha
+                    celulaID.innerHTML = estado.id; // Adiciona o ID do estado à celula
+
+                    const celulaNome = document.createElement('td'); // Instancia outra célula da linha
+                    celulaNome.innerHTML = estado.nome; // Adiciona o nome do estado à celula
+
+                    const celulaSigla = document.createElement('td'); // Instancia mais uma célula da linha
+                    celulaSigla.innerHTML = estado.sigla; // Adiciona a sigla do estado à celula
+
+                    linha.appendChild(celulaID); // Adiciona a célula do ID como elemento-filho da linha
+                    linha.appendChild(celulaNome); // Adiciona a célula do nome como elemento-filho da linha
+                    linha.appendChild(celulaSigla); // Adiciona a célula da sigla como elemento-filho da linha
+
+                    return linha; // Retorna a linha
+                }
+            );
+
+            const tabela = document.createElement('table'); // Instancia a tabela
+            linhasTabela.forEach(linha => tabela.appendChild(linha)); // Adiciona cada linha de estado à tabela
+            document.body.appendChild(tabela); // Adiciona a linha de estado como elemento-filho do corpo
+        };
+
+        enviarRequisicaoAjax // Invoca a função para enviar a requisição Ajax
+        (
+            { // Passa o objeto de configuração como parâmetro
+                metodo: 'get', // Adiciona o tipo de método ao objeto
+                url: 'dados/estados.json', // Adiciona a URL ao objeto
+                sucesso (resposta) // Adiciona a função de sucesso ao objeto
+                {
+                    const estados = JSON.parse(resposta); // Instancia a lista de estados com base na resposta recebida pela requisição
+                    criarTabela(estados); // Invoca a função de criar tabela passando a lista de estados como parâmetro
+                },
+                falha (erro) // Adiciona a função de falha ao objeto
+                {
+                    const mensagem = document.createTextNode(`${erro.codigo}: ${erro.texto}`); // Instancia a mensagem de erro com base no código e no texto presentes no objeto de erro
+                    document.body.appendChild(mensagem); // Adiciona a mensagem de erro como elemento-filho do corpo
+                }
+            }
+        );
+    </script>
+</body>

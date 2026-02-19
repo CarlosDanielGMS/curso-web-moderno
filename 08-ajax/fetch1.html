@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Fetch API #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Estados</h1>
+
+    <script>
+        const url = 'dados/estados.json'; // Define a URL do arquivo a ser lido
+        fetch(url) // Busca as informações na URL
+            .then(resposta => resposta.json()) // Transforma a resposta em dados JSON
+            .then(
+                    estados => // Passa os dados JSON como parâmetro para a função
+                    {
+                        const itens = estados.reduce((pagina, estado) => pagina + `<li>${estado.nome}</li>`, ''); // Junta todos os estados em um só "texto", criando uma cadeia de itens de lista com o nome de cada estado
+                        document.body.insertAdjacentHTML('beforeend', `<ul>${itens}</ul>`); // Insere, antes do fim do corpo, uma lista não ordenada com todos os itens encadeados anteriormente
+                    }
+                 );
+    </script>
+</body>

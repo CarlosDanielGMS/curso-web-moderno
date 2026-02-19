@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>XMLHttpRequest #03</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Estados</h1>
+
+    <script>
+        function enviarRequisicaoAjax (configuracao) // Instancia a função para enviar requisição com Ajax
+        {
+            const xhr = new XMLHttpRequest(); // Instancia uma requisição do tipo XMLHttpRequest
+            xhr.open(configuracao.metodo, configuracao.url, true); // Inicializa, de forma assíncrona, a requisição criada usando o método e a URL presentes no objeto de configuração
+
+            xhr.onreadystatechange = evento => // Atribui uma função ao identificar mudança no status da requisição
+            {
+                if (xhr.readyState === 4) // Verifica se o status da requisição é "pronto"
+                {
+                    if (xhr.status >= 200 && xhr.status < 300) // Verifica se o código de retorno é de sucesso
+                    {
+                        configuracao.sucesso(xhr.responseXML); // Invoca a função de sucesso presente no objeto de configuração passando como parâmetro a resposta no formato XML
+                    }
+                    else if (xhr.status >= 400) // Verifica se o código de retorno é de erro
+                    {
+                        configuracao.falha // Invoca a função de falha presente no objeto de configuração
+                        (
+                            { // Cria o objeto de falha
+                                codigo: xhr.status, // Atribui o código de retorno ao código do objeto de erro
+                                texto: xhr.statusText // Atribui o texto de retorno ao texto do objeto de erro
+                            }
+                        );
+                    }
+                }
+            };
+
+            xhr.send(); // Envia a requisição
+        };
+
+        enviarRequisicaoAjax // Invoca a função para enviar a requisição Ajax
+        (
+            { // Passa o objeto de configuração como parâmetro
+                metodo: 'get', // Adiciona o tipo de método ao objeto
+                url: 'dados/estados.xml', // Adiciona a URL ao objeto
+                sucesso (resposta) // Adiciona a função de sucesso ao objeto passando a resposta como parâmetro
+                {
+                    const estados = resposta.getElementsByTagName('estado'); // Captura todos os elementos com o nome 'estado' da resposta recebida por parâmetro
+                    const itens = Array.from(estados).reduce // Junta todos os estados em um só "texto"
+                    (
+                        (pagina, estado) => pagina + `<li>${estado.attributes.nome.value}</li>`, '' // Cria uma cadeia de itens de lista com o nome de cada estado
+                    );
+                    document.body.insertAdjacentHTML('beforeend', `<ul>${itens}</ul>`); // Insere, antes do fim do corpo, uma lista não ordenada com todos os itens encadeados anteriormente
+                },
+                falha (evento) // Adiciona a função de falha ao objeto passando a resposta como parâmetro
+                {
+                    const mensagem = document.createTextNode(`${evento.codigo}: ${evento.texto}`); // Instancia a mensagem de erro com base no código e no texto presentes no objeto de erro
+                    document.body.appendChild(mensagem); // Adiciona a mensagem de erro como elemento-filho do corpo
+                }
+            }
+        );
+    </script>
+</body>

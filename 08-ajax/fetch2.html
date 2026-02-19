@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Fetch API #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Formulário Via Fetch</h1>
+    <form name="usuarioForm" action="formulario" method="post">
+        <input type="text" name="nome" placeholder="Nome..." />
+        <input type="text" name="sobrenome" placeholder="Sobrenome..." />
+        <button>Salvar</button>
+    </form>
+    <div id="resultado"></div>
+    <script>
+        document.usuarioForm.onsubmit = async evento => // Executa uma função assíncrona ao submeter os dados do formulário que recebe o evento como parâmetro
+        {
+            evento.preventDefault(); // Previne a execução padrão do evento
+
+            const formulario = evento.target; // Captura o elemento do formulário
+            const dadosFormulario = new FormData(formulario); // Captura os dados inseridos no formulário
+            const opcoes = // Instancia o objeto de opções
+            {
+                method: formulario.method, // Captura o valor do atributo 'method' presente no formulário
+                body: new URLSearchParams(dadosFormulario) // Captura os dados inseridos no formulário e transforma-os no corpo de uma requisição seguindo o padrão de envio de formulários web
+            };
+            const resultado = document.getElementById('resultado'); // Seleciona o primeiro elemento com o ID de valor 'resultado' presente na página
+
+            // Envio da requisição com Promise
+            // fetch(formulario.action, opcoes) // Envia uma requisição com os dados do formulário para a rota definida no formulário com base nas opções definidas
+            //     .then(resposta => resposta.json()) // Transforma a resposta no formato JSON para objeto
+            //     .then
+            //     (
+            //         dados => // Passa os dados como parâmetro para a função
+            //         {
+            //             resultado.innerHTML = JSON.stringify(dados); // Transforma o objeto dos dados em uma string e adiciona ao elemento
+            //         }
+            //     )
+            //     .catch
+            //     (
+            //         erro => // Passa o erro como parâmetro para a função
+            //         {
+            //             resultado.innerHTML = erro; // Insere o erro ao elemento
+            //         }
+            //     );
+            
+            // Envio da requisição com Async/Await
+            try // Tenta executar uma função
+            {
+                const resposta = await fetch(formulario.action, opcoes); // Captura a resposta da requisição enviada com os dados do formulário com base nas opções definidas
+                const dados = await resposta.json(); // Transforma a resposta no formato JSON para objeto
+
+                resultado.innerHTML = JSON.stringify(dados); // Insere os dados no elemento 'resultado'
+            }
+            catch (erro) // Captura o erro de rede, se houver
+            {
+                resultado.innerHTML = erro; // Insere o erro no elemento 'resultado'
+            };
+        }
+    </script>
+</body>

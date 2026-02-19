@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Axios #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/axios.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Axios Get/Post</h1>
+    <div id="get"></div>
+    <div id="post"></div>
+
+    <script>
+        function exibirResultado (id, dados) // Insere os dados recebidos como parâmetro no elemento com o ID de valor igual ao passado como parâmetro
+        {
+            const elemento = document.getElementById(id); // Seleciona o primeiro elemento com o ID de valor igual ao passado como parâmetro presente na página
+            const texto = JSON.stringify(dados); // Transforma o objeto dos dados, no formato JSON, em texto
+
+            elemento.innerHTML = texto; // Insere o texto no elemento
+        };
+        
+        // Insere os parâmetros diretamente no endereço
+        //axios('parImpar?numero=7').then(resposta => exibirResultado('get', resposta.data)); // Envia uma requisição no formato 'query' e passa os dados da resposta junto com o ID do elemento como parâmetros na invocação da função 'exibirResultado'
+
+        // Insere os parâmetros por meio do objeto de opções
+        axios.get // Envia a requisição do tipo 'get'
+        (
+            'parImpar', // Passa como parâmetro o endereço
+            { // Passa como parâmetro o objeto de opções
+                params: // Define os parâmetros
+                { // Cria o objeto de parâmetros
+                    numero: 7 // Define o parâmetro 'numero' com o valor '7'
+                }
+            }
+        ).then(resposta => exibirResultado('get', resposta.data)); // Ao receber a resposta, invoca a função 'exibirResultado' passando o ID do elemento e os dados da resposta como parâmetros
+        
+        axios.post // Envia a requisição do tipo 'post'
+        (
+            'formulario', // Passa como parâmetro o endereço
+            { // Passa como parâmetro o objeto de opções
+                nome: 'João', // Define o parâmetro 'nome' com o valor 'João'
+                sobrenome: 'Santos' // Define o parâmetro 'sobrenome' com o valor 'Santos'
+            }
+        ).then(resposta => exibirResultado('post', resposta.data)); // Ao receber a resposta, invoca a função 'exibirResultado' passando o ID do elemento e os dados da resposta como parâmetros
+    </script>
+</body>

@@ -21,6 +21,7 @@ Para facilitar a navegação, o código está organizado por tema:
 * **`/05-html`**: TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens e vídeos.
 * **`/06-css`**: Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, media query, flex box e css grid.
 * **`/07-integracao`**: DOM, selecionando elementos, acessando atributos e classes, modificando HTML e trabalhando com eventos.
+* **`/08-ajax`**: Server, XMLHttpRequest, Fetch API e Axios.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
@@ -46,8 +47,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **HTML** | ✅ Concluído | TAG, página, CSS, Live Server, listas, links, tabelas, formulários, imagens, vídeos etc |
 | **CSS** | ✅ Concluído | Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, media query, flex box, css grid etc |
 | **Integrando HTML, CSS e JS** | ✅ Concluído | DOM, selecionando elementos, acessando atributos e classes, modificando HTML, trabalhando com eventos etc |
-| **Ajax** | 🔄 Em Progresso | Server, XMLHttpRequest, Fetch API, Axios etc |
-| **Gulp** | ⏳ Pendente | Instalação, fundamentos, Babel, TypeScript, SASS etc |
+| **Ajax** | ✅ Concluído | Server, XMLHttpRequest, Fetch API, Axios etc |
+| **Gulp** | 🔄 Em Progresso | Instalação, fundamentos, Babel, TypeScript, SASS etc |
+| **Webpack** | ⏳ Pendente | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos etc |
 | **---** | --- | --- |
 
 ---
