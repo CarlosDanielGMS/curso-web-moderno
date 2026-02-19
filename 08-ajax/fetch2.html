@@ -38,25 +38,25 @@
             const opcoes = // Instancia o objeto de opções
             {
                 method: formulario.method, // Captura o valor do atributo 'method' presente no formulário
-                body: new URLSearchParams(dadosFormulario) // Captura os dados inseridos no formulário e transforma-os no corpo de uma requisição
+                body: new URLSearchParams(dadosFormulario) // Captura os dados inseridos no formulário e transforma-os no corpo de uma requisição seguindo o padrão de envio de formulários web
             };
             const resultado = document.getElementById('resultado'); // Seleciona o primeiro elemento com o ID de valor 'resultado' presente na página
 
             // Envio da requisição com Promise
             // fetch(formulario.action, opcoes) // Envia uma requisição com os dados do formulário para a rota definida no formulário com base nas opções definidas
-            //     .then(resposta => resposta.json()) // Transforma a resposta em dados no formato JSON
+            //     .then(resposta => resposta.json()) // Transforma a resposta no formato JSON para objeto
             //     .then
             //     (
             //         dados => // Passa os dados como parâmetro para a função
             //         {
-            //             resultado.innerHTML = JSON.stringify(dados); // Insere os dados ao elemento
+            //             resultado.innerHTML = JSON.stringify(dados); // Transforma o objeto dos dados em uma string e adiciona ao elemento
             //         }
             //     )
             //     .catch
             //     (
-            //         evento => // Passa o erro como parâmetro para a função
+            //         erro => // Passa o erro como parâmetro para a função
             //         {
-            //             resultado.innerHTML = evento; // Insere o erro ao elemento
+            //             resultado.innerHTML = erro; // Insere o erro ao elemento
             //         }
             //     );
             
@@ -64,11 +64,11 @@
             try // Tenta executar uma função
             {
                 const resposta = await fetch(formulario.action, opcoes); // Captura a resposta da requisição enviada com os dados do formulário com base nas opções definidas
-                const dados = await resposta.json(); // Transforma a resposta em dados no formato JSON
+                const dados = await resposta.json(); // Transforma a resposta no formato JSON para objeto
 
                 resultado.innerHTML = JSON.stringify(dados); // Insere os dados no elemento 'resultado'
             }
-            catch (erro) // Captura o erro, se houver
+            catch (erro) // Captura o erro de rede, se houver
             {
                 resultado.innerHTML = erro; // Insere o erro no elemento 'resultado'
             };
