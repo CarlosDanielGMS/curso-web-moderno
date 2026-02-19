@@ -14,6 +14,53 @@
     <div id="post"></div>
 
     <script>
-        // ...
+        function exibirResultado (id, dados) // Insere os dados recebidos como parâmetro no elemento com o ID de valor igual ao passado como parâmetro
+        {
+            const elemento = document.getElementById(id); // Seleciona o primeiro elemento com o ID de valor igual ao passado como parâmetro presente na página
+            const texto = JSON.stringify(dados); // Transforma o objeto dos dados, no formato JSON, em texto
+
+            elemento.innerHTML = texto; // Insere o texto no elemento
+        };
+
+        $.ajax // Invoca a função 'ajax' do jQuery
+        (
+            { // Passa um objeto como parâmetro
+                url: 'parImpar', // Define o atributo 'url' com o valor 'parImpar'
+                method: 'get', // Define o atributo 'method' com o valor 'get'
+                data:  // Define o atributo 'data'
+                { // Cria um objeto
+                    numero: 7 // Define o atributo 'numero' com o valor '7'
+                },
+                success(resposta) // Define a função a ser chamada se o processo der certo passando a resposta como parâmetro
+                {
+                    exibirResultado('get', resposta); // Invoca a função 'exibirResultado' passando como parâmetro o valor do ID do elemento e a resposta da requisição
+                },
+                error (erro) // Define a função a ser chamada se o processo der errado passando o erro como parâmetro
+                {
+                    exibirResultado('post', erro); // Invoca a função 'exibirResultado' passando como parâmetro o valor do ID do elemento e o erro da requisição
+                }
+            }
+        );
+
+        $.ajax // Invoca a função 'ajax' do jQuery
+        (
+            { // Passa um objeto como parâmetro
+                url: 'formulario', // Define o atributo 'url' com o valor 'formulario'
+                method: 'post', // Define o atributo 'method' com o valor 'post'
+                data:  // Define o atributo 'data'
+                { // Cria um objeto
+                    nome: 'João', // Define o atributo 'nome' com o valor 'João'
+                    sobrenome: 'Santos' // Define o atributo 'sobrenome' com o valor 'Santos'
+                },
+                success(resposta) // Define a função a ser chamada se o processo der certo passando a resposta como parâmetro
+                {
+                    exibirResultado('post', resposta); // Invoca a função 'exibirResultado' passando como parâmetro o valor do ID do elemento e a resposta da requisição
+                },
+                error (erro) // Define a função a ser chamada se o processo der errado passando o erro como parâmetro
+                {
+                    exibirResultado('post', erro); // Invoca a função 'exibirResultado' passando como parâmetro o valor do ID do elemento e o erro da requisição
+                }
+            }
+        );
     </script>
 </body>
