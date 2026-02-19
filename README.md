@@ -22,6 +22,7 @@ Para facilitar a navegação, o código está organizado por tema:
 * **`/06-css`**: Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, media query, flex box e css grid.
 * **`/07-integracao`**: DOM, selecionando elementos, acessando atributos e classes, modificando HTML e trabalhando com eventos.
 * **`/08-ajax`**: Server, XMLHttpRequest, Fetch API e Axios.
+* **`/09-gulp`**: Instalação, fundamentos, Babel, TypeScript e SASS.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
