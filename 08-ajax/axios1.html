@@ -12,6 +12,15 @@
     <h1>Estados</h1>
 
     <script>
-        // ...
+        const endereco = 'dados/estados.json'; // Define o endereço do arquivo a ser lido
+        axios(endereco) // Envia a requisição para o endereço
+            .then // Executa uma função após finalizar a requisição
+            (
+                resposta => // Passa a resposta da requisição como parâmetro da função
+                {
+                    const itens = resposta.data.reduce((pagina, estado) => pagina + `<li>${estado.nome}</li>`, ''); // Junta todos os estados em um só "texto", criando uma cadeia de itens de lista com o nome de cada estado
+                    document.body.insertAdjacentHTML('beforeend', `<ul>${itens}</ul>`); // Insere, antes do fim do corpo, uma lista não ordenada com todos os itens encadeados anteriormente
+                }
+            );
     </script>
 </body>
