@@ -43,4 +43,18 @@ aplicacao.post // Cria uma rota para carregar arquivo
     }
 );
 
+aplicacao.post // Cria uma rota para enviar o formulário
+(
+    '/formulario', // Define o nome da rota
+    (requisicao, resposta) => // Instancia a função a ser executada ao acessar a rota
+    {
+        resposta.send // Envia uma resposta
+        (
+            { // Cria um objeto
+                ...requisicao.body, // Adiciona todos os atributos presente no corpo da requisição ao objeto
+            }
+        );
+    }
+);
+
 aplicacao.listen(8080, () => console.log('Executando...')); // Inicia o servidor e exibe uma mensagem logo após a execução
