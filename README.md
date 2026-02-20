@@ -22,6 +22,7 @@ Para facilitar a navegação, o código está organizado por tema:
 * **`/06-css`**: Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, media query, flex box e css grid.
 * **`/07-integracao`**: DOM, selecionando elementos, acessando atributos e classes, modificando HTML e trabalhando com eventos.
 * **`/08-ajax`**: Server, XMLHttpRequest, Fetch API e Axios.
+* **`/09-gulp`**: Instalação, fundamentos, Babel, TypeScript e SASS.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
@@ -48,8 +49,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **CSS** | ✅ Concluído | Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, media query, flex box, css grid etc |
 | **Integrando HTML, CSS e JS** | ✅ Concluído | DOM, selecionando elementos, acessando atributos e classes, modificando HTML, trabalhando com eventos etc |
 | **Ajax** | ✅ Concluído | Server, XMLHttpRequest, Fetch API, Axios etc |
-| **Gulp** | 🔄 Em Progresso | Instalação, fundamentos, Babel, TypeScript, SASS etc |
-| **Webpack** | ⏳ Pendente | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos etc |
+| **Gulp** | ✅ Concluído | Instalação, fundamentos, Babel, TypeScript, SASS etc |
+| **Webpack** | 🔄 Em Progresso | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos etc |
+| **jQuery** | ⏳ Pendente | Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação, plugin etc |
 | **---** | --- | --- |
 
 ---
@@ -82,6 +84,8 @@ Este tópico agrega as principais anotações de engenharia e as ideias mais dis
 * **Client-Side vs Server-Side:** esses dois conceitos fazem parte da arquitetura web e foram explicados durante a aula "Client Side vs Server Side", do módulo "Conceitos sobre Web". Client-Side se refere ao processamento executado diretamente no dispositivo do usuário, enquanto o Server-Side refere-se à lógica processada em servidores remotos, enviando ao cliente apenas o resultado final pronto para ser visualizado.
 
 * **Combinações de Seletores CSS:** a aula "Seletores CSS #01", do módulo CSS, explicou a diferença entre as combinações de seletores na linguagem. Existem quatro comportamentos fundamentais que vou explicar utilizando as tags ```div``` e ```p```: a **Descendência** (```div p```) aplica o estilo a todos os parágrafos dentro da divisão, independentemente do nível de aninhamento; a **Filiação Direta** (```div > p```) aplica o estilo apenas aos parágrafos que são filhos diretos da divisão; a **Vizinhança Adjacente** (```div + p```) aplica o estilo somente ao primeiro parágrafo que aparece logo após a divisão; e a **Vizinhança Geral** (```div ~ p```) aplica o estilo a todos os parágrafos depois da divisão que compartilham o mesmo nível de hierarquia.
+
+* **Versionamento de Código:** a convenção Semantic Versioning (SemVer), apresentada na aula "Instalando o Gulp e as Dependências" do módulo de Gulp, é um padrão universal adotado em praticamente todo o ecossistema de engenharia de software moderno (especialmente no gerenciador de pacotes NPM) que divide a versão em três partes por meio de pontos finais (x.y.z). A primeira parte da versão (X.y.z, *major*) deve ser iterada quando houver uma grande mudança estrutural e, principalmente, uma quebra de compatibilidade, enquanto a segunda (x.Y.z, *minor*) deve ser incrementada ao receber novas funcionalidades retrocompatíveis e a terceira (x.y.Z, *patch*) quando houver uma correção de falhas retrocompatíveis.
 
 ---
 
