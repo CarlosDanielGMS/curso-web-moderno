@@ -26,7 +26,7 @@ function copiarArquivos (sinalizarConclusao) // Instancia a função responsáve
         // .pipe(segundaTransformacao()) // Invoca a função que realiza a segunda transformação
         // .pipe(primeiraTransformacao()) // Invoca a função que realiza a primeira transformação
         // .pipe(terceiraTransformacao()) // Invoca a função que realiza a terceira transformação
-        .pipe(gulp.dest(enderecoDestino)) // Invoca a função que salva os arquivos do fluxo de trabalho no endereço de destino especificado nos parâmetros da função
+        .pipe(gulp.dest(enderecoDestino)); // Invoca a função que salva os arquivos do fluxo de trabalho no endereço de destino especificado nos parâmetros da função
 
     return sinalizarConclusao(); // Retorna a função passada como parâmetro
 };
