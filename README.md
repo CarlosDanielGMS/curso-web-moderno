@@ -23,6 +23,7 @@ Para facilitar a navegação, o código está organizado por tema:
 * **`/07-integracao`**: DOM, selecionando elementos, acessando atributos e classes, modificando HTML e trabalhando com eventos.
 * **`/08-ajax`**: Server, XMLHttpRequest, Fetch API e Axios.
 * **`/09-gulp`**: Instalação, fundamentos, Babel, TypeScript e SASS.
+* **`/10-webpack`**: Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos, desenvolvimento e produção, atualização e WebServer.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
@@ -50,7 +51,7 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Integrando HTML, CSS e JS** | ✅ Concluído | DOM, selecionando elementos, acessando atributos e classes, modificando HTML, trabalhando com eventos etc |
 | **Ajax** | ✅ Concluído | Server, XMLHttpRequest, Fetch API, Axios etc |
 | **Gulp** | ✅ Concluído | Instalação, fundamentos, Babel, TypeScript, SASS etc |
-| **Webpack** | 🔄 Em Progresso | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos etc |
+| **Webpack** | 🔄 Em Progresso | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos, desenvolvimento e produção, atualização, WebServer etc |
 | **jQuery** | ⏳ Pendente | Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação, plugin etc |
 | **---** | --- | --- |
 
