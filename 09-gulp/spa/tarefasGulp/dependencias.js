@@ -9,7 +9,7 @@ function importarDependenciasCss () // Instancia a função responsável por imp
     const enderecoDestino = 'build/assets/css'; // Instancia a constante com o endereço do diretório onde o arquivo concatenado deve ser salvo
     
     return gulp.src(enderecoOrigem) // Invoca a função que seleciona o arquivo a ser utilizado no fluxo de trabalho (src), transforma ele sequencialmente (pipe) e retorna a sinalização de conclusão da tarefa
-        .pipe(uglifyCss({ 'uglyComments': false })) // Invoca a função que compacta/minifica o código CSS passando como parâmetro um objeto com o atributo 'uglyComments' e o valor 'false', evitando a remoção de quebras de linhas e excessos de espaços dos comentários
+        .pipe(uglifyCss({ 'uglyComments': false })) // Invoca a função que compacta/minifica o código CSS passando como parâmetro um objeto com o atributo 'uglyComments' e o valor 'false', evitando a remoção dos comentários
         .pipe(concat(nomeArquivoMinificado)) // Invoca a função que concatena os códigos passando o nome do arquivo minificado como parâmetro
         .pipe(gulp.dest(enderecoDestino)); // Invoca a função que salva o arquivo passando o endereço de destino como parâmetro
 };
