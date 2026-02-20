@@ -59,6 +59,11 @@ function importarArquivosImagens () // Instancia a função responsável por cop
         .pipe(gulp.dest(enderecoDestino)); // Invoca a função que salva os arquivos do fluxo de trabalho no endereço de destino especificado nos parâmetros da função
 };
 
+gulp.task('processarArquivosHtml', processarArquivosHtml); // Invoca a função 'task' para configurar a função 'processarArquivosHtml' como uma tarefa passando o seu nome e a sua referência como parâmetros
+gulp.task('processarArquivosCss', processarArquivosCss); // Invoca a função 'task' para configurar a função 'processarArquivosCss' como uma tarefa passando o seu nome e a sua referência como parâmetros
+gulp.task('processarArquivosJs', processarArquivosJs); // Invoca a função 'task' para configurar a função 'processarArquivosJs' como uma tarefa passando o seu nome e a sua referência como parâmetros
+gulp.task('importarArquivosImagens', importarArquivosImagens); // Invoca a função 'task' para configurar a função 'processarArquivosImagens' como uma tarefa passando o seu nome e a sua referência como parâmetros
+
 module.exports = // Exporta os módulos passados como parâmetro
 {
     processarArquivosHtml,
