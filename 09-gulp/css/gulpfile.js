@@ -2,7 +2,7 @@ const gulp = require('gulp'); // Importa o módulo responsável pela otimizaçã
 const sass = require('gulp-sass')(require('sass')); // Importa o módulo responsável pela compilação do código CSS
 const uglifyCss = require('gulp-uglifycss'); // Importa o módulo responsável por compactar/minificar o código CSS, removendo espaços em branco, comentários, quebras de linha etc
 const concat = require('gulp-concat'); // Importa o módulo responsável pela concatenação do código
-const series = gulp.series; // Importa o submódulo do Gulp responsável por executar as tarefas em série
+const parallel = gulp.parallel; // Importa o submódulo do Gulp responsável por executar as tarefas em paralelo
 
 function compilarCodigo () // Instancia a função responsável por compilar o código TypeScript
 {
@@ -17,4 +17,13 @@ function compilarCodigo () // Instancia a função responsável por compilar o c
         .pipe(gulp.dest(enderecoDestino)); // Invoca a função que salva o arquivo passando o endereço de destino como parâmetro
 };
 
-exports.default = series(compilarCodigo); // Exporta a função criada como padrão e executa as funções/tarefas em série
+function copiarArquivo () // Instancia a função responsável por copiar o arquivo HTML
+{
+    const enderecoOrigem = 'src/index.html'; // Instancia a constante com o endereço para o arquivo HTML
+    const enderecoDestino = 'build'; // Instancia a constante com o endereço do diretório onde o arquivo HTML deve ser salvo
+    
+    return gulp.src(enderecoOrigem) // Invoca a função que seleciona o arquivo a ser utilizado no fluxo de trabalho e retorna a sinalização de conclusão da tarefa
+        .pipe(gulp.dest(enderecoDestino)); // Invoca a função que salva o arquivo do fluxo de trabalho no endereço de destino especificado nos parâmetros da função
+};
+
+exports.default = parallel(compilarCodigo, copiarArquivo); // Exporta a função criada como padrão e executa as funções/tarefas em paralelo
