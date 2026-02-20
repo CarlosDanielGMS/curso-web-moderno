@@ -49,8 +49,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **CSS** | ✅ Concluído | Anatomia, interno, externo, inline, seletores, especificidade, herança, altura, largura, cores, unidades, texto, media query, flex box, css grid etc |
 | **Integrando HTML, CSS e JS** | ✅ Concluído | DOM, selecionando elementos, acessando atributos e classes, modificando HTML, trabalhando com eventos etc |
 | **Ajax** | ✅ Concluído | Server, XMLHttpRequest, Fetch API, Axios etc |
-| **Gulp** | 🔄 Em Progresso | Instalação, fundamentos, Babel, TypeScript, SASS etc |
-| **Webpack** | ⏳ Pendente | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos etc |
+| **Gulp** | ✅ Concluído | Instalação, fundamentos, Babel, TypeScript, SASS etc |
+| **Webpack** | 🔄 Em Progresso | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos etc |
+| **jQuery** | ⏳ Pendente | Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação, plugin etc |
 | **---** | --- | --- |
 
 ---
