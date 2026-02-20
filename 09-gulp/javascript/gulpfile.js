@@ -22,7 +22,7 @@ function otimizarCodigo () // Instancia a função responsável por otimizar o c
             )
         )
         .pipe(uglify()) // Invoca a função que adiciona a função 'uglify' à "esteira" de execuções
-        .pipe(concat(nomeArquivoTransformado)) // Invoca a função que adiciona a função 'uglify' à "esteira" de execuções passando o nome do arquivo transformado como parâmetro
+        .pipe(concat(nomeArquivoTransformado)) // Invoca a função que adiciona a função 'concat' à "esteira" de execuções passando o nome do arquivo transformado como parâmetro
         .pipe(gulp.dest(enderecoDestino)) // Invoca a função que adiciona a função 'gulp.dest' à "esteira" de execuções passando o endereço de destino como parâmetro
         .on('error', erro => console.log(erro)); // Invoca a função que registra um ouvinte para o evento de erro e exibe a mensagem
 };
