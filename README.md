@@ -84,6 +84,8 @@ Este tópico agrega as principais anotações de engenharia e as ideias mais dis
 
 * **Combinações de Seletores CSS:** a aula "Seletores CSS #01", do módulo CSS, explicou a diferença entre as combinações de seletores na linguagem. Existem quatro comportamentos fundamentais que vou explicar utilizando as tags ```div``` e ```p```: a **Descendência** (```div p```) aplica o estilo a todos os parágrafos dentro da divisão, independentemente do nível de aninhamento; a **Filiação Direta** (```div > p```) aplica o estilo apenas aos parágrafos que são filhos diretos da divisão; a **Vizinhança Adjacente** (```div + p```) aplica o estilo somente ao primeiro parágrafo que aparece logo após a divisão; e a **Vizinhança Geral** (```div ~ p```) aplica o estilo a todos os parágrafos depois da divisão que compartilham o mesmo nível de hierarquia.
 
+* **Versionamento de Código:** a convenção Semantic Versioning (SemVer), apresentada na aula "Instalando o Gulp e as Dependências" do módulo de Gulp, é um padrão universal adotado em praticamente todo o ecossistema de engenharia de software moderno (especialmente no gerenciador de pacotes NPM) que divide a versão em três partes por meio de pontos finais (x.y.z). A primeira parte da versão (X.y.z, *major*) deve ser iterada quando houver uma grande mudança estrutural e, principalmente, uma quebra de compatibilidade, enquanto a segunda (x.Y.z, *minor*) deve ser incrementada ao receber novas funcionalidades retrocompatíveis e a terceira (x.y.Z, *patch*) quando houver uma correção de falhas retrocompatíveis.
+
 ---
 
 ## 🚀 Como Executar Localmente
