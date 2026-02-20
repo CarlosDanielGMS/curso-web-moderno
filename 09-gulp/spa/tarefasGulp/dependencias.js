@@ -2,7 +2,7 @@ const gulp = require('gulp'); // Importa o módulo responsável pela otimizaçã
 const uglifyCss = require('gulp-uglifycss'); // Importa o módulo responsável por compactar/minificar o código CSS, removendo espaços em branco, comentários, quebras de linha etc
 const concat = require('gulp-concat'); // Importa o módulo responsável pela concatenação dos códigos
 
-function importarDependenciasCss (sinalizarConclusao) // Instancia a função responsável por importar as dependências CSS e passa outra função como parâmetro responsável por sinalizar a conclusão da tarefa
+function importarDependenciasCss () // Instancia a função responsável por importar as dependências CSS
 {
     const enderecoOrigem = 'node_modules/font-awesome/css/font-awesome.css'; // Instancia a constante com o endereço para o arquivo CSS
     const nomeArquivoMinificado = 'deps.min.css' // Instancia a constante com o nome do arquivo minificado a ser salvo
@@ -14,7 +14,7 @@ function importarDependenciasCss (sinalizarConclusao) // Instancia a função re
         .pipe(gulp.dest(enderecoDestino)); // Invoca a função que salva o arquivo passando o endereço de destino como parâmetro
 };
 
-function importarDependenciasFontes (sinalizarConclusao) // Instancia a função responsável por importar as dependências de fontes e passa outra função como parâmetro responsável por sinalizar a conclusão da tarefa
+function importarDependenciasFontes () // Instancia a função responsável por importar as dependências de fontes
 {
     const enderecoOrigem = 'node_modules/font-awesome/fonts/*.*'; // Instancia a constante com o endereço para os arquivos de fonte
     const enderecoDestino = 'build/assets/fonts'; // Instancia a constante com o endereço do diretório onde os arquivos devem ser salvos
