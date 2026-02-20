@@ -50,7 +50,7 @@ function processarArquivosJs () // Instancia a função responsável por process
         .pipe(gulp.dest(enderecoDestino)); // Invoca a função que salva os arquivos passando o endereço de destino como parâmetro
 };
 
-function copiarArquivosImagens () // Instancia a função responsável por copiar os arquivos de imagens para a pasta de construção
+function importarArquivosImagens () // Instancia a função responsável por copiar os arquivos de imagens para a pasta de construção
 {
     const enderecoOrigem = 'src/assets/imgs/**/*.*'; // Instancia a constante com o endereço para todos os arquivos presentes no diretório 'src/assets/imgs' e em seus subdiretórios
     const enderecoDestino = 'build/assets/imgs'; // Instancia a constante com o endereço do diretório onde o arquivo HTML deve ser salvo
@@ -64,5 +64,5 @@ module.exports = // Exporta os módulos passados como parâmetro
     processarArquivosHtml,
     processarArquivosCss,
     processarArquivosJs,
-    copiarArquivosImagens
+    importarArquivosImagens
 };
