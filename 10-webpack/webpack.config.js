@@ -14,10 +14,10 @@ module.exports = // Exporta o módulo de configuração do webpack
         path: __dirname + '/dist', // Configura o diretório de saída do webpack
         filename: 'principal.js' // Configura o nome do arquivo de saída do webpack
     },
-    devServer:
+    devServer: // Configura o servidor de desenvolvimento do webpack
     {
-        contentBase: './dist',
-        port: 9000
+        contentBase: './dist', // Configura o diretório do servidor de desenvolvimento do webpack
+        port: 9000 // Configura a porta do servidor de desenvolvimento do webpack
     },
     optimization: // Configura as otimizações do webpack
     {
