@@ -1,7 +1,7 @@
 const modoDesenvolvimento  = process.env.NODE_ENV !== 'production'; // Verifica se o ambiente está configurado para o modo desenvolvimento
 const webpack = require('webpack'); // Importa o módulo responsável por compilar módulos JavaScript
 const miniCssExtractPlugin = require('mini-css-extract-plugin'); // Importa o módulo responsável por externalizar os módulos CSS
-const uglifyWebpackPlugin = require('uglifyjs-webpack-plugin'); // Importa o módulo responsável por compactar/minificar os códigos CSS, removendo espaços em branco, comentários, quebras de linha etc
+const uglifyWebpackPlugin = require('uglifyjs-webpack-plugin'); // Importa o módulo responsável por compactar/minificar os códigos JS, removendo espaços em branco, comentários, quebras de linha etc
 const optimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin'); // Importa o módulo responsável por otimizar os códigos CSS
 
 module.exports = // Exporta o módulo de configuração do webpack
