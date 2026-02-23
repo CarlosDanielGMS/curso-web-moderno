@@ -14,6 +14,11 @@ module.exports = // Exporta o módulo de configuração do webpack
         path: __dirname + '/public', // Configura o diretório de saída do webpack
         filename: 'principal.js' // Configura o nome do arquivo de saída do webpack
     },
+    devServer:
+    {
+        contentBase: './public',
+        port: 9000
+    },
     optimization: // Configura as otimizações do webpack
     {
         minimizer: // Configura o minimizador do webpack
