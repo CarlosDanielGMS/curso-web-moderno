@@ -25,12 +25,13 @@ module.exports = // Exporta o módulo de configuração do webpack
         rules: // Configura a lista de regras do webpack
         [
             {
-                test: /\.css$/, // Indentifica o tipo de arquivo a utilizar os carregadores
+                test: /\.s?[ac]ss$/, // Indentifica o tipo de arquivo a utilizar os carregadores
                 use: // Configura a lista de carregadores
                 [
                     miniCssExtractPlugin.loader, // Externaliza os arquivos CSS
                     // 'style-loader', // Adiciona o CSS na página injetando um elemento <style> no DOM para cada arquivo CSS
-                    'css-loader' // Interpreta os comandos @import e url() dentro do arquivo CSS
+                    'css-loader', // Interpreta os comandos @import e url() dentro do arquivo CSS
+                    'sass-loader'// Compila arquivos Sass/SCSS para CSS básico
                 ]
             }
         ]
