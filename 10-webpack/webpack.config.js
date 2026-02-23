@@ -9,5 +9,19 @@ module.exports = // Exporta o módulo de configuração do webpack
     {
         path: __dirname + '/public', // Configura o diretório de saída do webpack
         filename: 'principal.js' // Configura o nome do arquivo de saída do webpack
+    },
+    module: // Configura como o webpack deve lidar com os módulos/arquivos
+    {
+        rules: // Configura a lista de regras do webpack
+        [
+            {
+                test: /\.css$/, // Indentifica o tipo de arquivo a utilizar os carregadores
+                use: // Configura a lista de carregadores
+                [
+                    'style-loader', // Adiciona o CSS na página injetando um elemento <style> no DOM para cada arquivo CSS
+                    'css-loader' // Interpreta os comandos @import e url() dentro do arquivo CSS
+                ]
+            }
+        ]
     }
 };
