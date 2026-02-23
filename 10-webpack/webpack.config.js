@@ -50,6 +50,10 @@ module.exports = // Exporta o módulo de configuração do webpack
                     'css-loader', // Interpreta os comandos @import e url() dentro do arquivo CSS
                     'sass-loader'// Compila arquivos Sass/SCSS para CSS básico
                 ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/, // Indentifica os tipos de arquivos a utilizarem os carregadores
+                use: ['file-loader'] // Configura a lista de carregadores
             }
         ]
     }
