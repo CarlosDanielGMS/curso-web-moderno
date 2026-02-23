@@ -1,15 +1,32 @@
+const modoDesenvolvimento  = process.env.NODE_ENV !== 'production'; // Verifica se o ambiente está configurado para o modo desenvolvimento
 const webpack = require('webpack'); // Importa o módulo responsável por compilar módulos JavaScript
 const miniCssExtractPlugin = require('mini-css-extract-plugin'); // Importa o módulo responsável por externalizar os módulos CSS
+const uglifyWebpackPlugin = require('uglifyjs-webpack-plugin'); // Importa o módulo responsável por compactar/minificar os códigos CSS, removendo espaços em branco, comentários, quebras de linha etc
+const optimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin'); // Importa o módulo responsável por otimizar os códigos CSS
 
 module.exports = // Exporta o módulo de configuração do webpack
 {
     // mode: 'production', // Configura o webpack para o modo produção
-    mode: 'development', // Configura o webpack para o modo desenvolvimento
+    mode: modoDesenvolvimento ? 'development' : 'production', // Configura o webpack para o modo definido
     entry: './src/principal.js', // Configura o arquivo de entrada do webpack
     output: // Configura a saída do webpack
     {
         path: __dirname + '/public', // Configura o diretório de saída do webpack
         filename: 'principal.js' // Configura o nome do arquivo de saída do webpack
+    },
+    optimization: // Configura as otimizações do webpack
+    {
+        minimizer: // Configura o minimizador do webpack
+        [
+            new uglifyWebpackPlugin // Instancia o módulo responsável por compactar/minificar os códigos CSS
+            (
+                {
+                    cache: true, // Habilita o cache
+                    parallel: true // Habilita o paralelismo
+                }
+            ),
+            new optimizeCssAssetsWebpackPlugin({}) // Instancia o módulo responsável por otimizar os códigos CSS
+        ]
     },
     plugins: // Configura a lista de extensões do webpack
     [
