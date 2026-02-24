@@ -51,8 +51,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Integrando HTML, CSS e JS** | ✅ Concluído | DOM, selecionando elementos, acessando atributos e classes, modificando HTML, trabalhando com eventos etc |
 | **Ajax** | ✅ Concluído | Server, XMLHttpRequest, Fetch API, Axios etc |
 | **Gulp** | ✅ Concluído | Instalação, fundamentos, Babel, TypeScript, SASS etc |
-| **Webpack** | 🔄 Em Progresso | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos, desenvolvimento e produção, atualização, WebServer etc |
-| **jQuery** | ⏳ Pendente | Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação, plugin etc |
+| **Webpack** | ✅ Concluído | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos, desenvolvimento e produção, atualização, WebServer etc |
+| **jQuery** | 🔄 Em Progresso | Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação, plugin etc |
+| **Bootstrap** | ⏳ Pendente | Navegação, tipografia, espaços, título, cores, flexbox, imagens, float, grid, botões, barra de progresso, alertas, paginação etc |
 | **---** | --- | --- |
 
 ---
