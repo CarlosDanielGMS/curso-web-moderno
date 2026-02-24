@@ -14,6 +14,24 @@
     <div>2</div>
 
     <script>
-        // ...
+        // O jQuery pode ser acessado usando 'jQuery' ou '$' (mais comum)
+        // O parâmetro usado para manipular um elemento da página é o seu seletor
+        // O retorno da função é um objeto (ou uma lista de objetos, se houver mais de um) "decorado" que CONTÉM o nó do elemento no DOM, logo, não é o nó do elemento no DOM em si
+        $('div').hide(5000).show(5000).fadeOut(5000); // Manipula todas as divisões da página ocultando-as, exibindo-as e transparecendo-as, nesta ordem, em 5 segundos cada
+        // É possível selecionar um dos nós especificamente utilizando a função 'get' e passando como parâmetro o índice do elemento na lista
+        // Neste caso, não é possível encadear funções (utilizar a técnica 'chaining') porque o retorno é, de fato, o nó do elemento no DOM
+        console.log($('div').get(1)); // Exibe no console a segunda divisão presente na página
+        // É possível também verificar se um objeto é vazio utilizando a função 'isEmptyObject' e passando como parâmetro o objeto a ser analisado
+        console.log($.isEmptyObject({ nome: 'Daniel' })); // Exibe no console se o objeto é vazio ou não
+        // Para exibir a posição de um valor específico em um vetor, utiliza-se a função 'inArray' passando como parâmetro o valor procurado e o vetor
+        console.log(jQuery.inArray(3, [1, 2, 3])); // Exibe a posição do 3 no vetor
+        
+        // Para extender as funcionalidades do jQuery, é usado o objeto padrão 'fn' seguido da funcionalidade
+        $.fn.adicionarFundoLaranja = function () // Atribui uma função ao jQuery
+        {
+            this.css('background-color', 'orange'); // Altera a cor de fundo do objeto jQuery para laranja
+            return this; // Retorna o objeto jQuery (obrigatório para encadear funções)
+        };
+        $('body').adicionarFundoLaranja().hide(1000); // Altera a cor do fundo do corpo para laranja e oculta-o logo em seguida por 1 segundo
     </script>
 </body>
