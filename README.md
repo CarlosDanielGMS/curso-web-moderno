@@ -24,6 +24,7 @@ Para facilitar a navegação, o código está organizado por tema:
 * **`/08-ajax`**: Server, XMLHttpRequest, Fetch API e Axios.
 * **`/09-gulp`**: Instalação, fundamentos, Babel, TypeScript e SASS.
 * **`/10-webpack`**: Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos, desenvolvimento e produção, atualização e WebServer.
+* **`/11-jquery`**: Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação e plugin.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
