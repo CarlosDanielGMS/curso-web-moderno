@@ -1,0 +1,29 @@
+{
+  "name": "10-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && cross-env NODE_ENV=production webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "css-loader": "0.28.11",
+    "mini-css-extract-plugin": "0.4.0",
+    "sass": "^1.97.3",
+    "sass-loader": "^10.5.2",
+    "style-loader": "0.21.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "cross-env": "10.1.0",
+    "uglifyjs-webpack-plugin": "2.2.0",
+    "optimize-css-assets-webpack-plugin": "6.0.1",
+    "file-loader": "1.1.11",
+    "webpack-dev-server": "3.11.3"
+  }
+}
