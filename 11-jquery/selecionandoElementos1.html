@@ -49,6 +49,25 @@
     </form>
 
     <script>
-        // ...
+        // Seletores CSS padrões
+        $('#feira').addClass('destaque').removeClass('destaque'); // Adiciona e remove a classe 'destaque' dos elementos com o atributo 'ID' com o valor 'feira'
+        $('li').addClass('destaque'); // Adiciona a classe 'destaque' aos elementos do tipo 'li'
+        $('[wm-obrigatorio]').removeClass('destaque'); // Remove a classe 'destaque' dos elementos com o atributo 'wm-obrigatorio'
+        $('li.opcional').removeClass('destaque'); // Remove a classe 'destaque' dos elementos do tipo 'li' com a classe 'opcional'
+        $('div p span').addClass('destaque'); // Adiciona a classe 'destaque' aos elementos do tipo 'span' que estiverem dentro de um elemento do tipo 'p', que por sua vez esteja dentro de um elemento do tipo 'div'
+
+        // Seletores exclusivos do jQuery
+        $('li:first').css('border', 'solid 3px yellow'); // Adiciona o estilo CSS ao primeiro elemento do tipo 'li'
+        $('li:odd').css('border', 'solid 10px orange'); // Adiciona o estilo CSS a todos os elementos ímpares do tipo 'li'
+        $('li:gt(1)').css('border', 'solid 10px white'); // Adiciona o estilo CSS a todos os elementos do tipo 'li' depois do índice '1'
+        $('li:not(:last)').css('border', 'none'); // Adiciona o estilo CSS a todos os elementos do tipo 'li', exceto o último
+        $('li:contains("r")').css('background-color', 'black'); // Adiciona o estilo CSS a todos os elementos do tipo 'li' que contém a letra 'r'
+        
+        $('form *').hide(); // Oculta todos os elementos que estiverem dentro de um elemento do tipo 'form'
+        $('form :text').show(); // Oculta todos os elementos que estiverem dentro de um elemento do tipo 'form' com o atributo 'type' com o valor 'text'
+        $('form :password').show(); // Oculta todos os elementos que estiverem dentro de um elemento do tipo 'form' com o atributo 'type' com o valor 'password'
+        $('form :checkbox').show(); // Oculta todos os elementos que estiverem dentro de um elemento do tipo 'form' com o atributo 'type' com o valor 'checkbox'
+        $('form :radio').show(); // Oculta todos os elementos que estiverem dentro de um elemento do tipo 'form' com o atributo 'type' com o valor 'radio'
+        $('form :file').show(); // Oculta todos os elementos que estiverem dentro de um elemento do tipo 'form' com o atributo 'type' com o valor 'file'
     </script>
 </body>
