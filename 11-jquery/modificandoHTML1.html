@@ -13,8 +13,24 @@
     <div id='conteudo1'></div>
     <div id='conteudo2'></div>
     <div id='conteudo3'></div>
+    <div>Sem ID!</div>
 
     <script>
-        // ...
+        $('#conteudo1').append('<p>1</p>'); // Adiciona o elemento 'p' ao elemento já existente com o ID 'conteudo1'
+
+        const itens = // Instancia uma lista de itens
+        [
+            $('<li></li>').append('Arroz'), // Cria um elemento 'li' e adiciona a palavra 'Arroz' a ele
+            $('<li>').append('Feijão'), // Cria um elemento 'li' e adiciona a palavra 'Feijão' a ele
+            $('<li>').append('Carne') // Cria um elemento 'li' e adiciona a palavra 'Carne' a ele
+        ];
+        const lista = $('<ul><li>Sorvete</li></ul>').append(itens); // Cria um elemento 'ul' com um elemento 'li' contendo a palavra 'Sorvete' e adiciona os itens criados anteriormente ao início do elemento 'ul'
+        $('#conteudo2').append(lista); // Adiciona a lista criada anteriormente ao fim do elemento já existente com o ID 'conteudo2'
+
+        $('#conteudo3').append(['<h1>1</h1>', '<h1>2</h1>']).prepend('<h1>0</h1>'); // Adiciona a lista com os elementos 'h1' contendo os valores '1' e '2' ao início e o elemento 'h1' com o valor '0' ao fim do elemento com o ID 'conteudo3'
+        $('#conteudo3').html('<h1>123</h1>'); // Substitui todo o conteúdo do elemento com o ID 'conteudo3' pelo elemento 'h1' com o valor '123'
+        $('#conteudo3').text('<h1>123</h1>'); // Substitui todo o conteúdo do elemento com o ID 'conteudo3' pelo valor '<h1>123</h1>'
+
+        $('div[id]').html('<strong>Todos!</strong>'); // Substitui todo o conteúdo do elemento 'div' com o atributo 'id' pelo elemento 'strong' com o valor 'Todos!'
     </script>
 </body>
