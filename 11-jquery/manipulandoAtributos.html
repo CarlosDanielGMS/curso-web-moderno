@@ -22,6 +22,7 @@
 <body class='conteudo exercicio'>
     <h1>Manipulando Atributos</h1>
     <div wm-relogio='1000'></div>
+    <div wm-relogio='3000'></div>
     <script>
         function Relogio (elemento)
         {
@@ -66,7 +67,14 @@
 
             iniciar();
         };
-
+        
+        // Cria um novo relógio para cada elemento com o atributo 'wm-relogio'
         $('[wm-relogio]').each((indice, elemento) => new Relogio(elemento));
+
+        // Adiciona novos atributos aos elementos com o atributo 'wm-relogio'
+        $('[wm-relogio]').attr({ saudacao: 'A paz de Deus!', novo: true });
+
+        // Remove atributos dos elementos com o atributo 'wm-relogio'
+        $('[wm-relogio]').removeAttr('saudacao').removeAttr('novo');
     </script>
 </body>
