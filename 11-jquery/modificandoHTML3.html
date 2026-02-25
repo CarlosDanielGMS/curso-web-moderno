@@ -20,6 +20,20 @@
             { nome: 'Julia', nota: 9.7 }
         ]
         
-        // ...
+        const tabela = $('<table>');
+        const corpo = $('body');
+        
+        pessoas.forEach
+        (
+            (pessoa) =>
+            {
+                const dadoNome = $('<td>').append(pessoa.nome);
+                const dadoNota = $('<td>').append(pessoa.nota);
+                const linha = $('<tr>').append(dadoNome, dadoNota);
+                tabela.append(linha);
+            }
+        );
+
+        corpo.append(tabela);
     </script>
 </body>
