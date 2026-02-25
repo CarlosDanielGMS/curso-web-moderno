@@ -81,6 +81,28 @@
         <p>Cod3r Ensino</p>
     </footer>
     <script>
-        // ...
+        const comBorda = // Instancia um objeto
+        {
+            'border': 'solid 8px orange' // Adiciona uma borda CSS laranja sólida de 8 pixels como atributo do objeto
+        };
+        
+        const semBorda = // Instancia um objeto
+        {
+            'border': 'none' // Adiciona uma borda CSS invisível como atributo do objeto
+        };
+
+        $('a[href="#link3"]').parent().css(comBorda).css(semBorda); // Adiciona e remove a borda do elemento-pai do elemento do tipo 'a' que tem o atributo 'href' com o valor '#link3'
+        $('li:last').prev().css(comBorda).css(semBorda); // Adiciona e remove a borda do elemento anterior ao último elemento do tipo 'li'
+        $('a[href="#link3"]').parent().next().css(comBorda).css(semBorda); // Adiciona e remove a borda do elemento posterior ao elemento-pai do elemento do tipo 'a' que tem o atributo 'href' com o valor '#link3'
+        $('a[href="#link1"]').parents().css(comBorda).css(semBorda); // Adiciona e remove a borda de todos os elementos ancestrais do elemento do tipo 'a' que tem o atributo 'href' com o valor '#link1'
+        $('a[href="#link1"]').parentsUntil($('body')).css(comBorda).css(semBorda); // Adiciona e remove a borda de todos os elementos ancestrais do elemento do tipo 'a' que tem o atributo 'href' com o valor '#link1' até o elemento do tipo 'body' (sem incluí-lo)
+        $('main').children().css(comBorda).css(semBorda); // Adiciona e remove a borda de todos os elementos descendentes (apenas diretos) do elemento do tipo 'main'
+        $('body').find('a').css(comBorda); // Adiciona a borda de todos os elementos descendentes do tipo 'a' (incluindo indiretos) do elemento do tipo 'body'
+
+        const elementosDom = document.getElementsByClassName('menu'); // Seleciona todos os elementos que possuem a classe com o valor 'menu'
+        $(elementosDom).css(comBorda); // Adiciona a borda aos elementos selecionados anteriormente
+
+        $('main').children().each((indice, elemento) => $(elemento).css(comBorda).css(semBorda)); // Adiciona e remove a borda de cada elemento descendente (apenas diretos) do elemento do tipo 'main'
+        $('li').each((indice, elemento) => $(elemento).css(comBorda)); // Adiciona a borda a cada elemento do tipo 'li'
     </script>
 </body>
