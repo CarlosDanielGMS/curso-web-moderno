@@ -17,6 +17,43 @@
     <p class='numero'>5</p>
 
     <script>
-        // ...
+        // Adiciona conteúdos ao fim do elemento selecionado
+        $('#div1').append(', 2'); // Não precisa especificar o tipo de elemento a ser adicionado
+        $('<span>, 3</span>').appendTo('#div1'); // Precisa especificar o tipo de elemento a ser adicionado
+        
+        // Adiciona conteúdos ao início do elemento selecionado
+        $('#div1').prepend('0, '); // Não precisa especificar o tipo de elemento a ser adicionado
+        $('<span>-1, </span>').prependTo('#div1'); // Precisa especificar o tipo de elemento a ser adicionado
+        
+        // Adiciona conteúdos antes do elemento selecionado
+        $('#div2').before('<p>Antes do 2</p>');
+        $('<p>Antes do 3</p>').insertBefore('#div3');
+        
+        // Adiciona conteúdos depois do elemento selecionado
+        $('#div2').after('<p>Depois do 2</p>');
+        $('<p>Depois do 3</p>').insertAfter('#div3');
+
+        // Envolve cada elemento selecionado com o elemento 'div'
+        // $('p.numero').wrap('<div>');
+
+        // Envolve todos os elementos selecionados com o elemento 'div' que possui o ID 'div4'
+        $('p.numero').wrapAll('<div id="div4">');
+        
+        // Remove todo o conteúdo do elemento selecionado
+        $('#div4').empty();
+
+        // Remove o elemento anterior a cada elemento selecionado
+        $('#div3, #div4').prev().remove();
+
+        // Substitui todos os elementos selecionados pelo conteúdo especificado
+        // $('body > p').replaceWith('<div>Substituto</div>');
+        // $('<div>Substituto</div>').replaceAll('body > p');
+        $('body > p').replaceWith
+        (
+            function ()
+            {
+                return $('<div>').html($(this).html()).append('!!!');
+            }
+        );
     </script>
 </body>
