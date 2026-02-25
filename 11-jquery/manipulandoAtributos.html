@@ -23,6 +23,50 @@
     <h1>Manipulando Atributos</h1>
     <div wm-relogio='1000'></div>
     <script>
-        // ...
+        function Relogio (elemento)
+        {
+            const $paragrafoHora = $('<p>').html('0');
+            const $botaoMenos = $('<button>').html('-');
+            const $botaoMais = $('<button>').html('+');
+
+            const $elemento = $(elemento);
+            $elemento.append($paragrafoHora, $botaoMenos, $botaoMais);
+            
+            let temporizador = null;
+            
+            // Captura o valor do atributo 'wm-relogio' do elemento passado como parâmetro
+            const getIntervaloAtual = () => parseInt($elemento.attr('wm-relogio'));
+
+            function iniciar ()
+            {
+                if (temporizador) clearInterval(temporizador);
+                temporizador = setInterval
+                (
+                    () =>
+                    {
+                        $paragrafoHora.html(new Date().toLocaleString('pt-BR'));
+                    },
+                    getIntervaloAtual()
+                );
+            };
+
+            function alterarIntervalo (delta)
+            {
+                const novoIntervalo = Math.max(getIntervaloAtual() + delta, 1000);
+
+                // Altera o valor do atributo 'wm-relogio'
+                $elemento.attr('wm-relogio', novoIntervalo);
+
+                iniciar();
+            };
+            
+            // Configura as funções a serem executadas ao clicar nos botões
+            $botaoMenos.click(evento => alterarIntervalo(1000));
+            $botaoMais.click(evento => alterarIntervalo(-1000));
+
+            iniciar();
+        };
+
+        $('[wm-relogio]').each((indice, elemento) => new Relogio(elemento));
     </script>
 </body>
