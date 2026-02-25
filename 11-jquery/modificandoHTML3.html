@@ -13,27 +13,35 @@
     <div id='conteudo'></div>
 
     <script>
-        const pessoas = [
-            { nome: 'Ana', nota: 9.1 },
-            { nome: 'Bianca', nota: 8.4 },
-            { nome: 'Carlos', nota: 7.6 },
-            { nome: 'Julia', nota: 9.7 }
-        ]
-        
-        const tabela = $('<table>');
-        const corpo = $('body');
-        
-        pessoas.forEach
+        // Aguarda o carregamento completo da página antes de manipulá-la
+        //$(document).ready
+        $
         (
-            (pessoa) =>
+            function ()
             {
-                const dadoNome = $('<td>').append(pessoa.nome);
-                const dadoNota = $('<td>').append(pessoa.nota);
-                const linha = $('<tr>').append(dadoNome, dadoNota);
-                tabela.append(linha);
+                const alunos =
+                [
+                    { nome: 'Ana', nota: 9.1 },
+                    { nome: 'Bianca', nota: 8.4 },
+                    { nome: 'Carlos', nota: 7.6 },
+                    { nome: 'Julia', nota: 9.7 }
+                ];
+                
+                const linhas = alunos.map
+                (
+                    aluno =>
+                    {
+                        const dadoNome = $('<td>').html(aluno.nome);
+                        const dadoNota = $('<td>').html(aluno.nota);
+                        const linha = $('<tr>').append(dadoNome, dadoNota);
+                        
+                        return linha;
+                    }
+                );
+                const tabela = $('<table>').append(linhas).css('border', 'solid 5px');
+                
+                $('#conteudo').append(tabela);
             }
         );
-
-        corpo.append(tabela);
     </script>
 </body>
