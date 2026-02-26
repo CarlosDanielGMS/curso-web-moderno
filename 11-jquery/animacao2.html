@@ -28,6 +28,33 @@
     <div>Animar!</div>
 
     <script>
-        // ...
+        function animarElemento (seletor, propriedades, opcoes)
+        {
+            return new Promise
+            (
+                (resolver, rejeitar) =>
+                {
+                    // Anima o elemento
+                    $(seletor).animate
+                    (
+                        propriedades,
+                        {
+                            ...opcoes,
+                            complete: () => resolver()
+                        }
+                    );
+                }
+            );
+        };
+        
+        async function iniciarAnimacoes ()
+        {
+            await animarElemento('div', { width: '+=300' }, { duration: 100 });
+            await animarElemento('div', { width: '-=300' }, { duration: 'slow' });
+            await animarElemento('div', { top: '+=300', left: '+=300' }, { duration: 600 });
+            await animarElemento('div', { deg: '3300' }, { duration: 3000, step: function (agora) { $(this).css('transform', `rotate(${agora}deg)`) } });
+        };
+
+        iniciarAnimacoes();
     </script>
 </body>
