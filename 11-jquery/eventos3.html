@@ -26,6 +26,52 @@
     <span id='resultado'></span>
 
     <script>
-        // ...
+        const $div1 = $('#div1');
+        const $div2 = $('#div2');
+        const $input1 = $('#input1');
+        const $resultado = $('#resultado');
+
+        function exibirDados (evento)
+        {
+            $resultado.empty();
+
+            const $divCriada1 = $('<div>');
+            const $divCriada2 = $('<div>');
+            
+            $resultado.append($divCriada1, $divCriada2);
+            
+            // Exibe o ID do elemento referente ao evento
+            $divCriada1.append(`target: ${evento.target.id}`);
+
+            // Exibe o tipo do elemento relacionado ao evento
+            $divCriada1.append(`<br>relatedTarget: ${evento.relatedTarget ? evento.relatedTarget.tagName : null}`);
+
+            // Exibe o tipo do evento
+            $divCriada1.append(`<br>type: ${evento.type}`);
+
+            // Exibe o código da tecla/botão pressionado
+            $divCriada1.append(`<br>wich: ${evento.which}`);
+
+            // Exibe se a tecla Windows/Command está pressionada
+            $divCriada1.append(`<br>metaKey: ${evento.metaKey}`);
+
+            // Exibe a coordenada X do mouse relativa ao documento inteiro
+            $divCriada2.append(`pageX: ${evento.pageX}`);
+
+            // Exibe a coordenada Y do mouse relativa ao documento inteiro
+            $divCriada2.append(`<br>pageY: ${evento.pageY}`);
+
+            // Exibe a coordenada X do mouse relativa à área visível da página
+            $divCriada2.append(`<br>clientX: ${evento.clientX}`);
+
+            // Exibe a coordenada Y do mouse relativa à área visível da página
+            $divCriada2.append(`<br>clientY: ${evento.clientY}`);
+
+            // Exibe o valor da variável criada na chamada do evento
+            $divCriada2.append(`<br>saudacao: ${evento.data ? evento.data.saudacao : null}`);
+        }
+
+        $('#div1, #div2').on('mouseenter mouseleave', { saudacao: 'A paz de Deus!' }, exibirDados);
+        $input1.keyup(exibirDados);
     </script>
 </body>
