@@ -20,6 +20,63 @@
     <input type="text" placeholder="Cor de Background">
 
     <script>
-        // ...
+        let quantidadeCliques = 0;
+        const corFundoOriginal = $('body').css('background-color');
+
+        function exibirCoordenadasMouse (evento)
+        {
+            $('#posicao').html(`x: ${evento.clientX} y: ${evento.clientY}`);
+        }
+
+        function incrementarCliques ()
+        {
+            $('#cliques').html(`Cliques: ${++quantidadeCliques}`);
+        };
+
+        function alterarCorFundo (cor)
+        {
+            $('body').css('background-color', cor);
+        };
+        
+        // Exibe as coordenadas do mouse ao movê-lo sobre o corpo
+        $('body').on('mousemove', exibirCoordenadasMouse);
+        
+        // Para de exibir as coordenadas do mouse ao movê-lo sobre o corpo sempre que mover o mouse sobre o elemento com o ID 'posicao'
+        $('#posicao').mouseover
+        (
+            evento =>
+            {
+                $('body').off('mousemove', exibirCoordenadasMouse);
+            }
+        );
+        
+        // Volta a exibir as coordenadas do mouse ao movê-lo sobre o corpo sempre que mover o mouse para fora do elemento com o ID 'posicao'
+        $('#posicao').mouseleave
+        (
+            evento =>
+            {
+                $('body').mousemove(exibirCoordenadasMouse);
+            }
+        );
+
+        // Exibe a quantidade de cliques ao clicar sobre o corpo
+        $('body').click(incrementarCliques);
+
+        // Altera a cor de fundo do corpo ao pressionar e soltar uma tecla
+        $('input').keyup
+        (
+            function (evento)
+            {
+                const valor = $(this).val();
+                if (valor.match(/#[\da-fA-F]{3,6}/))
+                {
+                    alterarCorFundo(valor);
+                }
+                else
+                {
+                    alterarCorFundo(corFundoOriginal);
+                }
+            }
+        );
     </script>
 </body>
