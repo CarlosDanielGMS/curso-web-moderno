@@ -21,6 +21,50 @@
     <input type="text" placeholder="Digite e Selecione">
     <div id="resultado2">?</div>
     <script>
-        // ...
+        function alternarDestaque ()
+        {
+            $('#div1').toggleClass('destaque');
+        };
+
+        function exibirAlerta ()
+        {
+            alert('Aviso IMPORTANTE: você foi avisado!');
+        };
+
+        function ocultarExibir ()
+        {
+            $('#div1').fadeOut(250).fadeIn(250);
+        };
+
+        function exibirDimensoesJanela ()
+        {
+            const largura = $(window).width();
+            const altura = $(window).height();
+
+            $('#resultado1').html(`Largura: ${largura} Altura: ${altura}`);
+        };
+
+        function exibirSelecao (evento)
+        {
+            const inicioSelecao = evento.target.selectionStart;
+            const fimSelecao = evento.target.selectionEnd;
+
+            $('#resultado2').html(evento.target.value.substring(inicioSelecao, fimSelecao));
+        };
+
+        // Alterna a classe do elemento ao sobrepor o mouse a ele
+        $('#div1').hover(alternarDestaque, alternarDestaque);
+
+        // Exibe o alerta ao mover o mouse sobre o elemento apenas uma vez
+        $('#div1').one('mouseenter', exibirAlerta);
+
+        // Oculta e exibe o elemento ao clicar duas vezes sobre ele
+        $('#div1').dblclick(ocultarExibir);
+
+        // Oculta as dimensões da tela ao redimensioná-la
+        $(window).resize(exibirDimensoesJanela);
+
+        // Exibe o conteúdo selecionado
+        $(':input').select(exibirSelecao);
     </script>
 </body>
