@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Animação #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+    <style>
+        div {
+            text-align: center;
+        }
+        button {
+            font-size: 1.8em;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Animação #01</h1>
+    <button>Iniciar</button>
+    <div id='animar'>Animar!</div>
+
+    <script>
+        const $botao = $('button');
+        const $div = $('#animar');
+
+        $botao.click
+        (
+            evento =>
+            {
+                const tempoAnimacao = 500;
+                
+                // Oculta e exibe o elemento
+                //$div.hide(tempoAnimacao).show(tempoAnimacao);
+                $div.toggle(tempoAnimacao).toggle(tempoAnimacao);
+                
+                // Adiciona e remove transparência do elemento
+                //$div.fadeOut(tempoAnimacao).fadeIn(tempoAnimacao);
+                $div.fadeToggle(tempoAnimacao).fadeToggle(tempoAnimacao);
+                
+                // Comprime e descomprime o elemento
+                //$div.slideUp(tempoAnimacao).slideDown(tempoAnimacao);
+                $div.slideToggle(tempoAnimacao).slideToggle(tempoAnimacao);
+            }
+        );
+    </script>
+</body>

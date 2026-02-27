@@ -24,6 +24,7 @@ Para facilitar a navegação, o código está organizado por tema:
 * **`/08-ajax`**: Server, XMLHttpRequest, Fetch API e Axios.
 * **`/09-gulp`**: Instalação, fundamentos, Babel, TypeScript e SASS.
 * **`/10-webpack`**: Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos, desenvolvimento e produção, atualização e WebServer.
+* **`/11-jquery`**: Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação e plugin.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
@@ -52,8 +53,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Ajax** | ✅ Concluído | Server, XMLHttpRequest, Fetch API, Axios etc |
 | **Gulp** | ✅ Concluído | Instalação, fundamentos, Babel, TypeScript, SASS etc |
 | **Webpack** | ✅ Concluído | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos, desenvolvimento e produção, atualização, WebServer etc |
-| **jQuery** | 🔄 Em Progresso | Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação, plugin etc |
-| **Bootstrap** | ⏳ Pendente | Navegação, tipografia, espaços, título, cores, flexbox, imagens, float, grid, botões, barra de progresso, alertas, paginação etc |
+| **jQuery** | ✅ Concluído | Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação, plugin etc |
+| **Bootstrap** | 🔄 Em Progresso | Navegação, tipografia, espaços, título, cores, flexbox, imagens, float, grid, botões, barra de progresso, alertas, paginação etc |
+| **Projeto Galeria (Bootstrap/jQuery/Webpack)** | ⏳ Pendente | Referenciando estilos SCSS, carregando HTML via Ajax, filtrando fotos por cidade, executando plugin etc |
 | **---** | --- | --- |
 
 ---
