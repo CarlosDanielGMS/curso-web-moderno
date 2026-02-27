@@ -22,6 +22,38 @@
     </div>
 
     <script>
-        // ...
+        // Pode acontecer de alguém substituir o valor da variável '$' por outro que não seja o jQuery
+        // const $ = { nome: 'Não é o jQuery' };
+
+        // Para resolver isso, basta passar a variável '$' como parâmetro de uma função auto-invocada que usa o 'jQuery' como parâmetro na invocação
+        (
+            function ($)
+            {
+                $.fn.interpretar = function ()
+                {
+                    const retirarChaves = texto => texto.substring(2, texto.length - 2);
+                    const conteudo = $(this).html();
+                    const expressoesComChaves = conteudo.match(/\{\{.+\}\}/g);
+                    const expressoes = expressoesComChaves.map(retirarChaves);
+                    
+                    // Captura os resultados das expressões
+                    const resultados = expressoes.map(expressao => eval(expressao));
+
+                    let conteudoFinal = conteudo;
+                    for (let indice = 0; indice < expressoesComChaves.length; indice++)
+                    {
+                        conteudoFinal = conteudoFinal.replace
+                        (
+                            expressoesComChaves[indice],
+                            resultados[indice]
+                        );
+                    };
+
+                    $(this).html(conteudoFinal);
+                }
+            }
+        ) (jQuery);
+
+        $('div').interpretar();
     </script>
 </body>
