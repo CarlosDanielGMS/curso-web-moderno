@@ -13,7 +13,11 @@
             .then(html => {
                 destino.innerHTML = html
                 // Processa scripts das páginas
-                eval(html.match(/\<script\>([\s\S]*)\<\/script\>/)[1])
+                const codigo = html.match(/\<script\>([\s\S]*)\<\/script\>/);
+                if (codigo)
+                {
+                    eval(codigo[1]);
+                };
             })
     }
 
