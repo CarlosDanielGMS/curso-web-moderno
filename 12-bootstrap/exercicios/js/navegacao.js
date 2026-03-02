@@ -12,6 +12,8 @@
             .then(resp => resp.text())
             .then(html => {
                 destino.innerHTML = html
+                // Processa scripts das páginas
+                eval(html.match(/\<script\>([\s\S]*)\<\/script\>/)[1])
             })
     }
 
