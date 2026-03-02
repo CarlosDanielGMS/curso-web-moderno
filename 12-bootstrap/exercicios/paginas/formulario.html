@@ -19,3 +19,115 @@
 </p>
 
 <!-- Formulário -->
+<!-- Cria o cartão do formulário -->
+<div class="card">
+    <!-- Cria o cabeçalho do formulário -->
+    <div class="card-header">
+        <!-- Cria o título do formulário -->
+        <h5 class="mb-0">
+            Exemplo de Formulário
+        </h5>
+    </div>
+    <!-- Cria o corpo do formulário -->
+    <div class="card-body">
+        <!-- Cria o formulário -->
+        <form action="" class="container-fluid">
+            <!-- Cria a linha do formulário -->
+            <div class="form-row">
+                <!-- Ocupa todas as 12 colunas do espaço da tela -->
+                <div class="col-12">
+                    <!-- Cria o grupo de elementos do formulário -->
+                    <div class="form-group">
+                        <!-- Adiciona o texto do campo -->
+                        <label for="nome">Nome</label>
+                        <!-- Adiciona o campo -->
+                        <input type="text" class="form-control" id="id" placeholder="Informe o nome">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cria a linha do formulário -->
+            <div class="form-row">
+                <!-- Ocupa todas as 12 colunas do espaço se a tela for extra pequena ou maior e ocupa 6 das 12 colunas do espaço se a tela for média ou maior -->
+                <div class="col-12 col-md-6">
+                    <!-- Cria o grupo de elementos do formulário -->
+                    <div class="form-group">
+                        <!-- Adiciona o texto do campo -->
+                        <label for="email">E-mail</label>
+                        <!-- Adiciona o grupo de elementos do campo -->
+                        <div class="input-group">
+                            <!-- Adiciona um elemento no início do grupo -->
+                            <div class="input-group-prepend">
+                                <!-- Adiciona o arroba -->
+                                <span class="input-group-text">@</span>
+                            </div>
+                            <!-- Adiciona o campo -->
+                            <input type="email" id="email" class="form-control" placeholder="Informe o e-mail">
+                        </div>
+                        <!-- Adiciona o texto explicativo do campo -->
+                        <small class="form-text text-muted">
+                            Enviaremos um e-mail para confirmar o cadastro.
+                        </small>
+                    </div>
+                </div>
+
+                <!-- Ocupa todas as 12 colunas do espaço se a tela for extra pequena ou maior e ocupa 6 das 12 colunas do espaço se a tela for média ou maior -->
+                <div class="col-12 col-md-6">
+                    <!-- Cria o grupo de elementos do formulário -->
+                    <div class="form-group">
+                        <!-- Adiciona o texto do campo -->
+                        <label for="linguagemPreferida">Linguagem</label>
+                        <!-- Adiciona o campo -->
+                        <select id="linguagemPreferida" class="form-control">
+                            <option>Selecione</option>
+                            <option>JavaScript</option>
+                            <option>Java</option>
+                            <option>Python</option>
+                            <option>Ruby</option>
+                            <option>Outra</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cria a linha do formulário -->
+            <div class="form-row">
+                <!-- Ocupa todas as 12 colunas -->
+                <div class="col-12">
+                    <!-- Cria a caixa de seleção -->
+                    <div class="form-check">
+                        <!-- Cria o campo -->
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <!-- Cria o texto do campo -->
+                        <label class="form-check-label" for="defaultCheck1">
+                            Default checkbox
+                        </label>
+                    </div>
+                    <!-- Cria a caixa de seleção -->
+                    <div class="form-check">
+                        <!-- Cria o campo -->
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                        <!-- Cria o texto do campo -->
+                        <label class="form-check-label" for="defaultCheck2">
+                            Disabled checkbox
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adiciona quebra de temática -->
+            <hr>
+
+            <!-- Cria a linha do formulário -->
+            <div class="form-row mb-0">
+                <!-- Ocupa todas as 12 colunas e alinha ao final do Flex-Box -->
+                <div class="col-12 justify-content-end">
+                    <!-- Cria um botão primário (azul) com margem à direita -->
+                    <button class="btn btn-primary mr-2" type="submit">Salvar</button>
+                    <!-- Cria um botão secundário (cinza) -->
+                    <button class="btn btn-secondary" type="reset">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
