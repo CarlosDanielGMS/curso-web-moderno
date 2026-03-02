@@ -269,6 +269,71 @@
 <hr>
 
 <!-- Accordion -->
+<div>
+    <!-- Cria um conjunto de itens a serem ocultados e exibidos -->
+    <div class="mb-5" id="accordion">
+        <!-- Cria o primeiro item do conjunto -->
+        <div class="card">
+            <!-- Cria o cabeçalho do item -->
+            <div class="card-header" id="primeiraPergunta">
+                <!-- Cria o texto do item -->
+                <h5 class="mb-0">
+                    <!-- Cria o botão do item -->
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#primeiraResposta">
+                        Primeira pergunta...
+                    </button>
+                </h5>
+            </div>
+            <!-- Cria o corpo do item -->
+            <div class="collapse" id="primeiraResposta" data-parent="#accordion">
+                <!-- Cria o texto do item -->
+                <div class="card-body">
+                    Primeira resposta!
+                </div>
+            </div>
+        </div>
+        <!-- Cria o segundo item do conjunto -->
+        <div class="card">
+            <!-- Cria o cabeçalho do item -->
+            <div class="card-header" id="segundaPergunta">
+                <!-- Cria o texto do item -->
+                <h5 class="mb-0">
+                    <!-- Cria o botão do item -->
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#segundaResposta">
+                        Segunda pergunta...
+                    </button>
+                </h5>
+            </div>
+            <!-- Cria o corpo do item -->
+            <div class="collapse" id="segundaResposta" data-parent="#accordion">
+                <!-- Cria o texto do item -->
+                <div class="card-body">
+                    Segunda resposta!
+                </div>
+            </div>
+        </div>
+        <!-- Cria o terceiro item do conjunto -->
+        <div class="card">
+            <!-- Cria o cabeçalho do item -->
+            <div class="card-header" id="terceiraPergunta">
+                <!-- Cria o texto do item -->
+                <h5 class="mb-0">
+                    <!-- Cria o botão do item -->
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#terceiraResposta">
+                        Terceira pergunta...
+                    </button>
+                </h5>
+            </div>
+            <!-- Cria o corpo do item -->
+            <div class="collapse" id="terceiraResposta" data-parent="#accordion">
+                <!-- Cria o texto do item -->
+                <div class="card-body">
+                    Terceira resposta!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     // Exibe o tooltip
