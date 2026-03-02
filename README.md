@@ -55,8 +55,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Gulp** | ✅ Concluído | Instalação, fundamentos, Babel, TypeScript, SASS etc |
 | **Webpack** | ✅ Concluído | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos, desenvolvimento e produção, atualização, WebServer etc |
 | **jQuery** | ✅ Concluído | Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação, plugin etc |
-| **Bootstrap** | 🔄 Em Progresso | Navegação, tipografia, espaços, título, cores, flexbox, imagens, float, grid, botões, barra de progresso, alertas, paginação etc |
-| **Projeto Galeria (Bootstrap/jQuery/Webpack)** | ⏳ Pendente | Referenciando estilos SCSS, carregando HTML via Ajax, filtrando fotos por cidade, executando plugin etc |
+| **Bootstrap** | ✅ Concluído | Navegação, tipografia, espaços, título, cores, flexbox, imagens, float, grid, botões, barra de progresso, alertas, paginação etc |
+| **Projeto Galeria (Bootstrap/jQuery/Webpack)** | 🔄 Em Progresso | Referenciando estilos SCSS, carregando HTML via Ajax, filtrando fotos por cidade, executando plugin etc |
+| **React** | ⏳ Pendente | React Web Worker, criação de projeto, componentes (primeiro, com parâmetro, múltiplos, classe pai e filho) etc |
 | **---** | --- | --- |
 
 ---
