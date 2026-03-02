@@ -25,6 +25,7 @@ Para facilitar a navegação, o código está organizado por tema:
 * **`/09-gulp`**: Instalação, fundamentos, Babel, TypeScript e SASS.
 * **`/10-webpack`**: Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos, desenvolvimento e produção, atualização e WebServer.
 * **`/11-jquery`**: Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação e plugin.
+* **`/12-bootstrap`**: Referenciando estilos SCSS, carregando HTML via Ajax, filtrando fotos por cidade e executando plugin.
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
@@ -54,8 +55,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Gulp** | ✅ Concluído | Instalação, fundamentos, Babel, TypeScript, SASS etc |
 | **Webpack** | ✅ Concluído | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos, desenvolvimento e produção, atualização, WebServer etc |
 | **jQuery** | ✅ Concluído | Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação, plugin etc |
-| **Bootstrap** | 🔄 Em Progresso | Navegação, tipografia, espaços, título, cores, flexbox, imagens, float, grid, botões, barra de progresso, alertas, paginação etc |
-| **Projeto Galeria (Bootstrap/jQuery/Webpack)** | ⏳ Pendente | Referenciando estilos SCSS, carregando HTML via Ajax, filtrando fotos por cidade, executando plugin etc |
+| **Bootstrap** | ✅ Concluído | Navegação, tipografia, espaços, título, cores, flexbox, imagens, float, grid, botões, barra de progresso, alertas, paginação etc |
+| **Projeto Galeria (Bootstrap/jQuery/Webpack)** | 🔄 Em Progresso | Referenciando estilos SCSS, carregando HTML via Ajax, filtrando fotos por cidade, executando plugin etc |
+| **React** | ⏳ Pendente | React Web Worker, criação de projeto, componentes (primeiro, com parâmetro, múltiplos, classe pai e filho) etc |
 | **---** | --- | --- |
 
 ---

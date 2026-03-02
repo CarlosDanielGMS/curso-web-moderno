@@ -1,0 +1,128 @@
+<!-- Título (jumbotron) -->
+ <div class="jumbotron p-4 my-1">
+    <h1 class="display-4">Fundamentos</h1>
+    <p class="lead m-1">Alguns recursos importantes do Bootstrap</p>
+ </div>
+ 
+<!-- Breadcrumb -->
+<nav class="mb-5">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#/paginas/bemVindo.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Fundamentos</li>
+    </ol>
+</nav>
+
+<div class="exercicio">
+    <h1>1. Tipografia -
+        <small>
+            <a href="https://getbootstrap.com/docs/4.0/content/typography/" target="_black">Documentação Oficial</a>
+        </small>
+    </h1>
+    <hr>
+
+    <ul>
+        <li><strong>Reboot</strong> - Torna consistente o estilo entre diferentes browser!</li>
+        <li><strong>Rems</strong> - Baseado no raiz</li>
+        <li>Evita <strong>margin-top</strong> - Provavelmente será necessário adicionar algum espaço</li>
+        <li><strong>box-sizing</strong> border-box</li>
+        <li>Fontes nativas</li>
+    </ul>
+
+    <h1 class="mt-5">2. Espaços -
+        <small>
+            <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_black">Documentação Oficial</a>
+        </small>
+    </h1>
+    <hr>
+
+    <!-- Espaços -->
+    
+    <!-- Adiciona margem inferior de tamanho 5 -->
+    <div class="mb-5">1</div>
+
+    <!-- Adiciona margem inferior de tamanho 4 e preenchimento horizontal de tamanho 5 -->
+    <div class="mb-4 py-4">2</div>
+
+    <!-- Adiciona preenchimento superior de tamanho 5 -->
+    <div class="pt-5">3</div>
+
+    <h1 class="mt-5">3. Cores -
+        <small>
+            <a href="https://getbootstrap.com/docs/4.0/utilities/colors/" target="_black">Documentação Oficial</a>
+        </small>
+    </h1>
+    <hr>
+
+    <!-- Cores -->
+    
+    <!-- Adiciona fundo "primário" e texto "claro" -->
+    <div class="my-1 bg-primary text-light">1</div>
+    
+    <!-- Adiciona fundo "perigoso" e texto "branco" -->
+    <div class="my-1 bg-danger text-white">1</div>
+    
+    <!-- Adiciona fundo "de alerta" e texto "de sucesso" -->
+    <div class="my-1 bg-warning text-success">1</div>
+
+    <h1 class="mt-5">4. Flex -
+        <small>
+            <a href="https://getbootstrap.com/docs/4.0/utilities/flex/" target="_black">Documentação Oficial</a>
+        </small>
+    </h1>
+    <hr>
+
+    <!-- Flex -->
+    
+    <!-- Habilita e configura o Flex-Box para a orientação de coluna, na ordem contrária e somente para dispositivos pequenos -->
+    <div class="d-sm-flex flex-column-reverse p-2">
+        <!-- Alinha o item no fim do Flex-Box -->
+        <div class="align-self-end">1</div>
+        <!-- Alinha o item no meio do Flex-Box -->
+        <div class="align-self-center">2</div>
+        <!-- Alinha o item no início do Flex-Box -->
+        <div class="align-self-start">3</div>
+    </div>
+
+    <h1 class="mt-5">5. Imagens -
+        <small>
+            <a href="https://getbootstrap.com/docs/4.0/content/images/" target="_black">Documentação Oficial</a>
+        </small>
+    </h1>
+    <hr>
+
+    <!-- Imagens -->
+    
+    <div class="p-2">
+        <!-- Centraliza a imagem -->
+        <img src="/imgs/img1.png" alt="Imagem 1" class="mx-auto d-block" width="400">
+        <!-- Adiciona uma borda à imagem -->
+        <img src="/imgs/img1.png" alt="Imagem 1" class="img-thumbnail" width="400">
+        <!-- Torna a imagem responsiva -->
+        <img src="/imgs/img1.png" alt="Imagem 1" class="img-fluid" width="400">
+    </div>
+
+    <h1 class="mt-5">6. Float -
+        <small>
+            <a href="https://getbootstrap.com/docs/4.0/utilities/float/" target="_black">Documentação Oficial</a>
+        </small>
+    </h1>
+    <hr>
+
+    <!-- Float -->
+     
+    <!-- Flutua à esquerda -->
+    <div class="my-1 p-3 float-left">1</div>
+    <!-- Flutua à direita -->
+    <div class="my-1 p-3 float-right">2</div>
+    <!-- Em tela grande ou maior, flutua à direita. Em tela extra grande ou maior, flutua à esquerda. -->
+    <div class="my-1 p-3 float-lg-right float-xl-left">3</div>
+</div>
+
+<style>
+    .exercicio div {
+        border: solid 8px #000;
+        font-size: 2rem;
+    }
+</style>

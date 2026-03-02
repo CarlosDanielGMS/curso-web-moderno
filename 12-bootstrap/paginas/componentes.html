@@ -1,0 +1,341 @@
+<!-- Título (jumbotron) -->
+ <div class="jumbotron p-4 my-1">
+    <h1 class="display-4">Componentes</h1>
+    <p class="lead m-1">Exemplo de alguns componentes do Bootstrap</p>
+ </div>
+ 
+<!-- Breadcrumb -->
+<nav class="mb-5">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#/paginas/bemVindo.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Componentes</li>
+    </ol>
+</nav>
+
+<h1>1. Botões -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Botões -->
+<div>
+    <div class="mb-3">
+        <!-- Cria um botão primário (azul) -->
+        <button class="btn btn-primary">Salvar</button>
+        <!-- Cria um botão secundário (cinza) -->
+        <button class="btn btn-secondary">Cancelar</button>
+        <!-- Cria um botão de sucesso (branco/verde) -->
+        <button class="btn btn-outline-success">Finalizar</button>
+        <!-- Cria um botão de perigo (vermelho) desabilitado -->
+        <button class="btn btn-danger" disabled>Excluir</button>
+        <!-- Cria um botão de alerta (amarelo) selecionável -->
+        <button class="btn btn-warning" data-toggle="button">Selecionar</button>
+    </div>
+    
+    <!-- Cria um grupo de botões -->
+    <div class="btn-group mb-3">
+        <!-- Cria um botão de informação -->
+        <button class="btn btn-info">Esquerda</button>
+        <!-- Cria um botão de informação ativo/selecionado -->
+        <button class="btn btn-info active">Centro</button>
+        <!-- Cria um botão de informação -->
+        <button class="btn btn-info">Direita</button>
+    </div>
+
+    <!-- Cria um botão com menu suspenso -->
+    <div class="dropdown">
+        <!-- Cria um botão de perigo (vermelho) grande com menu suspenso -->
+        <button class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown">Comprar</button>
+        <!-- Cria o menu suspenso do botão -->
+        <div class="dropdown-menu">
+            <!-- Cria o primeiro item do menu suspenso do botão -->
+            <a href="#" class="dropdown-item">Pix</a>
+            <!-- Cria o segundo item do menu suspenso do botão -->
+            <a href="#" class="dropdown-item">Boleto</a>
+        </div>
+    </div>
+</div>
+
+<h1 class="mt-5">2. Progresso -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/progress/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Progresso -->
+<div>
+    <!-- Cria uma barra de progresso -->
+    <div class="progress mb-4">
+        <!-- Cria um progresso de 25% -->
+        <div class="progress-bar" style="width: 25%"></div>
+    </div>
+    
+    <!-- Cria uma barra de progresso -->
+    <div class="progress mb-4">
+        <!-- Cria um progresso verde de 80% com linhas -->
+        <div class="progress-bar progress-bar-striped bg-success" style="width: 80%">80%</div>
+    </div>
+    
+    <!-- Cria uma barra de progresso mais alta -->
+    <div class="progress" style="height: 40px">
+        <!-- Cria um progresso de 15% -->
+        <div class="progress-bar" style="width: 15%">15%</div>
+        <!-- Cria um progresso de perigo de 30% -->
+        <div class="progress-bar bg-danger" style="width: 30%">30%</div>
+        <!-- Cria um progresso de informação de 20% -->
+        <div class="progress-bar bg-info" style="width: 20%">20%</div>
+        <!-- Cria um progresso de alerta de 25% -->
+        <div class="progress-bar bg-warning" style="width: 25%">25%</div>
+    </div>
+</div>
+
+<h1 class="mt-5">3. Mensagens (Alertas) -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/alerts/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Alertas -->
+<div>
+    <!-- Cria um alerta de sucesso -->
+    <div class="alert alert-success">
+        Operação realizada com sucesso!
+    </div>
+
+    <!-- Cria um alerta de aviso -->
+    <div class="alert alert-warning">
+        <!-- Exibe parte da mensagem em negrito -->
+        <strong>Atenção!</strong> A operação realizada gerou impacto no estoque!
+    </div>
+
+    <!-- Cria um alerta de perigo -->
+    <div class="alert alert-danger">
+        <!-- Exibe parte da mensagem em negrito -->
+        <strong>Erro!</strong> Ocorreu um erro inesperado!
+        <!-- Exibe um link de alerta -->
+        <a href="#" class="alert-link">Mais detalhes</a>
+    </div>
+
+    <!-- Cria um alerta de sucesso -->
+    <div class="alert alert-success">
+        <!-- Exibe um título -->
+        <h4 class="alert-heading">Parabéns!</h4>
+        <!-- Exibe um subtítulo -->
+        <p>Operação realizada com sucesso!</p>
+        <!-- Exibe uma divisão temática -->
+        <hr>
+        <!-- Exibe uma mensagem -->
+        <p class="mb-0">Pode ficar orgulhoso(a)!</p>
+    </div>
+
+    <!-- Cria um alerta de aviso dispensável com efeito de exibição -->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <!-- Exibe parte da mensagem em negrito -->
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <!-- Exibe um botão de fechar -->
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <!-- Oculta o conteúdo -->
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+
+<h1 class="mt-5">4. Paginação -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/pagination/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Peginação -->
+<div>
+    <nav>
+        <!-- Cria uma paginação -->
+        <ul class="pagination">
+            <!-- Cria um item da paginação -->
+            <li class="page-item">
+                <!-- Cria um link do item da paginação -->
+                <a href="#" class="page-link">Anterior</a>
+            </li>
+            <!-- Cria um item da paginação -->
+            <li class="page-item">
+                <!-- Cria um link do item da paginação -->
+                <a href="#" class="page-link">1</a>
+            </li>
+            <!-- Cria um item da paginação -->
+            <li class="page-item">
+                <!-- Cria um link do item da paginação -->
+                <a href="#" class="page-link">2</a>
+            </li>
+            <!-- Cria um item ativo da paginação -->
+            <li class="page-item active">
+                <!-- Cria um link do item da paginação -->
+                <a href="#" class="page-link">3</a>
+            </li>
+            <!-- Cria um item da paginação -->
+            <li class="page-item">
+                <!-- Cria um link do item da paginação -->
+                <a href="#" class="page-link">4</a>
+            </li>
+            <!-- Cria um item da paginação -->
+            <li class="page-item">
+                <!-- Cria um link do item da paginação -->
+                <a href="#" class="page-link">5</a>
+            </li>
+            <!-- Cria um item da paginação -->
+            <li class="page-item">
+                <!-- Cria um link do item da paginação -->
+                <a href="#" class="page-link">Próximo</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<h1 class="mt-5">5. Tooltip -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/tooltip/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Tooltip -->
+<div>
+    <div class="alert alert-warning">
+        Precisa chamar uma função JavaScript!
+        <strong>E agora?</strong>
+    </div>
+    
+    <!-- Cria um botão de perigo com uma dica de ferramente exibida no topo -->
+    <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Pense antes!">
+        Excluir
+    </button>
+</div>
+
+<h1 class="mt-5">6. Slider -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/carousel/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Slider -->
+<div>
+    <!-- Cria um carrossel com controle deslizante -->
+    <div class="carousel slide" id="slider" data-ride="carousel">
+        <!-- Cria um fundo para o carrosel -->
+        <div class="carousel-inner bg-dark">
+            <!-- Cria um item ativo do carrossel -->
+            <div class="carousel-item active">
+                <!-- Adiciona a imagem -->
+                <img src="/imgs/slide1.png" alt="Slide1" class="d-block mx-auto">
+            </div>
+            <!-- Cria um item do carrossel -->
+            <div class="carousel-item">
+                <!-- Adiciona a imagem -->
+                <img src="/imgs/slide2.png" alt="Slide2" class="d-block mx-auto">
+            </div>
+            <!-- Cria um item do carrossel -->
+            <div class="carousel-item">
+                <!-- Adiciona a imagem -->
+                <img src="/imgs/slide3.png" alt="Slide3" class="d-block mx-auto">
+            </div>
+        </div>
+        
+        <!-- Cria um botão de voltar imagem para o carrosel -->
+        <a href="#slider" class="carousel-control-prev" data-slide="prev">
+            <!-- Adiciona o ícone -->
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+
+        <!-- Cria um botão de avançar imagem para o carrosel -->
+        <a href="#slider" class="carousel-control-next" data-slide="next">
+            <!-- Adiciona o ícone -->
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+
+<h1 class="mt-5">7. Accordion -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/collapse/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Accordion -->
+<div>
+    <!-- Cria um conjunto de itens a serem ocultados e exibidos -->
+    <div class="mb-5" id="accordion">
+        <!-- Cria o primeiro item do conjunto -->
+        <div class="card">
+            <!-- Cria o cabeçalho do item -->
+            <div class="card-header" id="primeiraPergunta">
+                <!-- Cria o texto do item -->
+                <h5 class="mb-0">
+                    <!-- Cria o botão do item -->
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#primeiraResposta">
+                        Primeira pergunta...
+                    </button>
+                </h5>
+            </div>
+            <!-- Cria o corpo do item -->
+            <div class="collapse" id="primeiraResposta" data-parent="#accordion">
+                <!-- Cria o texto do item -->
+                <div class="card-body">
+                    Primeira resposta!
+                </div>
+            </div>
+        </div>
+        <!-- Cria o segundo item do conjunto -->
+        <div class="card">
+            <!-- Cria o cabeçalho do item -->
+            <div class="card-header" id="segundaPergunta">
+                <!-- Cria o texto do item -->
+                <h5 class="mb-0">
+                    <!-- Cria o botão do item -->
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#segundaResposta">
+                        Segunda pergunta...
+                    </button>
+                </h5>
+            </div>
+            <!-- Cria o corpo do item -->
+            <div class="collapse" id="segundaResposta" data-parent="#accordion">
+                <!-- Cria o texto do item -->
+                <div class="card-body">
+                    Segunda resposta!
+                </div>
+            </div>
+        </div>
+        <!-- Cria o terceiro item do conjunto -->
+        <div class="card">
+            <!-- Cria o cabeçalho do item -->
+            <div class="card-header" id="terceiraPergunta">
+                <!-- Cria o texto do item -->
+                <h5 class="mb-0">
+                    <!-- Cria o botão do item -->
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#terceiraResposta">
+                        Terceira pergunta...
+                    </button>
+                </h5>
+            </div>
+            <!-- Cria o corpo do item -->
+            <div class="collapse" id="terceiraResposta" data-parent="#accordion">
+                <!-- Cria o texto do item -->
+                <div class="card-body">
+                    Terceira resposta!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Exibe o tooltip
+    $('[data-toggle="tooltip"]').tooltip();
+</script>
