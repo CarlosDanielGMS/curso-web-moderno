@@ -7,3 +7,4 @@ import 'bootstrap';
 
 // Inclusões
 import './js/core/includes';
+import './js/plugins/cityButtons';
