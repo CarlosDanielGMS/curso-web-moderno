@@ -57,22 +57,23 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Webpack** | ✅ Concluído | Visão geral, estrutura básica, sistema de módulos, carregamento de arquivos, desenvolvimento e produção, atualização, WebServer etc |
 | **jQuery** | ✅ Concluído | Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação, plugin etc |
 | **Bootstrap** | ✅ Concluído | Navegação, tipografia, espaços, título, cores, flexbox, imagens, float, grid, botões, barra de progresso, alertas, paginação etc |
-| **Projeto Galeria (Bootstrap/jQuery/Webpack)** | 🔄 Em Progresso | Referenciando estilos SCSS, carregando HTML via Ajax, filtrando fotos por cidade, executando plugin etc |
-| **React** | ⏳ Pendente | React Web Worker, criação de projeto, componentes (primeiro, com parâmetro, múltiplos, classe pai e filho) etc |
+| **Projeto Galeria (Bootstrap/jQuery/Webpack)** | ✅ Concluído | Referenciando estilos SCSS, carregando HTML via Ajax, filtrando fotos por cidade, executando plugin etc |
+| **React** | 🔄 Em Progresso | React Web Worker, criação de projeto, componentes (primeiro, com parâmetro, múltiplos, classe pai e filho) etc |
+| **Projeto Calculadora** | ⏳ Pendente | Componentes Calculator, Button, Display e implementação da lógica etc |
 | **---** | --- | --- |
 
 ---
 
 ## ⭐ Projetos em Destaque
 
-Por questões de organização, os projetos finais de cada grande módulo possuirão seus próprios repositórios. Quando disponíveis, os links para ver as aplicações completas rodando poderão ser acessados abaixo.
+Por questões de organização, os projetos finais de cada grande módulo possuem seus próprios diretórios. Os links para ver as aplicações completas rodando podem ser acessados abaixo.
 
-### [Ordem]. 🧮 [Nome]
+### 1. 📸 Galeria
 
-[Descrição].
+Site com exibição de fotografias que utiliza um sistema de inclusão dinâmica para carregar partes do HTML via Ajax de forma assíncrona e um plugin para filtrar as imagens por cidade.
 
-* **Repositório:** [Link]
-* **Tecnologias:** [Descrição].
+* **Diretório:** [13-galeria](/13-galeria/)
+* **Tecnologias:** HTML, CSS, JS, Bootstrap, jQuery, Webpack, SASS, Babel, Node.js etc.
 
 ---
 
