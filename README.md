@@ -27,6 +27,7 @@ Para facilitar a navegação, o código está organizado por tema:
 * **`/11-jquery`**: Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação e plugin.
 * **`/12-bootstrap`**: Navegação, tipografia, espaços, título, cores, flexbox, imagens, float, grid, botões, barra de progresso, alertas, paginação, tooltip, slider, accordion e formulário.
 * **`/13-galeria`**: Referenciando estilos SCSS, carregando HTML via Ajax, filtrando fotos por cidade e executando plugin.
+* **`/14-react`**: React Web Worker, criação de projeto e componentes (primeiro, com parâmetro, múltiplos, classe pai e filho).
 * *(Outros módulos serão adicionados conforme o progresso)*
 
 ---
