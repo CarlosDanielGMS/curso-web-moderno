@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom/client'; // Importa a nova biblioteca de DOM do 
 
 // Importa o primeiro componente React
 // A nomenclatura da importação de todo componente React personalizado deve começar com letra maiúscula
-import Primeiro from './componentes/Primeiro';
+// import Primeiro from './componentes/Primeiro';
+
+// Importa o componente React de saudação
+import Saudacao from './componentes/Saudacao';
 
 // Cria a raiz do React apontando para o elemento do HTML com ID 'root'
 const raiz = ReactDOM.createRoot(document.getElementById('root'));
 
 // Monta e renderiza o componente React na árvore do DOM do navegador
-raiz.render(<Primeiro/>);
+// raiz.render(<Primeiro/>);
+
+// Monta e renderiza o componente React com os parâmetros na árvore do DOM do navegador
+raiz.render(<Saudacao nome="Daniel" idade={25}/>);
