@@ -59,8 +59,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **jQuery** | ✅ Concluído | Selecionando elementos, modificando HTML, manipulando atributos e CSS, eventos, animação, plugin etc |
 | **Bootstrap** | ✅ Concluído | Navegação, tipografia, espaços, título, cores, flexbox, imagens, float, grid, botões, barra de progresso, alertas, paginação etc |
 | **Projeto Galeria (Bootstrap/jQuery/Webpack)** | ✅ Concluído | Referenciando estilos SCSS, carregando HTML via Ajax, filtrando fotos por cidade, executando plugin etc |
-| **React** | 🔄 Em Progresso | React Web Worker, criação de projeto, componentes (primeiro, com parâmetro, múltiplos, classe pai e filho) etc |
-| **Projeto Calculadora** | ⏳ Pendente | Componentes Calculator, Button, Display e implementação da lógica etc |
+| **React** | ✅ Concluído | React Web Worker, criação de projeto, componentes (primeiro, com parâmetro, múltiplos, classe pai e filho) etc |
+| **Projeto Calculadora** | 🔄 Em Progresso | Componentes Calculator, Button, Display e implementação da lógica etc |
+| **Projeto Cadastro de Usuário** | ⏳ Pendente | Backend, frontend, componentes, estilo, rotas, responsividade etc |
 | **---** | --- | --- |
 
 ---
