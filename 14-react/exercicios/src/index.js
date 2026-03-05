@@ -12,7 +12,10 @@ import ReactDOM from 'react-dom/client'; // Importa a nova biblioteca de DOM do 
 // import Multiplos, { BoaTarde } from './componentes/Multiplos';
 
 // Importa o componente de classe React 'Cumprimento'
-import Cumprimento from './componentes/Cumprimento';
+// import Cumprimento from './componentes/Cumprimento';
+
+// Importa o componente pai React
+import Pai from './componentes/Pai';
 
 // Cria a raiz do React apontando para o elemento do HTML com ID 'root'
 const raiz = ReactDOM.createRoot(document.getElementById('root'));
@@ -32,10 +35,18 @@ const raiz = ReactDOM.createRoot(document.getElementById('root'));
 //     </div>
 // );
 
+// Monta e renderiza o componente React com os parâmetros na árvore do DOM do navegador
+// raiz.render
+// (
+//     <div>
+//         <Cumprimento tipo="Bom dia" nome="Daniel"/>
+//     </div>
+// );
+
 // Monta e renderiza os componentes React com os parâmetros na árvore do DOM do navegador
 raiz.render
 (
     <div>
-        <Cumprimento tipo="Bom dia" nome="Daniel"/>
+        <Pai nome="Daniel" sobrenome="Galvão"/>
     </div>
 );
