@@ -14,8 +14,9 @@ import ReactDOM from 'react-dom/client'; // Importa a nova biblioteca de DOM do 
 // Importa o componente de classe React 'Cumprimento'
 // import Cumprimento from './componentes/Cumprimento';
 
-// Importa o componente pai React
+// Importa os componentes pai e filho React
 import Pai from './componentes/Pai';
+import Filho from './componentes/Filho';
 
 // Cria a raiz do React apontando para o elemento do HTML com ID 'root'
 const raiz = ReactDOM.createRoot(document.getElementById('root'));
@@ -47,6 +48,10 @@ const raiz = ReactDOM.createRoot(document.getElementById('root'));
 raiz.render
 (
     <div>
-        <Pai nome="Daniel" sobrenome="Galvão"/>
+        <Pai nome="Daniel" sobrenome="Galvão">
+            <Filho nome="Ícaro"/>
+            <Filho nome="Daniel"/>
+            <Filho nome="Ágata"/>
+        </Pai>
     </div>
 );

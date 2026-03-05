@@ -1,7 +1,6 @@
 import React from "react";
 
-// Importa o componente filho
-import Filho from "./Filho";
+import { obterFilhosPropriedades } from "../utils/utils";
 
 // Exporta o componente pai
 export default props =>
@@ -9,8 +8,7 @@ export default props =>
         <h1>{props.nome} {props.sobrenome}</h1>
         <h2>Filhos</h2>
         <ul>
-            <Filho nome="Ícaro" sobrenome={props.sobrenome}/>
-            <Filho {...props}/>
-            <Filho {...props} nome="Ágata"/>
+            {/* Adiciona os elementos filhos e suas propriedades */}
+            { obterFilhosPropriedades(props) }
         </ul>
     </div>;
