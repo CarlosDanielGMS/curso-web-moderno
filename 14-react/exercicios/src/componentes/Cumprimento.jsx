@@ -8,15 +8,28 @@ export default class Cumprimento extends Component
     // Isso significa que um componente é renderizado novamente quando ocorre uma mudança de estado, mas nunca o contrário
     // Os valores recebidos como propriedade são sempre constantes e, para alterá-los, deve ser usado o objeto 'state'
 
-    // Define o estado local com base nas propriedades recebidas
-    state =
+    // Configura o comportamento inicial da instância do componente classe React
+    constructor (props)
     {
-        tipo: this.props.tipo,
-        nome: this.props.nome
+        // Executa o construtor do componente classe pai passando as propriedades recebidas como parâmetro
+        super(props);
+
+        // Define o estado local com base nas propriedades recebidas
+        this.state =
+        {
+            tipo: this.props.tipo,
+            nome: this.props.nome
+        }
+
+        // Define a instância do componente classe como o valor de 'this' na função
+        this.setTipo = this.setTipo.bind(this);
     };
     
     // Atualiza o estado 'tipo' com base no valor do destino do evento (passado por parâmetro quando o valor do elemento 'input' é alterado)
-    setTipo = evento => { this.setState({ tipo: evento.target.value }); };
+    setTipo (evento)
+    {
+        this.setState({ tipo: evento.target.value });
+    };
 
     // Atualiza o estado 'nome' com base no valor do destino do evento (passado por parâmetro quando o valor do elemento 'input' é alterado)
     setNome = evento => { this.setState({ nome: evento.target.value }); };
