@@ -9,7 +9,10 @@ import ReactDOM from 'react-dom/client'; // Importa a nova biblioteca de DOM do 
 // import Saudacao from './componentes/Saudacao';
 
 // Importa os componentes React de bom dia diretamente e boa tarde via desestruturação
-import Multiplos, { BoaTarde } from './componentes/Multiplos';
+// import Multiplos, { BoaTarde } from './componentes/Multiplos';
+
+// Importa o componente de classe React 'Cumprimento'
+import Cumprimento from './componentes/Cumprimento';
 
 // Cria a raiz do React apontando para o elemento do HTML com ID 'root'
 const raiz = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,10 +24,18 @@ const raiz = ReactDOM.createRoot(document.getElementById('root'));
 // raiz.render(<Saudacao nome="Daniel" idade={25}/>);
 
 // Monta e renderiza os componentes React com os parâmetros na árvore do DOM do navegador
+// raiz.render
+// (
+//     <div>
+//         <Multiplos.BomDia nome="Daniel"/>
+//         <BoaTarde nome="Neta"/>
+//     </div>
+// );
+
+// Monta e renderiza os componentes React com os parâmetros na árvore do DOM do navegador
 raiz.render
 (
     <div>
-        <Multiplos.BomDia nome="Daniel"/>
-        <BoaTarde nome="Neta"/>
+        <Cumprimento tipo="Bom dia" nome="Daniel"/>
     </div>
 );
