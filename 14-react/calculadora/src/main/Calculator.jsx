@@ -31,9 +31,63 @@ export default class Calculator extends Component
         this.setState({ ...initialState });
     };
 
-    setOperation (operation)
+    setOperation (newOperation)
     {
-        console.log(operation);
+        if (this.state.currentValue === 0)
+        {
+            this.setState
+            (
+                {
+                    clearDisplay: true,
+                    operation: newOperation,
+                    currentValue: 1
+                }
+            );
+        }
+        else
+        {
+            const equals = newOperation === '=';
+            const currentOperation = this.state.operation;
+
+            const newValues = [...this.state.values];
+            switch (currentOperation) {
+                case '+':
+                    newValues[0] = newValues[0] + newValues[1];
+                    break;
+                
+                case '-':
+                    newValues[0] = newValues[0] - newValues[1];
+                    break;
+                
+                case '*':
+                    newValues[0] = newValues[0] * newValues[1];
+                    break;
+                
+                case '/':
+                    newValues[0] = newValues[0] / newValues[1];
+                    break;
+            
+                default:
+                    break;
+            }
+            newValues[1] = 0;
+            if (isNaN(newValues[0]) || !isFinite(newValues[0]))
+            {
+                this.clearMemory();
+                return;
+            }
+
+            this.setState
+            (
+                {
+                    displayValue: newValues[0],
+                    clearDisplay: !equals,
+                    operation: equals ? null : newOperation,
+                    values: newValues,
+                    currentValue: equals ? 0 : 1
+                }
+            );
+        };
     };
 
     addDigit (digit)
@@ -44,12 +98,18 @@ export default class Calculator extends Component
         const currentValue = clearDisplay ? '' : this.state.displayValue;
         const newDisplayValue = currentValue + digit;
 
-        this.setState({ displayValue: newDisplayValue, clearDisplay: false });
+        this.setState
+        (
+            {
+                displayValue: newDisplayValue,
+                clearDisplay: false
+            }
+        );
 
         if (digit !== '.')
         {
             const indice = this.state.currentValue;
-            const newValue = parseFloat(displayValue);
+            const newValue = parseFloat(newDisplayValue);
             const newValues = [...this.state.values];
             newValues[indice] = newValue;
 
