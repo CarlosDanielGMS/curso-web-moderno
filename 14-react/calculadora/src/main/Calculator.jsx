@@ -46,11 +46,12 @@ export default class Calculator extends Component
         }
         else
         {
-            const equals = newOperation === '=';
+            const isOperationEqual = newOperation === '=';
             const currentOperation = this.state.operation;
 
             const newValues = [...this.state.values];
-            switch (currentOperation) {
+            switch (currentOperation)
+            {
                 case '+':
                     newValues[0] = newValues[0] + newValues[1];
                     break;
@@ -81,10 +82,10 @@ export default class Calculator extends Component
             (
                 {
                     displayValue: newValues[0],
-                    clearDisplay: !equals,
-                    operation: equals ? null : newOperation,
+                    clearDisplay: !isOperationEqual,
+                    operation: isOperationEqual ? null : newOperation,
                     values: newValues,
-                    currentValue: equals ? 0 : 1
+                    currentValue: isOperationEqual ? 0 : 1
                 }
             );
         };
@@ -108,10 +109,10 @@ export default class Calculator extends Component
 
         if (digit !== '.')
         {
-            const indice = this.state.currentValue;
+            const currentValueIndex = this.state.currentValue;
             const newValue = parseFloat(newDisplayValue);
             const newValues = [...this.state.values];
-            newValues[indice] = newValue;
+            newValues[currentValueIndex] = newValue;
 
             this.setState({ values: newValues });
         }
