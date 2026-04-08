@@ -1,15 +1,24 @@
 {
-    "users":
-    [
-        {
-            "id": 0,
-            "name": "Daniel",
-            "email": "daniel@mail.com"
-        },
-        {
-            "id": 1,
-            "name": "Lucas",
-            "email": "lucas@mail.com"
-        }
-    ]
+  "users": [
+    {
+      "id": 0,
+      "name": "Daniel",
+      "email": "daniel@mail.com"
+    },
+    {
+      "id": 1,
+      "name": "Lucas",
+      "email": "lucas@mail.com"
+    },
+    {
+      "name": "Eslhânio",
+      "email": "eslhanio@mail.com",
+      "id": 2
+    },
+    {
+      "name": "Neta",
+      "email": "neta@mail.com",
+      "id": 3
+    }
+  ]
 }
