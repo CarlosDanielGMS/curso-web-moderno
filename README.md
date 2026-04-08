@@ -61,8 +61,9 @@ Logo abaixo é possível visualizar o andamento do curso, com detalhes acerca de
 | **Projeto Galeria (Bootstrap/jQuery/Webpack)** | ✅ Concluído | Referenciando estilos SCSS, carregando HTML via Ajax, filtrando fotos por cidade, executando plugin etc |
 | **React** | ✅ Concluído | React Web Worker, criação de projeto, componentes (primeiro, com parâmetro, múltiplos, classe pai e filho) etc |
 | **Projeto Calculadora** | ✅ Concluído | Componentes Calculator, Button, Display e implementação da lógica etc |
-| **Projeto Cadastro de Usuário** | 🔄 Em Progresso | Backend, frontend, componentes, estilo, rotas, responsividade etc |
-| **Projeto Cadastro de Usuário - Integração com Banco de Dados (Firestore)** | ⏳ Pendente | Next.js, estrutura, componentes, rotas, navegação, API, TailwindCSS, Firebase, hooks etc |
+| **Projeto Cadastro de Usuário** | ✅ Concluído | Backend, frontend, componentes, estilo, rotas, responsividade etc |
+| **Projeto Cadastro de Usuário - Integração com Banco de Dados (Firestore)** | 🔄 Em Progresso | Next.js, estrutura, componentes, rotas, navegação, API, TailwindCSS, Firebase, hooks etc |
+| **VueJS** | ⏳ Pendente | Conceitos básicos, binding, eventos, diretivas, aplicando estilo CSS, template na Vue Instance, componente e diretiva personalizada etc |
 | **---** | --- | --- |
 
 ---
