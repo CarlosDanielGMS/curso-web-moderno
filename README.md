@@ -79,6 +79,13 @@ Site com exibição de fotografias que utiliza um sistema de inclusão dinâmica
 * **Diretório:** [13-galeria](/13-galeria/)
 * **Tecnologias:** HTML, CSS, JS, Bootstrap, jQuery, Webpack, SASS, Babel, Node.js etc.
 
+### 2. 🧮 Calculadora
+
+Calculadora web funcional focada na manipulação intensiva de estados e lógica de interface.
+
+* **Diretório:** [14-react](/14-react/calculadora/)
+* **Tecnologias:** React, CSS etc.
+
 ---
 
 ## 📝 Notas de Engenharia & Insights
