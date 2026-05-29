@@ -4,8 +4,8 @@ export default function Exemplo ()
 {
     return (
         <>
-            <Cabecalho />
-            <Cabecalho />
+            <Cabecalho titulo="Next.js e React" />
+            <Cabecalho titulo="Aprendendo Next.js na prática" />
         </>
     );
 };
