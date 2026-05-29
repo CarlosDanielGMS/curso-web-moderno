@@ -1,4 +1,9 @@
 export default function Inicio ()
 {
-    return "Início";
+    return (
+        <div>
+            <h1>Fundamentos de Next.js e React</h1>
+            <h2>Vamos estudar este framework</h2>
+        </div>
+    )
 };
